@@ -71,7 +71,8 @@ import sys.FileSystem;
 import GameJolt.GameJoltAPI;
 #end
 #if FEATURE_MP4
-import hxcodec.flixel.FlxVideoSprite as VideoSprite;
+// import hxcodec.flixel.FlxVideoSprite as VideoSprite;
+import hxvlc.flixel.FlxVideoSprite as VideoSprite;
 #end
 
 using StringTools;
@@ -594,9 +595,10 @@ class PlayState extends MusicBeatState
 		camOverlay.bgColor.alpha = 0;
 
 		FlxG.cameras.reset(camGame);
-		FlxG.cameras.add(camGame2);
-		FlxG.cameras.add(camHUD);
-		FlxG.cameras.add(camOverlay);
+		FlxG.cameras.setDefaultDrawTarget(camGame, true);
+		FlxG.cameras.add(camGame2, false);
+		FlxG.cameras.add(camHUD, false);
+		FlxG.cameras.add(camOverlay, false);
 
 		camHUD.zoom = defaultHudZoom;
 
@@ -604,7 +606,6 @@ class PlayState extends MusicBeatState
 		grpNoteSplashes.add(tempNoteSplash);
 		tempNoteSplash.alpha = 0.001;
 
-		FlxCamera.defaultCameras = [camGame];
 		CustomFadeTransition.nextCamera = camOverlay;
 
 		persistentUpdate = true;
@@ -1514,7 +1515,9 @@ class PlayState extends MusicBeatState
 						}
 
 						rainBG = new VideoSprite();
-						rainBG.play(Paths.video('rain'), true);
+						rainBG.load(Assets.getBytes(Paths.video('rain')), [":input-repeat=65535"]);
+						rainBG.play();
+						// rainBG.play(Paths.video('rain'), true);
 						rainBG.scrollFactor.set();
 						rainBG.setGraphicSize(Std.int(rainBG.width / defaultCamZoom));
 						rainBG.updateHitbox();
@@ -1556,7 +1559,9 @@ class PlayState extends MusicBeatState
 					if (!SaveData.lowEnd)
 					{
 						testVM = new VideoSprite();
-						testVM.play(Paths.video('testvm'), true);
+						testVM.load(Assets.getBytes(Paths.video('testvm')), [":input-repeat=65535"]);
+						testVM.play();
+						// testVM.play(Paths.video('testvm'), true);
 						testVM.scrollFactor.set();
 						testVM.setGraphicSize(Std.int(testVM.width / defaultCamZoom));
 						testVM.updateHitbox();
@@ -1652,7 +1657,9 @@ class PlayState extends MusicBeatState
 					if (!SaveData.lowEnd)
 					{
 						crackBG = new VideoSprite(-10, -10);
-						crackBG.play(Paths.video('crackBG'), true);
+						crackBG.load(Assets.getBytes(Paths.video('crackBG')), [":input-repeat=65535"]);
+						crackBG.play();
+						// crackBG.play(Paths.video('crackBG'), true);
 						crackBG.scrollFactor.set(0.3, 0.3);
 						crackBG.setGraphicSize(Std.int(crackBG.width / defaultCamZoom));
 						crackBG.updateHitbox();
@@ -2717,7 +2724,9 @@ class PlayState extends MusicBeatState
 					var video:VideoHandler = new VideoHandler();
 					video.canSkip = SaveData.beatLibitina;
 					video.skipKeys = [FlxKey.ESCAPE, FlxKey.ENTER];
-					video.play(Paths.video('metaintro'));
+					video.load(Assets.getBytes(Paths.video('metaintro')));
+					video.play();
+					// video.play(Paths.video('metaintro'));
 					video.onEndReached.add(function()
 					{
 						startCountdown();
@@ -3037,9 +3046,12 @@ class PlayState extends MusicBeatState
 
 					#if FEATURE_MP4
 					var video:VideoHandler = new VideoHandler();
+					// gotta make a way to skip this in android
 					video.canSkip = SaveData.beatPrologue;
 					video.skipKeys = [FlxKey.ESCAPE, FlxKey.ENTER];
-					video.play(Paths.video('monika'));
+					video.load(Assets.getBytes(Paths.video('monika')));
+					video.play();
+					// video.play(Paths.video('monika'));
 					video.onEndReached.add(function()
 					{
 						endSong();
@@ -3088,21 +3100,27 @@ class PlayState extends MusicBeatState
 			{
 				#if FEATURE_MP4
 				var video:VideoHandler = new VideoHandler();
-				video.play(Paths.video('monikacodin'));
+				video.load(Assets.getBytes(Paths.video('monikacodin')));
+				video.play();
+				// video.play(Paths.video('monikacodin'));
 				#end
 			}
 			case 'senpaitransform':
 			{
 				#if FEATURE_MP4
 				var video:VideoHandler = new VideoHandler();
-				video.play(Paths.video('senpaicodin'));
+				video.load(Assets.getBytes(Paths.video('senpaicodin')));
+				video.play();
+				// video.play(Paths.video('senpaicodin'));
 				#end
 			}
 			case 'youregoingtophilly':
 			{
 				#if FEATURE_MP4
 				var video:VideoHandler = new VideoHandler();
-				video.play(Paths.video('youregoingtophilly'));
+				video.load(Assets.getBytes(Paths.video('youregoingtophilly')));
+				video.play();
+				// video.play(Paths.video('youregoingtophilly'));
 				#end
 			}
 			case 'wiltedbgin':

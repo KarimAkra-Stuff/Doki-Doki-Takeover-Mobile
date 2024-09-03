@@ -1,7 +1,7 @@
 package;
 
 import flixel.util.FlxColor;
-import flixel.FlxObject;
+import flixel.util.FlxDirectionFlags;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.graphics.frames.FlxAtlasFrames;
@@ -88,7 +88,7 @@ class Character extends FlxSprite
 	public var holdTimer:Float = 0;
 
 	// https://github.com/ThatRozebudDude/FPS-Plus-Public/pull/11
-	public var initFacing:Int = FlxObject.RIGHT;
+	public var initFacing:Int = FlxDirectionFlags.RIGHT;
 	var initWidth:Float;
 
 	public function new(x:Float, y:Float, ?character:String = "bf", ?isPlayer:Bool = false, ?forceCostume:String = '')
@@ -171,11 +171,11 @@ class Character extends FlxSprite
 
 		if (!!json.flip_x)
 		{
-			initFacing = FlxObject.LEFT;
+			initFacing = FlxDirectionFlags.LEFT;
 		}
 		else
 		{
-			initFacing = FlxObject.RIGHT;
+			initFacing = FlxDirectionFlags.RIGHT;
 		}
 
 		if (json.scale != 1)
@@ -246,12 +246,12 @@ class Character extends FlxSprite
 		initWidth = frameWidth;
 
 		//Doing it like this for now
-		setFacingFlip((initFacing == FlxObject.LEFT ? FlxObject.RIGHT : FlxObject.LEFT), true, false);
+		setFacingFlip((initFacing == FlxDirectionFlags.LEFT ? FlxDirectionFlags.RIGHT : FlxDirectionFlags.LEFT), true, false);
 		
 		if (!PlayState.mirrormode)	
-			facing = (isPlayer ? FlxObject.LEFT : FlxObject.RIGHT);
+			facing = (isPlayer ? FlxDirectionFlags.LEFT : FlxDirectionFlags.RIGHT);
 		else // Turn around please, I beg of you ;-; //Edit, 20 lines of code condenced to this dumb crap ;-;
-			facing = (isPlayer ? FlxObject.RIGHT : FlxObject.LEFT);
+			facing = (isPlayer ? FlxDirectionFlags.RIGHT : FlxDirectionFlags.LEFT);
 
 		calculateDanceIdle();
 		dance();

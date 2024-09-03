@@ -369,7 +369,8 @@ class DokiStoryState extends MusicBeatState
 					var video:VideoHandler = new VideoHandler();
 					video.canSkip = SaveData.beatSayori;
 					video.skipKeys = [FlxKey.ESCAPE, FlxKey.ENTER];
-					video.play(Paths.video('sayointro'));
+					video.load(openfl.Assets.getBytes(Paths.video('sayointro')));
+					video.play();
 					video.onEndReached.add(function()
 					{
 						FlxG.camera.fade(FlxColor.BLACK, 0, false);

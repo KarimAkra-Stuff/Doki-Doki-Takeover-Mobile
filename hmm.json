@@ -52,10 +52,9 @@
 			"version": "2.5.0"
 		},
 		{
-			"name": "hxCodec",
-			"type": "git",
-			"ref": "main",
-			"url": "https://github.com/polybiusproxy/hxCodec.git"
+			"name": "hxvlc",
+			"type": "haxelib",
+			"version": "1.8.1"
 		},
 		{
 			"name": "discord_rpc",

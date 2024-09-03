@@ -607,7 +607,7 @@ class CostumeSelectStateOriginal extends MusicBeatState
 
 		if (dad.facing != dad.initFacing)
 		{
-			dad.facing = FlxObject.RIGHT;
+			dad.facing = flixel.util.FlxDirectionFlags.RIGHT;
 		}
 
 	}
