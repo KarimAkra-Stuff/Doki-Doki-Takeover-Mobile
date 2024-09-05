@@ -1,6 +1,5 @@
 package shaders;
 
-import flixel.system.FlxAssets.FlxShader;
 import lime.utils.Assets;
 import haxe.Json;
 

@@ -1,7 +1,5 @@
 package shaders;
 
-import flixel.system.FlxAssets.FlxShader;
-
 class BloomShader extends FlxShader // Taken from BBPanzu anime mod hueh
 {
 	@:glFragmentSource('

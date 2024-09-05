@@ -1,7 +1,5 @@
 package shaders;
 
-import flixel.system.FlxAssets.FlxShader;
-
 class InvertShader extends FlxShader
 {
 	@:glFragmentSource('

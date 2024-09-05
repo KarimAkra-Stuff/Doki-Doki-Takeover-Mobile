@@ -1,7 +1,5 @@
 package shaders;
 
-import flixel.system.FlxAssets.FlxShader;
-
 class WarpShader extends FlxShader // modified from https://www.shadertoy.com/view/wlScRz
 {
 	@:glFragmentSource('

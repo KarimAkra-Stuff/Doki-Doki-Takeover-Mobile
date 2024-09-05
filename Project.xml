@@ -85,6 +85,7 @@
 		<library name="shared" preload="true" />
 		<library name="week6" preload="true" />
 		<library name="doki" preload="true" />
+		<library name="mobile" preload="true" />
 	</section>
 
 	<section if="NO_PRELOAD_ALL">
@@ -92,12 +93,14 @@
 		<library name="shared" preload="false" />
 		<library name="week6" preload="false" />
 		<library name="doki" preload="false" />
+		<library name="mobile" preload="false" />
 	</section>
 
 	<assets path="assets/songs" library="songs" />
 	<assets path="assets/shared" library="shared" />
 	<assets path="assets/week6" library="week6" />
 	<assets path="assets/doki" library="doki" />
+	<assets path="assets/mobile" library="mobile" />
 
 	<assets path="assets/videos" />
 

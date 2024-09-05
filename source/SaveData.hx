@@ -127,6 +127,10 @@ class SaveData
 	public static var gjUser:Dynamic = null;
 	public static var gjToken:Dynamic = null;
 
+	// Mobile
+	public static var hitboxType:String = 'Gradient';
+	public static var controlsAlpha:Float = 0.8;
+
 	private static var importantMap:Map<String, Array<String>> =
 	[
 		"flixelSound" => ["volume"]
