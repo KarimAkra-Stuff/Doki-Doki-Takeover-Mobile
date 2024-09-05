@@ -19,19 +19,19 @@ class Paths
 
 	public static var dumpExclusions:Array<String> = [
 		// images
-		'assets/images/Credits_LeftSide.png',
+		// 'assets/images/Credits_LeftSide.png',
 		'assets/images/cursor.png',
-		'assets/images/DDLCStart_Screen_Assets.png',
-		'assets/images/scrollingBG.png',
+		// 'assets/images/DDLCStart_Screen_Assets.png',
+		// 'assets/images/scrollingBG.png',
 		// music
 		'assets/music/freakyMenu.$SOUND_EXT',
-		'assets/music/disco.$SOUND_EXT',
-		'assets/music/monic.$SOUND_EXT',
-		'assets/music/natsc.$SOUND_EXT',
-		'assets/music/pixelc.$SOUND_EXT',
-		'assets/music/protagc.$SOUND_EXT',
-		'assets/music/sayoc.$SOUND_EXT',
-		'assets/music/yuric.$SOUND_EXT'
+		'assets/music/disco.$SOUND_EXT'
+		// 'assets/music/monic.$SOUND_EXT',
+		// 'assets/music/natsc.$SOUND_EXT',
+		// 'assets/music/pixelc.$SOUND_EXT',
+		// 'assets/music/protagc.$SOUND_EXT',
+		// 'assets/music/sayoc.$SOUND_EXT',
+		// 'assets/music/yuric.$SOUND_EXT'
 	];
 
 	/// haya I love you for the base cache dump I took to the max
@@ -225,7 +225,7 @@ class Paths
 		return 'songs:assets/songs/${song.toLowerCase()}/${prefix}Voices${suffix}.$SOUND_EXT';
 		#else
 		var songKey:String = '${song.toLowerCase()}/${prefix}Voices${suffix}';
-		var voices = returnSound('songs', songKey);
+		var voices = returnSoundAlt('songs', songKey, "songs");
 		return voices;
 		#end
 	}
@@ -236,7 +236,7 @@ class Paths
 		return 'songs:assets/songs/${song.toLowerCase()}/Inst.$SOUND_EXT';
 		#else
 		var songKey:String = '${song.toLowerCase()}/Inst';
-		var inst = returnSound('songs', songKey);
+		var inst = returnSoundAlt('songs', songKey, "songs");
 		return inst;
 		#end
 	}
@@ -369,6 +369,25 @@ class Paths
 		{
 			if (OpenFlAssets.exists(getPath('$path/$key.$SOUND_EXT', SOUND, library)))
 				currentTrackedSounds.set(gottenPath, OpenFlAssets.getSound(getPath('$path/$key.$SOUND_EXT', SOUND, library)));
+			else
+				currentTrackedSounds.set(gottenPath, Sound.fromFile( #if ! mobile './' + #end gottenPath));
+		}
+
+		if (!localTrackedAssets.contains(gottenPath))
+			localTrackedAssets.push(gottenPath);
+
+		return currentTrackedSounds.get(gottenPath);
+	}
+
+	public static function returnSoundAlt(path:String, key:String, ?library:String)
+	{
+		var gottenPath:String = getPath('$path/$key.$SOUND_EXT', SOUND, null);
+		gottenPath = gottenPath.substring(gottenPath.indexOf(':') + 1, gottenPath.length);
+
+		if (!currentTrackedSounds.exists(gottenPath))
+		{
+			if (OpenFlAssets.exists('$library:$gottenPath'))
+				currentTrackedSounds.set(gottenPath, OpenFlAssets.getSound('$library:$gottenPath'));
 			else
 				currentTrackedSounds.set(gottenPath, Sound.fromFile('./' + gottenPath));
 		}

@@ -3046,7 +3046,7 @@ class PlayState extends MusicBeatState
 
 					#if FEATURE_MP4
 					var video:VideoHandler = new VideoHandler();
-					// gotta make a way to skip this in android
+					// gotta make a way to skip this in mobile
 					video.canSkip = SaveData.beatPrologue;
 					video.skipKeys = [FlxKey.ESCAPE, FlxKey.ENTER];
 					video.load(Assets.getBytes(Paths.video('monika')));

@@ -20,24 +20,35 @@
 
 	<!--These
 	window settings apply to all targets-->
-	<window width="1280" height="720" fps="" background="#000000" hardware="true" vsync="false"
-		orientation="landscape" fullscreen="false" resizable="true" />
+	<!--These
+	window settings apply to all targets-->
+	<window width="1280" height="720" fps="60" background="#000000" hardware="true" vsync="false" />
 
-	<!--Mobile/Switch-specific-->
-	<window if="mobile || switch" orientation="landscape" fullscreen="true" resizable="false"
-		vsync="true" />
+	<!--HTML5-specific-->
+	<window if="html5" resizable="true" />
+
+	<!--Desktop-specific-->
+	<window if="desktop" orientation="landscape" fullscreen="false" resizable="true" vsync="false" />
+
+	<!--Mobile-specific-->
+	<window if="mobile" orientation="landscape" fullscreen="true" resizable="false"
+		allow-shaders="true" require-shaders="true" allow-high-dpi="true" />
+
+	<!--Switch-specific-->
+	<window if="switch" orientation="landscape" fullscreen="true" width="0" height="0"
+		resizable="true" />
 
 	<!-- _____________________________ DDTO Settings ____________________________ -->
 
 	<!-- Defines whether or not this is a public build. -->
-	<define name="PUBLIC_BUILD" unless="debug" />
+	<define name="PUBLIC_BUILD" unless="debug || FORCE_DEBUG" />
 
 	<!-- Defines whether the Discord client should be enabled. -->
 	<define name="FEATURE_DISCORD" if="desktop PUBLIC_BUILD" unless="hl" />
 	<!-- Defines whether the file system can be read/written directly. Does not work in browser. -->
-	<define name="FEATURE_FILESYSTEM" if="desktop" />
+	<!-- <define name="FEATURE_FILESYSTEM" if="desktop || mobile" /> -->
 	<!-- Defines whether MP4 videos should be enabled. -->
-	<define name="FEATURE_MP4" if="desktop || android" unless="hl" />
+	<define name="FEATURE_MP4" if="desktop || mobile" unless="hl" />
 	<!-- Defines whether Caching is enabled. Will cause issues on systems with limited memory.
 	Doesn't work with Linux. -->
 	<define name="FEATURE_CACHING" if="desktop" unless="linux || 32bit" />
@@ -54,7 +65,7 @@
 	<!-- Defines whether there's an unlock all function in the Options menu. -->
 	<define name="FEATURE_UNLOCK" unless="PUBLIC_BUILD" />
 	<!-- Defines whether or not the Izzy Engine crash handler is used. -->
-	<define name="CRASH_HANDLER" if="desktop" unless="debug" />
+	<define name="CRASH_HANDLER" if="cpp" />
 
 	<!-- _____________________________ Path Settings ____________________________ -->
 
@@ -132,7 +143,7 @@
 	<ndll name="systools" haxelib="systools" if="FEATURE_GAMEJOLT" />
 
 	<!-- https://twitter.com/EliteMasterEric/status/1535814918917734400 -->
-	<haxelib name="hxcpp-debug-server" if="desktop debug" />
+	<haxelib name="hxcpp-debug-server" if="desktop debug || FORCE_DEBUG" />
 
 	<!-- <haxelib name="markdown" /> -->
 	<!-- <haxelib name="HtmlParser" /> -->
@@ -182,11 +193,11 @@
 
 	<!--Disable
 	the Flixel core debugger. Automatically gets set whenever you compile in release mode!-->
-	<haxedef name="FLX_NO_DEBUG" unless="debug" />
+	<haxedef name="FLX_NO_DEBUG" unless="debug || FORCE_DEBUG" />
 
 	<!--Enable
 	this for Nape release builds for a serious peformance improvement-->
-	<haxedef name="NAPE_RELEASE_BUILD" unless="debug" />
+	<haxedef name="NAPE_RELEASE_BUILD" unless="debug || FORCE_DEBUG" />
 
 	<!--Allow
 	working memory greater than 1GB-->
@@ -210,5 +221,13 @@
 	<icon path="art/icon256.png" size='256' />
 	<icon path="art/icon512.png" size='512' />
 	<icon path="art/iconOG.png" />
+
+	<!-- Mobile's architecture defines used for building. -->
+	<section if="mobile">
+		<architecture exclude="armv7" if="ONLY_ARM64" unless="UNIVERSAL" />
+		<architecture include="arm64" if="ONLY_ARM64 || UNIVERSAL" />
+		<architecture include="armv7" if="ONLY_ARMV7 || UNIVERSAL" />
+		<architecture exclude="arm64" if="ONLY_ARMV7" unless="UNIVERSAL" />
+	</section>
 
 </project>

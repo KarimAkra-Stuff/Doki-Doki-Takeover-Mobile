@@ -37,7 +37,7 @@ class Init extends MusicBeatState
 
 		FlxG.worldBounds.set(0, 0, FlxG.width, FlxG.height);
 		FlxG.fixedTimestep = false;
-		FlxG.game.focusLostFramerate = 60;
+		FlxG.game.focusLostFramerate = 30;
 
 		FlxG.mouse.useSystemCursor = !SaveData.customCursor;
 

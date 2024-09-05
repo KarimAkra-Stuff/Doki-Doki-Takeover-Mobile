@@ -13,7 +13,7 @@ class VideoHandler extends FlxVideo
 	{
 		super();
 
-		autoVolumeHandle = false;
+		// autoVolumeHandle = false;
 		onEndReached.add(function()
 		{
 			dispose();

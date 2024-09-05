@@ -6,9 +6,7 @@ import openfl.utils.Assets as OpenFlAssets;
 import flixel.graphics.FlxGraphic;
 import flixel.addons.transition.FlxTransitionableState;
 import openfl.utils.Assets;
-#if FEATURE_FILESYSTEM
 import sys.io.Process;
-#end
 
 using StringTools;
 
@@ -155,7 +153,7 @@ class CoolUtil
 
 	public static function setFPSCap(cap:Int):Void
 	{
-		openfl.Lib.current.stage.frameRate = cap;
+		openfl.Lib.current.stage.frameRate = FlxG.drawFramerate = FlxG.updateFramerate = cap;
 	}
 
 	public static function getUsername():String

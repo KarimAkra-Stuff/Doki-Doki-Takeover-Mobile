@@ -61,8 +61,8 @@ class MusicBeatState extends FlxUIState
 			}
 		}
 
-		if (CoolUtil.getFPSCap() != SaveData.framerate)
-			CoolUtil.setFPSCap(SaveData.framerate);
+		// if (CoolUtil.getFPSCap() != SaveData.framerate)
+		// 	CoolUtil.setFPSCap(SaveData.framerate);
 
 		// let's improve performance of this a tad
 		if (FlxG.autoPause != SaveData.autoPause)

@@ -13,16 +13,6 @@ import lime.app.Application;
 import Discord.DiscordClient;
 #end
 
-// crash handler stuff
-#if CRASH_HANDLER
-import openfl.events.UncaughtErrorEvent;
-import haxe.CallStack;
-import haxe.io.Path;
-import sys.FileSystem;
-import sys.io.File;
-import sys.io.Process;
-#end
-
 using StringTools;
 
 class Main extends Sprite
@@ -59,6 +49,12 @@ class Main extends Sprite
 		{
 			addEventListener(Event.ADDED_TO_STAGE, init);
 		}
+
+		#if android
+		Sys.setCwd(haxe.io.Path.addTrailingSlash(android.content.Context.getExternalFilesDir()));
+		#elseif ios
+		Sys.setCwd(lime.system.System.documentsDirectory);
+		#end
 	}
 
 	private function init(?E:Event):Void
@@ -80,18 +76,21 @@ class Main extends Sprite
 		startFullscreen = isSteamDeck();
 		#end
 
-		#if (flixel < "5.0.0")
+		#if (openfl <= "9.2.0")
 		var stageWidth:Int = Lib.current.stage.stageWidth;
 		var stageHeight:Int = Lib.current.stage.stageHeight;
 
-		if (zoom == -1)
+		if (game.zoom == -1.0)
 		{
 			var ratioX:Float = stageWidth / gameWidth;
 			var ratioY:Float = stageHeight / gameHeight;
 			zoom = Math.min(ratioX, ratioY);
-			gameWidth = Math.ceil(stageWidth / zoom);
-			gameHeight = Math.ceil(stageHeight / zoom);
+			gameWidth = Math.ceil(stageWidth / game.zoom);
+			gameHeight = Math.ceil(stageHeight / game.zoom);
 		}
+		#else
+		if (zoom == -1.0)
+			zoom = 1.0;
 		#end
 
 		game = new FlxGame(gameWidth, gameHeight, initialState, #if (flixel < "5.0.0") zoom, #end framerate, framerate, skipSplash, startFullscreen);
@@ -104,7 +103,11 @@ class Main extends Sprite
 			fpsVar.visible = SaveData.showFPS;
 
 		#if CRASH_HANDLER
-		Lib.current.loaderInfo.uncaughtErrorEvents.addEventListener(UncaughtErrorEvent.UNCAUGHT_ERROR, onCrash);
+		CrashHandler.init();
+		#end
+
+		#if FEATURE_MP4
+		hxvlc.util.Handle.init(#if (hxvlc >= "1.8.0") ['--no-lua' #if windows ,'--aout=waveout' #end] #end);
 		#end
 
 		// Finish up loading debug tools.
@@ -112,6 +115,35 @@ class Main extends Sprite
 		#if !hl
 		Debug.onGameStart();
 		#end
+
+		FlxG.signals.gameResized.add(function (w, h) {
+			if(fpsVar != null)
+				fpsVar.positionFPS(10, 3, Math.min(w / FlxG.width, h / FlxG.height));
+
+		     if (FlxG.cameras != null) {
+			   for (cam in FlxG.cameras.list) {
+				if (cam != null && cam.filters != null)
+					resetSpriteCache(cam.flashSprite);
+			   }
+			}
+
+			if (FlxG.game != null)
+			resetSpriteCache(FlxG.game);
+		});
+
+		#if web
+		FlxG.keys.preventDefaultKeys.push(TAB);
+		#else
+		FlxG.keys.preventDefaultKeys = [TAB];
+		#end
+		#if android FlxG.android.preventDefaultKeys = [BACK]; #end
+	}
+
+	static function resetSpriteCache(sprite:Sprite) {
+		@:privateAccess {
+		    sprite.__cacheBitmap = null;
+			sprite.__cacheBitmapData = null;
+		}
 	}
 
 	inline public static function isSteamDeck():Bool
@@ -125,52 +157,10 @@ class Main extends Sprite
 
 	inline public static function alertPopup(desc:String, title:String = 'Error!')
 	{
-		Application.current.window.alert(desc, title);
-	}
-
-	// Code was entirely made by sqirra-rng for their fnf engine named "Izzy Engine", big props to them!!!
-	// very cool person for real they don't get enough credit for their work
-	#if CRASH_HANDLER
-	function onCrash(e:UncaughtErrorEvent):Void
-	{
-		var errMsg:String = "";
-		var path:String;
-		var callStack:Array<StackItem> = CallStack.exceptionStack(true);
-		var dateNow:String = Date.now().toString();
-
-		dateNow = dateNow.replace(" ", "_");
-		dateNow = dateNow.replace(":", "'");
-
-		path = './crash/DDTO_$dateNow.txt';
-
-		for (stackItem in callStack)
-		{
-			switch (stackItem)
-			{
-				case FilePos(s, file, line, column):
-					errMsg += file + " (line " + line + ")\n";
-				default:
-					Sys.println(stackItem);
-			}
-		}
-
-		errMsg += "\nUncaught Error: "
-			+ e.error
-			+ "\nPlease report this error to the GitHub page: https://github.com/Jorge-SunSpirit/Doki-Doki-Takeover\n\n> Crash Handler written by: sqirra-rng";
-
-		if (!FileSystem.exists("./crash/"))
-			FileSystem.createDirectory("./crash/");
-
-		File.saveContent(path, errMsg + "\n");
-
-		Sys.println(errMsg);
-		Sys.println("Crash dump saved in " + Path.normalize(path));
-
-		Application.current.window.alert(errMsg, "Error!");
-		#if FEATURE_DISCORD
-		DiscordClient.shutdown();
+		#if (android && !macro)
+		android.Tools.showAlertDialog(title, desc, {name: 'ok', func: null});
+		#else
+		FlxG.stage.window.alert(desc, title);
 		#end
-		Sys.exit(1);
 	}
-	#end
 }

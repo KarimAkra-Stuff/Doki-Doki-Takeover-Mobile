@@ -3,12 +3,21 @@ package;
 import flixel.FlxG;
 import openfl.text.TextField;
 import openfl.text.TextFormat;
-import openfl.system.System;
+import openfl.system.System as OpenFlSystem;
+import lime.system.System as LimeSystem;
+#if cpp
+import cpp.vm.Gc;
+#end
 
 /**
 	The FPS class provides an easy-to-use monitor to display
 	the current frame rate of an OpenFL project
 **/
+#if (!windows && cpp)
+@:headerInclude('sys/utsname.h')
+#elseif (windows && cpp)
+@:cppFileCode('#include <windows.h>')
+#end
 class FPSCounter extends TextField
 {
 	/**
@@ -23,18 +32,24 @@ class FPSCounter extends TextField
 
 	@:noCompletion private var times:Array<Float>;
 
+	public var os:String = '';
+
 	public function new(x:Float = 10, y:Float = 10, color:Int = 0x000000)
 	{
 		super();
 
-		this.x = x;
-		this.y = y;
+		if (LimeSystem.platformName == LimeSystem.platformVersion || LimeSystem.platformVersion == null)
+			os = '\nOS: ${LimeSystem.platformName}' #if (cpp && !ios) + ' ${getArch()}' #end;
+		else
+			os = '\nOS: ${LimeSystem.platformName}' #if (cpp && !ios) + ' ${getArch()}' #end + ' - ${LimeSystem.platformVersion}';
+
+		positionFPS(x, y);
 
 		currentFPS = 0;
 		selectable = false;
 		mouseEnabled = false;
-		defaultTextFormat = new TextFormat("_sans", 14, color, true);
-		autoSize = LEFT;
+		defaultTextFormat = new TextFormat("_sans", 14, color);
+		width = FlxG.width;
 		multiline = true;
 		text = "FPS: ";
 
@@ -46,34 +61,82 @@ class FPSCounter extends TextField
 	// Event Handlers
 	private override function __enterFrame(deltaTime:Float):Void
 	{
-		if (deltaTimeout > 1000)
-		{
+		// prevents the overlay from updating every frame, why would you need to anyways
+		if (deltaTimeout > 1000) {
 			deltaTimeout = 0.0;
 			return;
 		}
 
-		var now:Float = haxe.Timer.stamp();
+		final now:Float = haxe.Timer.stamp() * 1000;
 		times.push(now);
+		while (times[0] < now - 1000) times.shift();
 
-		while (times[0] < now - 1000)
-			times.shift();
-
-		currentFPS = currentFPS < SaveData.framerate ? times.length : SaveData.framerate;
+		currentFPS = times.length < FlxG.updateFramerate ? times.length : FlxG.updateFramerate;		
 		updateText();
 		deltaTimeout += deltaTime;
 	}
 
-	public dynamic function updateText():Void
+	public dynamic function updateText():Void // so people can override it in hscript
 	{
-		text = 'FPS: ${currentFPS}'
-		+ '\nMemory: ${flixel.util.FlxStringUtil.formatBytes(memoryMegas)}';
+		text = 
+		'FPS: $currentFPS' + 
+		'\nMemory: ${flixel.util.FlxStringUtil.formatBytes(memoryMegas)}' +
+		os;
 
 		textColor = 0xFF1DADBB;
-
-		if (currentFPS < 60)
+		if (currentFPS < FlxG.drawFramerate * 0.5)
 			textColor = 0xFFBB2B1D;
 	}
 
 	inline function get_memoryMegas():Float
-		return cast(System.totalMemory, UInt);
+	{
+		#if cpp
+		return Gc.memInfo64(Gc.MEM_INFO_USAGE);
+		#else
+		return cast(OpenFlSystem.totalMemory, UInt);
+		#end
+	}
+
+	public inline function positionFPS(X:Float, Y:Float, ?scale:Float = 1){
+		scaleX = scaleY = #if mobile (scale > 1 ? scale : 1) #else (scale < 1 ? scale : 1) #end;
+		x = FlxG.game.x + X;
+		y = FlxG.game.y + Y;
+	}
+
+	#if cpp
+	#if windows
+	@:functionCode('
+		SYSTEM_INFO osInfo;
+
+		GetSystemInfo(&osInfo);
+
+		switch(osInfo.wProcessorArchitecture)
+		{
+			case 9:
+				return ::String("x86_64");
+			case 5:
+				return ::String("ARM");
+			case 12:
+				return ::String("ARM64");
+			case 6:
+				return ::String("IA-64");
+			case 0:
+				return ::String("x86");
+			default:
+				return ::String("Unknown");
+		}
+	')
+	#else
+	@:functionCode('
+		struct utsname osInfo{};
+		uname(&osInfo);
+		return ::String(osInfo.machine);
+	')
+	#end
+	@:noCompletion
+	private function getArch():String
+	{
+		return null;
+	}
+    #end
 }

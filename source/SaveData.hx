@@ -1,6 +1,6 @@
 import flixel.FlxG;
 import flixel.util.FlxSave;
-#if FEATURE_FILESYSTEM
+#if sys
 import sys.FileSystem;
 #end
 
@@ -42,7 +42,7 @@ class SaveData
 	public static var gfCountdown:Null<Bool> = false;
 	public static var zoom:Null<Float> = 1;
 	public static var middleOpponent:Null<Bool> = false;
-	public static var gpuTextures:Null<Bool> = true;
+	public static var gpuTextures:Null<Bool> = #if dektop true #else false #end;
 	public static var cacheSong:Null<Bool> = false;
 	public static var middleScroll:Null<Bool> = false;
 	public static var laneUnderlay:Null<Bool> = false;
