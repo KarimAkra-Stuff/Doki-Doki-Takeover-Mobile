@@ -232,7 +232,7 @@ class TouchPad extends FlxTypedSpriteGroup<TouchButton> implements MobileControl
 			button.tag = labelGraphic.toUpperCase();
 
 			button.onDown.callback = () -> onButtonDown.dispatch(button);
-			button.onUp.callback = () -> onButtonUp.dispatch(button);
+			button.onOut.callback = button.onUp.callback = () -> onButtonUp.dispatch(button);
 		}
 		return button;
 	}

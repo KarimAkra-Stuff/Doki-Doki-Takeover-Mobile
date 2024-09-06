@@ -168,7 +168,7 @@ class Hitbox extends FlxTypedSpriteGroup<TouchButton> implements MobileControls
 					}
 				});
 			}
-			button.onUp.callback = function()
+			button.onOut.callback = button.onUp.callback = function()
 			{
 				onButtonUp.dispatch(button);
 				if (hintTween != null)
@@ -186,7 +186,7 @@ class Hitbox extends FlxTypedSpriteGroup<TouchButton> implements MobileControls
 		else
 		{
 			button.onDown.callback = () -> onButtonDown.dispatch(button);
-			button.onUp.callback = () -> onButtonUp.dispatch(button);
+			button.onOut.callback = button.onUp.callback = () -> onButtonUp.dispatch(button);
 		}
 
 		button.statusAlphas = [];
