@@ -10,7 +10,7 @@
 		{
 			"name": "lime",
 			"type": "git",
-			"ref": "develop",
+			"ref": "4a83f8bc6b60ada46f25d35a7bfd06752b6dd2ac",
 			"url": "https://github.com/mcagabe19-stuff/lime"
 		},
 		{
