@@ -868,9 +868,9 @@ class Controls extends FlxActionSet
 
 	public function mobileControlsJustPressed(id:MobileButtonsList):Bool
 	{
-		var bools:Array<Bool> = [false, false];
+		var bools:Array<Bool> = [false, false, false];
 
-		var state = MusicBeatState.instance;
+		var state:Dynamic = MusicBeatState.instance;
 
 		if (state != null && state.touchPad != null)
 			bools[0] = state.touchPad.buttonJustPressed(id);
@@ -878,14 +878,19 @@ class Controls extends FlxActionSet
 		if (state != null && state.mobileControls != null)
 			bools[1] = state.mobileControls.buttonJustPressed(id);
 
-		return bools[0] || bools[1];
+		state = MusicBeatSubstate.instance;
+
+		if (state != null && state.touchPad != null)
+			bools[0] = state.touchPad.buttonJustPressed(id);
+
+		return bools[0] || bools[1] || bools[2];
 	}
 
 	public function mobileControlsJustReleased(id:MobileButtonsList):Bool
 	{
-		var bools:Array<Bool> = [false, false];
+		var bools:Array<Bool> = [false, false, false];
 
-		var state = MusicBeatState.instance;
+		var state:Dynamic = MusicBeatState.instance;
 
 		if (state != null && state.touchPad != null)
 			bools[0] = state.touchPad.buttonJustReleased(id);
@@ -893,14 +898,19 @@ class Controls extends FlxActionSet
 		if (state != null && state.mobileControls != null)
 			bools[1] = state.mobileControls.buttonJustReleased(id);
 
-		return bools[0] || bools[1];
+		state = MusicBeatSubstate.instance;
+
+		if (state != null && state.touchPad != null)
+			bools[0] = state.touchPad.buttonJustReleased(id);
+
+		return bools[0] || bools[1] || bools[2];
 	}
 
 	public function mobileControlsPressed(id:MobileButtonsList):Bool
 	{
-		var bools:Array<Bool> = [false, false];
+		var bools:Array<Bool> = [false, false, false];
 
-		var state = MusicBeatState.instance;
+		var state:Dynamic = MusicBeatState.instance;
 
 		if (state != null && state.touchPad != null)
 			bools[0] = state.touchPad.buttonPressed(id);
@@ -908,6 +918,11 @@ class Controls extends FlxActionSet
 		if (state != null && state.mobileControls != null)
 			bools[1] = state.mobileControls.buttonPressed(id);
 
-		return bools[0] || bools[1];
+		state = MusicBeatSubstate.instance;
+
+		if (state != null && state.touchPad != null)
+			bools[0] = state.touchPad.buttonPressed(id);
+
+		return bools[0] || bools[1] || bools[2];
 	}
 }

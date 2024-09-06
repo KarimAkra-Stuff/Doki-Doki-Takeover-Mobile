@@ -311,6 +311,9 @@ class PauseSubState extends MusicBeatSubstate
 		changeSelection();
 
 		cameras = [FlxG.cameras.list[FlxG.cameras.list.length - 1]];
+
+		addTouchPad('LEFT_FULL', 'A_C');
+		addTouchPadCamera();
 	}
 
 	override function update(elapsed:Float)
@@ -336,8 +339,8 @@ class PauseSubState extends MusicBeatSubstate
 
 		var upP = controls.UP_P;
 		var downP = controls.DOWN_P;
-		var leftP = FlxG.keys.pressed.SHIFT ? controls.LEFT : controls.LEFT_P;
-		var rightP = FlxG.keys.pressed.SHIFT ? controls.RIGHT : controls.RIGHT_P;
+		var leftP = (FlxG.keys.pressed.SHIFT || touchPad.buttonC.pressed) ? controls.LEFT : controls.LEFT_P;
+		var rightP = (FlxG.keys.pressed.SHIFT || touchPad.buttonC.pressed) ? controls.RIGHT : controls.RIGHT_P;
 		var accepted = controls.ACCEPT;
 		var reset = controls.RESET;
 
