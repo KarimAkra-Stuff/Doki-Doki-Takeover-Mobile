@@ -72,6 +72,23 @@ class OptionsState extends MusicBeatState
 			#end
 		]),
 		#end
+		new OptionCategory(LangUtil.getString('catSave', 'option'), [
+			#if FEATURE_LANGUAGE
+			new LanguageSelection(LangUtil.getString('descLanguage', 'option')),
+			#end
+			#if FEATURE_OBS
+			new SelfAwareness('...'),
+			#end
+			#if FEATURE_GAMEJOLT
+			new GameJolt(LangUtil.getString('descGameJolt', 'option')),
+			#end
+			#if FEATURE_UNLOCK
+			new UnlockAll("Unlocks everything that's offered in this game. Does not unlock costumes with requirements."),
+			#end
+			new ResetScore(LangUtil.getString('descScoreReset', 'option')),
+			new ResetStory(LangUtil.getString('descStoryReset', 'option')),
+			new ResetSave(LangUtil.getString('descSaveReset', 'option'))
+		]),
 		new OptionCategory('Mobile Options', [
 			new HitboxTypeOption("Change The Hitbox's Designe."),
 			new HitboxAlphaOption("Set The Hibtox's Opacity."),
