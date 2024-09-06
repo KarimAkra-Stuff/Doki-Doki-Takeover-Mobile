@@ -3,9 +3,9 @@ descKeyBindings	Change the key bindings of each note.
 descDownscroll	Change the direction of incoming notes.
 descGhostTap	Determines whether or not tapping outside of incoming notes will reduce your health.
 descJudgement	Customize the game's judgement timings.
-descFPSCap	Set the game's FPS cap. (Left or Right, Shift to go faster)
+descFPSCap	Set the game's FPS cap. (Left or Right, X to go faster)
 descCurFPSCap	Current FPS Cap
-descScroll	Change your note scroll speed. Mid-song speed changes won't apply. (Left or Right, Shift to go faster)
+descScroll	Change your note scroll speed. Mid-song speed changes won't apply. (Left or Right, X to go faster)
 descCurScroll	Current Scroll Speed
 descReset	Toggle pressing R to game over.
 descCustomize	Customize parts of the gameplay HUD to your heart's content.

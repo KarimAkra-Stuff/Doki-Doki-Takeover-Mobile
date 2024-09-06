@@ -5,7 +5,8 @@
       "graphic": "a",
       "x": 1156,
       "y": 596,
-      "color": "0xFF0000"
+      "color": "0xFF0000",
+      "id": ["BUTTON_A"]
     }
   ]
 }

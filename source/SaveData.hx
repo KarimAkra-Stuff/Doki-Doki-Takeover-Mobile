@@ -129,7 +129,8 @@ class SaveData
 
 	// Mobile
 	public static var hitboxType:String = 'Gradient';
-	public static var controlsAlpha:Float = 0.8;
+	public static var hitboxAlpha:Float = 0.6;
+	public static var touchPadAlpha:Float = 1.0;
 
 	private static var importantMap:Map<String, Array<String>> =
 	[

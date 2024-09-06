@@ -115,6 +115,7 @@ class Main extends Sprite
 		#if !hl
 		Debug.onGameStart();
 		#end
+		mobile.MobileData.init();
 
 		FlxG.signals.gameResized.add(function (w, h) {
 			if(fpsVar != null)

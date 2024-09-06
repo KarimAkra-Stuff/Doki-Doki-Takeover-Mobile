@@ -59,6 +59,7 @@ import openfl.filters.ShaderFilter;
 import flixel.util.FlxSpriteUtil;
 import flixel.group.FlxSpriteGroup;
 import shaders.*;
+import mobile.*;
 import StageData;
 #if FEATURE_DISCORD
 import Discord.DiscordClient;
@@ -2509,6 +2510,10 @@ class PlayState extends MusicBeatState
 		if (curStage == 'dokiclubroom' && staticshock != null)
 			add(staticshock);
 
+		addMobileControls();
+		mobileControls.onButtonDown.add(onButtonPress);
+		mobileControls.onButtonUp.add(onButtonRelease);
+
 		startingSong = true;
 		isintro = true;
 		if (showCutscene && !ForceDisableDialogue)
@@ -4896,7 +4901,7 @@ class PlayState extends MusicBeatState
 		if (SaveData.npsDisplay)
 			scoreTxt.text = Ratings.CalculateRanking((practiceMode ? practiceScore : songScore), nps, maxNPS, accuracy);
 
-		if (controls.PAUSE && startedCountdown && canPause)
+		if ((controls.PAUSE #if android || FlxG.android.justReleased.BACK #end) && startedCountdown && canPause)
 			pauseState();
 
 		if (FlxG.keys.justPressed.F7 #if !debug && SaveData.unlockedEpiphany #end)
@@ -5835,6 +5840,93 @@ class PlayState extends MusicBeatState
 			}
 		}
 		return -1;
+	}
+
+	private function onButtonPress(button:TouchButton):Void
+	{
+		var buttonCode:Int = MobileButtonsList.createAll().indexOf(button.id[0].getName().startsWith('NOTE') ? button.id[0] : button.id[1]);
+
+		if (!toggleBotplay && !paused && buttonCode > -1 && button.justPressed)
+		{
+			if (!boyfriend.stunned && generatedMusic && !endingSong)
+			{
+				// more accurate hit time for the ratings?
+				var lastTime:Float = Conductor.songPosition;
+				Conductor.songPosition = FlxG.sound.music.time + songOffset;
+
+				var canMiss:Bool = !SaveData.ghostTapping;
+
+				// heavily based on my own code LOL if it aint broke dont fix it
+				var pressNotes:Array<Note> = [];
+				// var notesDatas:Array<Int> = [];
+				var notesStopped:Bool = false;
+
+				var sortedNotesList:Array<Note> = [];
+				notes.forEachAlive(function(daNote:Note)
+				{
+					if (daNote.canBeHit && daNote.mustPress && !daNote.tooLate && !daNote.wasGoodHit && !daNote.isSustainNote)
+					{
+						if (daNote.noteData == buttonCode)
+							sortedNotesList.push(daNote);
+
+						if (mirrormode || (!mirrormode && daNote.noteType != 2))
+							canMiss = true;
+					}
+				});
+				sortedNotesList.sort((a, b) -> Std.int(a.strumTime - b.strumTime));
+
+				if (sortedNotesList.length > 0)
+				{
+					for (epicNote in sortedNotesList)
+					{
+						for (doubleNote in pressNotes)
+						{
+							if (Math.abs(doubleNote.strumTime - epicNote.strumTime) < 1)
+							{
+								doubleNote.kill();
+								notes.remove(doubleNote, true);
+								doubleNote.destroy();
+							}
+							else
+								notesStopped = true;
+						}
+
+						if (!notesStopped)
+						{
+							goodNoteHit(epicNote);
+							pressNotes.push(epicNote);
+						}
+					}
+				}
+				else if (canMiss)
+					noteMissPress(buttonCode);
+
+				// more accurate hit time for the ratings? part 2 (Now that the calculations are done, go back to the time it was before for not causing a note stutter)
+				Conductor.songPosition = lastTime;
+			}
+
+			var spr:StrumNote = playerStrums.members[buttonCode];
+			if (spr != null && spr.animation.curAnim.name != 'confirm')
+			{
+				spr.playAnim('pressed');
+				spr.resetAnim = 0;
+			}
+		}
+	}
+
+	private function onButtonRelease(button:TouchButton):Void
+	{
+		var buttonCode:Int = MobileButtonsList.createAll().indexOf(button.id[0].getName().startsWith('NOTE') ? button.id[0] : button.id[1]);
+
+		if (!toggleBotplay && !paused && buttonCode > -1)
+		{
+			var spr:StrumNote = playerStrums.members[buttonCode];
+			if (spr != null)
+			{
+				spr.playAnim('static');
+				spr.resetAnim = 0;
+			}
+		}
 	}
 
 	private function keyShit():Void

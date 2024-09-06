@@ -72,22 +72,10 @@ class OptionsState extends MusicBeatState
 			#end
 		]),
 		#end
-		new OptionCategory(LangUtil.getString('catSave', 'option'), [
-			#if FEATURE_LANGUAGE
-			new LanguageSelection(LangUtil.getString('descLanguage', 'option')),
-			#end
-			#if FEATURE_OBS
-			new SelfAwareness('...'),
-			#end
-			#if FEATURE_GAMEJOLT
-			new GameJolt(LangUtil.getString('descGameJolt', 'option')),
-			#end
-			#if FEATURE_UNLOCK
-			new UnlockAll("Unlocks everything that's offered in this game. Does not unlock costumes with requirements."),
-			#end
-			new ResetScore(LangUtil.getString('descScoreReset', 'option')),
-			new ResetStory(LangUtil.getString('descStoryReset', 'option')),
-			new ResetSave(LangUtil.getString('descSaveReset', 'option'))
+		new OptionCategory('Mobile Options', [
+			new HitboxTypeOption("Change The Hitbox's Designe."),
+			new HitboxAlphaOption("Set The Hibtox's Opacity."),
+			new TouchPadAlphaOption("Set The Touch Pad's Opacity.")
 		])
 	];
 
@@ -170,6 +158,9 @@ class OptionsState extends MusicBeatState
 
 		changeSelection();
 
+		addTouchPad('LEFT_FULL', 'A_B_X_Y');
+		addTouchPadCamera();
+
 		super.create();
 	}
 
@@ -199,9 +190,10 @@ class OptionsState extends MusicBeatState
 			if (controls.DOWN_P)
 				changeSelection(1);
 
-			changeValue(FlxG.keys.pressed.SHIFT ? controls.LEFT : controls.LEFT_P, FlxG.keys.pressed.SHIFT ? controls.RIGHT : controls.RIGHT_P);
+			changeValue((FlxG.keys.pressed.SHIFT || touchPad.buttonX.pressed) ? controls.LEFT : controls.LEFT_P,
+				(FlxG.keys.pressed.SHIFT || touchPad.buttonX.pressed) ? controls.RIGHT : controls.RIGHT_P);
 
-			if (controls.RESET)
+			if (controls.RESET || touchPad.buttonY.justPressed)
 			{
 				SaveData.offset = 0;
 				changeSelection();

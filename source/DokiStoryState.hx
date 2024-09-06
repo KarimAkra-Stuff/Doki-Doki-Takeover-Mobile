@@ -217,6 +217,8 @@ class DokiStoryState extends MusicBeatState
 		unlockedWeeks();
 		updateSelected();
 
+		addTouchPad('LEFT_FULL', 'A_B');
+		
 		super.create();
 	}
 	
@@ -409,6 +411,7 @@ class DokiStoryState extends MusicBeatState
 		}
 		else if (icons[curSelected][1])
 		{
+			touchPad.visible = false;
 			selectedSomethin = true;
 			FlxG.sound.play(Paths.sound('confirmMenu'));
 			goToState();

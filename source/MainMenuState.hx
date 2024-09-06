@@ -83,7 +83,9 @@ class MainMenuState extends MusicBeatState
 
 		persistentUpdate = persistentDraw = true;
 
+		#if desktop
 		FlxG.mouse.visible = true;
+		#end
 
 		if (!SaveData.beatPrologue)
 		{
@@ -253,8 +255,10 @@ class MainMenuState extends MusicBeatState
 			else
 				menuItem.x = 50;
 
+			#if desktop
 			// Add menu item into mouse manager, so it can be selected by cursor
 			mouseManager.add(menuItem, onMouseDown, null, onMouseOver);
+			#end
 		}
 
 		shaker = new FlxSprite(1132, 538);
@@ -265,7 +269,9 @@ class MainMenuState extends MusicBeatState
 		if (addVally)
 			add(shaker);
 
+		#if desktop
 		add(mouseManager);
+		#end
 
 		var versionShit:FlxText = new FlxText(-350, FlxG.height - 24, 0, "v" + Application.current.meta.get('version'), 12);
 		versionShit.scrollFactor.set();
@@ -288,6 +294,7 @@ class MainMenuState extends MusicBeatState
 
 		changeItem();
 
+		addTouchPad('UP_DOWN', 'A_B');
 		super.create();
 	}
 

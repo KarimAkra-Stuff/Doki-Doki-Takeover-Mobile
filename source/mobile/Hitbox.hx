@@ -9,6 +9,7 @@ import mobile.TouchButton;
 import openfl.display.Shape;
 import flixel.graphics.FlxGraphic;
 import flixel.group.FlxSpriteGroup.FlxTypedSpriteGroup;
+import flixel.util.FlxSignal;
 
 /**
  * A zone with 4 hint's (A hitbox).
@@ -16,12 +17,17 @@ import flixel.group.FlxSpriteGroup.FlxTypedSpriteGroup;
  *
  * @author: Mihai Alexandru and Karim Akra
  */
-class Hitbox extends FlxTypedSpriteGroup<HitboxButton>
+class Hitbox extends FlxTypedSpriteGroup<TouchButton> implements MobileControls
 {
-	public var buttonLeft:HitboxButton = new HitboxButton(0, 0);
-	public var buttonDown:HitboxButton = new HitboxButton(0, 0);
-	public var buttonUp:HitboxButton = new HitboxButton(0, 0);
-	public var buttonRight:HitboxButton = new HitboxButton(0, 0);
+	public var buttonLeft:TouchButton = new TouchButton(0, 0);
+	public var buttonDown:TouchButton = new TouchButton(0, 0);
+	public var buttonUp:TouchButton = new TouchButton(0, 0);
+	public var buttonRight:TouchButton = new TouchButton(0, 0);
+
+	public var instance:FlxTypedSpriteGroup<TouchButton>;
+	public var onButtonDown:FlxTypedSignal<TouchButton->Void> = new FlxTypedSignal<TouchButton->Void>();
+	public var onButtonUp:FlxTypedSignal<TouchButton->Void> = new FlxTypedSignal<TouchButton->Void>();
+
 
 	/**
 	 * Create the zone.
@@ -30,12 +36,84 @@ class Hitbox extends FlxTypedSpriteGroup<HitboxButton>
 	{
 		super();
 
-		add(buttonLeft = createHint(0, 0, Std.int(FlxG.width / 4), FlxG.height, 0xFFC24B99));
-		add(buttonDown = createHint(FlxG.width / 4, 0, Std.int(FlxG.width / 4), FlxG.height, 0xFF00FFFF));
-		add(buttonUp = createHint(FlxG.width / 2, 0, Std.int(FlxG.width / 4), FlxG.height, 0xFF12FA05));
-		add(buttonRight = createHint((FlxG.width / 2) + (FlxG.width / 4), 0, Std.int(FlxG.width / 4), FlxG.height, 0xFFF9393F));
+		add(buttonLeft = createHint(0, 0, Std.int(FlxG.width / 4), FlxG.height, 0xFFC24B99, [HITBOX_LEFT, NOTE_LEFT]));
+		add(buttonDown = createHint(FlxG.width / 4, 0, Std.int(FlxG.width / 4), FlxG.height, 0xFF00FFFF, [HITBOX_DOWN, NOTE_DOWN]));
+		add(buttonUp = createHint(FlxG.width / 2, 0, Std.int(FlxG.width / 4), FlxG.height, 0xFF12FA05, [HITBOX_UP, NOTE_UP]));
+		add(buttonRight = createHint((FlxG.width / 2) + (FlxG.width / 4), 0, Std.int(FlxG.width / 4), FlxG.height, 0xFFF9393F, [HITBOX_RIGHT, NOTE_RIGHT]));
 			
 		scrollFactor.set();
+		instance = this;
+	}
+
+	public function buttonJustPressed(id:MobileButtonsList):Bool
+	{
+		if(id == null) return false;
+
+		var button:TouchButton = null;
+
+		for(member in members)
+		{
+			if (member.id.contains(id))
+			{
+				button = member;
+				break;
+			}
+			else
+				continue;
+		}
+
+		if(button == null)
+			return false;
+
+		return button.justPressed;
+	}
+
+	public function buttonPressed(id:MobileButtonsList):Bool
+	{
+		if (id == null)
+			return false;
+
+		var button:TouchButton = null;
+
+		for (member in members)
+		{
+			if (member.id.contains(id))
+			{
+				button = member;
+				break;
+			}
+			else
+				continue;
+		}
+
+		if (button == null)
+			return false;
+
+		return button.pressed;
+	}
+
+	public function buttonJustReleased(id:MobileButtonsList):Bool
+	{
+		if (id == null)
+			return false;
+
+		var button:TouchButton = null;
+
+		for (member in members)
+		{
+			if (member.id.contains(id))
+			{
+				button = member;
+				break;
+			}
+			else
+				continue;
+		}
+
+		if (button == null)
+			return false;
+
+		return button.justReleased;
 	}
 
 	/**
@@ -46,41 +124,43 @@ class Hitbox extends FlxTypedSpriteGroup<HitboxButton>
 		super.destroy();
 
 		for (field in Reflect.fields(this))
-			if (Std.isOfType(Reflect.field(this, field), HitboxButton))
+			if (Std.isOfType(Reflect.field(this, field), TouchButton))
 				Reflect.setField(this, field, FlxDestroyUtil.destroy(Reflect.field(this, field)));
+
+		onButtonDown.removeAll();
+		onButtonUp.removeAll();
+		onButtonDown = onButtonDown = null;
 	}
 
-	private function createHint(X:Float, Y:Float, Width:Int, Height:Int, Color:Int = 0xFFFFFF):HitboxButton
+	private function createHint(X:Float, Y:Float, Width:Int, Height:Int, Color:Int = 0xFFFFFF, ?id:Array<MobileButtonsList>):TouchButton
 	{
-		var hint = new HitboxButton(X, Y, Width, Height);
+		var hint:TouchButton = getButtonInstance(X, Y, Width, Height);
 		hint.color = Color;
+		hint.id = id;
 		#if FLX_DEBUG
 		hint.ignoreDrawDebug = true;
 		#end
 		return hint;
 	}
-}
 
-class HitboxButton extends TouchButton
-{
-	public function new(x:Float, y:Float, ?width:Int, ?height:Int)
-    {
-		super(x, y);
+	private function getButtonInstance(x:Float = 0, y:Float = 0, ?width:Int, ?height:Int):TouchButton
+	{
+		var button:TouchButton = new TouchButton(x, y);
+		if (width == null || height == null)
+			return button;
 
-		if(width == null || height == null)
-			return;
-        
-        loadGraphic(createHintGraphic(width, height));
+		button.loadGraphic(createHintGraphic(width, height));
 
 		if (SaveData.hitboxType != "Hidden")
 		{
-    		var hintTween:FlxTween = null;
-			onDown.callback = function()
+			var hintTween:FlxTween = null;
+			button.onDown.callback = function()
 			{
+				onButtonDown.dispatch(button);
 				if (hintTween != null)
 					hintTween.cancel();
 
-				hintTween = FlxTween.tween(this, {alpha: SaveData.controlsAlpha}, SaveData.controlsAlpha / 100, {
+				hintTween = FlxTween.tween(button, {alpha: SaveData.hitboxAlpha}, SaveData.hitboxAlpha / 100, {
 					ease: FlxEase.circInOut,
 					onComplete: function(twn:FlxTween)
 					{
@@ -88,25 +168,13 @@ class HitboxButton extends TouchButton
 					}
 				});
 			}
-			onUp.callback = function()
+			button.onUp.callback = function()
 			{
+				onButtonUp.dispatch(button);
 				if (hintTween != null)
 					hintTween.cancel();
 
-				hintTween = FlxTween.tween(this, {alpha: 0.00001}, SaveData.controlsAlpha / 10, {
-					ease: FlxEase.circInOut,
-					onComplete: function(twn:FlxTween)
-					{
-						hintTween = null;
-					}
-				});
-			}
-			onOut.callback = function()
-			{
-				if (hintTween != null)
-					hintTween.cancel();
-
-				hintTween = FlxTween.tween(this, {alpha: 0.00001}, SaveData.controlsAlpha / 10, {
+				hintTween = FlxTween.tween(button, {alpha: 0.00001}, SaveData.hitboxAlpha / 10, {
 					ease: FlxEase.circInOut,
 					onComplete: function(twn:FlxTween)
 					{
@@ -115,29 +183,36 @@ class HitboxButton extends TouchButton
 				});
 			}
 		}
+		else
+		{
+			button.onDown.callback = () -> onButtonDown.dispatch(button);
+			button.onUp.callback = () -> onButtonUp.dispatch(button);
+		}
 
-        statusAlphas = [];
-		statusIndicatorType = NONE;
-		solid = false;
-		immovable = true;
-		multiTouch = true;
-		moves = false;
-		antialiasing = SaveData.globalAntialiasing;
-		alpha = 0.00001;
+		button.statusAlphas = [];
+		button.statusIndicatorType = NONE;
+		button.solid = false;
+		button.immovable = true;
+		button.multiTouch = true;
+		button.moves = false;
+		button.antialiasing = SaveData.globalAntialiasing;
+		button.alpha = 0.00001;
+		
+		return button;
 	}
 
 	function createHintGraphic(Width:Int, Height:Int):FlxGraphic
 	{
-		var guh = SaveData.controlsAlpha;
-        
+		var guh = SaveData.hitboxAlpha;
+
 		if (guh >= 0.9)
 			guh = guh - 0.1;
-        
-        var shape:Shape = new Shape();
+
+		var shape:Shape = new Shape();
 		shape.graphics.beginFill(0xFFFFFF);
 
 		if (SaveData.hitboxType == 'Gradient')
-        {
+		{
 			shape.graphics.lineStyle(3, 0xFFFFFF, 1);
 			shape.graphics.drawRect(0, 0, Width, Height);
 			shape.graphics.lineStyle(0, 0, 0);
@@ -147,8 +222,8 @@ class HitboxButton extends TouchButton
 			shape.graphics.drawRect(3, 3, Width - 6, Height - 6);
 			shape.graphics.endFill();
 		}
-        else
-        {
+		else
+		{
 			shape.graphics.lineStyle(10, 0xFFFFFF, 1);
 			shape.graphics.drawRect(0, 0, Width, Height);
 			shape.graphics.endFill();
@@ -156,7 +231,7 @@ class HitboxButton extends TouchButton
 
 		var bitmap:BitmapData = new BitmapData(Width, Height, true, 0);
 		bitmap.draw(shape);
-        
+
 		return FlxG.bitmap.add(bitmap);
 	}
 }

@@ -4,6 +4,8 @@ import haxe.ds.Map;
 import haxe.Json;
 import haxe.io.Path;
 import openfl.utils.Assets;
+import flixel.util.FlxSave;
+import flixel.math.FlxPoint;
 
 using StringTools;
 
@@ -15,45 +17,104 @@ class MobileData
 {
 	public static var actionModes:Map<String, TouchPadButtonsData> = new Map();
 	public static var dpadModes:Map<String, TouchPadButtonsData> = new Map();
+	public static var buttonsListIDs:Map<String, MobileButtonsList> = new Map();
+	public static var save:FlxSave = new FlxSave();
+	public static var mode(get, set):Int;
 
 	public static function init()
 	{
 		readDirectory(Paths.getLibraryPath('DPadModes', "mobile"), dpadModes);
 		readDirectory(Paths.getLibraryPath('ActionModes', "mobile"), actionModes);
-		// shit is meant for psych and not kade soo fuck it
-		// #if FEATURE_FILESYSTEM
-		// for (folder in Mods.directoriesWithFile(Paths.getSharedPath(), 'mobile/'))
-		// {
-		// 	readDirectory(Path.join([folder, 'DPadModes']), dpadModes);
-		// 	readDirectory(Path.join([folder, 'ActionModes']), actionModes);
-		// }
-		// #end
+
+		for (data in MobileButtonsList.createAll())
+			buttonsListIDs.set(data.getName(), data);
+
+		save.bind('MobileControls', SaveData.getSavePath());
+	}
+
+	public static function setTouchPadCustomMode(touchPad:TouchPad):Void
+	{
+		if (save.data.buttons == null)
+		{
+			save.data.buttons = new Array();
+			for (buttons in touchPad)
+				save.data.buttons.push(FlxPoint.get(buttons.x, buttons.y));
+		}
+		else
+		{
+			var tempCount:Int = 0;
+			for (buttons in touchPad)
+			{
+				save.data.buttons[tempCount] = FlxPoint.get(buttons.x, buttons.y);
+				tempCount++;
+			}
+		}
+
+		save.flush();
+	}
+
+	public static function getTouchPadCustomMode(touchPad:TouchPad):TouchPad
+	{
+		var tempCount:Int = 0;
+
+		if (save.data.buttons == null)
+			return touchPad;
+
+		for (buttons in touchPad)
+		{
+			if (save.data.buttons[tempCount] != null)
+			{
+				buttons.x = save.data.buttons[tempCount].x;
+				buttons.y = save.data.buttons[tempCount].y;
+			}
+			tempCount++;
+		}
+
+		return touchPad;
+	}
+
+	static function set_mode(mode:Int = 3)
+	{
+		save.data.mobileControlsMode = mode;
+		save.flush();
+		return mode;
+	}
+
+	static function get_mode():Int
+	{
+		if (save.data.mobileControlsMode == null)
+		{
+			save.data.mobileControlsMode = 3;
+			save.flush();
+		}
+
+		return save.data.mobileControlsMode;
 	}
 
 	public static function readDirectory(folder:String, map:Dynamic)
 	{
-		#if FEATURE_FILESYSTEM if(FileSystem.exists(folder)) #end
-			for (file in readDir(folder))
+		for (file in readDir(folder))
+		{
+			var fileWithNoLib:String = file.contains(':') ? file.split(':')[1] : file;
+			if (Path.extension(fileWithNoLib) == 'json')
 			{
-				var fileWithNoLib:String = file.contains(':') ? file.split(':')[1] : file;
-				if (Path.extension(fileWithNoLib) == 'json')
-				{
-				 	#if FEATURE_FILESYSTEM file = Path.join([folder, Path.withoutDirectory(file)]); #end
-					var str = #if FEATURE_FILESYSTEM File.getContent(file) #else Assets.getText(file) #end;
-					var json:TouchPadButtonsData = cast Json.parse(str);
-					var mapKey:String = Path.withoutDirectory(Path.withoutExtension(fileWithNoLib));
-					map.set(mapKey, json);
-				}
+			 	#if FEATURE_FILESYSTEM file = Path.join([folder, Path.withoutDirectory(file)]); #end
+				var str = #if FEATURE_FILESYSTEM File.getContent(file) #else Assets.getText(file) #end;
+				var json:TouchPadButtonsData = cast Json.parse(str);
+				var mapKey:String = Path.withoutDirectory(Path.withoutExtension(fileWithNoLib));
+				map.set(mapKey, json);
 			}
+		}
 	}
 
     public static function readDir(directory:String):Array<String>
 	{
+		var directoryWithNoLib:String = directory.contains(':') ? directory.split(':')[1] : directory;
 		#if FEATURE_FILESYSTEM
-		return FileSystem.readDirectory(directory);
+		return FileSystem.readDirectory(directoryWithNoLib);
 		#else
 		var dirs:Array<String> = [];
-		for(dir in Assets.list().filter(folder -> folder.startsWith(directory)))
+		for (dir in Assets.list().filter(folder -> folder.startsWith(directoryWithNoLib)))
 		{
 			@:privateAccess
 			for(library in lime.utils.Assets.libraries.keys())
@@ -80,5 +141,6 @@ typedef ButtonsData =
 	graphic:String, // the graphic of the button, usually can be located in the TouchPad xml .
 	x:Float, // the button's X position on screen.
 	y:Float, // the button's Y position on screen.
-	color:String // the button color, default color is white.
+	color:String, // the button color, default color is white.
+	id:Array<String> // should be a MobileButtonsList value as a string.
 }

@@ -13,6 +13,7 @@ import openfl.utils.Assets;
 import openfl.utils.AssetType;
 import openfl.display.BitmapData;
 import flixel.group.FlxSpriteGroup.FlxTypedSpriteGroup;
+import flixel.util.FlxSignal;
 
 using StringTools;
 
@@ -20,119 +21,225 @@ using StringTools;
  * ...
  * @author: Karim Akra and Lily Ross (mcagabe19)
  */
-class TouchPad extends FlxTypedSpriteGroup<TouchPadButton>
+@:access(mobile.TouchButton)
+class TouchPad extends FlxTypedSpriteGroup<TouchButton> implements MobileControls
 {
-	public var buttonLeft:TouchPadButton = new TouchPadButton(0, 0);
-	public var buttonUp:TouchPadButton = new TouchPadButton(0, 0);
-	public var buttonRight:TouchPadButton = new TouchPadButton(0, 0);
-	public var buttonDown:TouchPadButton = new TouchPadButton(0, 0);
-	public var buttonLeft2:TouchPadButton = new TouchPadButton(0, 0);
-	public var buttonUp2:TouchPadButton = new TouchPadButton(0, 0);
-	public var buttonRight2:TouchPadButton = new TouchPadButton(0, 0);
-	public var buttonDown2:TouchPadButton = new TouchPadButton(0, 0);
-	public var buttonA:TouchPadButton = new TouchPadButton(0, 0);
-	public var buttonB:TouchPadButton = new TouchPadButton(0, 0);
-	public var buttonC:TouchPadButton = new TouchPadButton(0, 0);
-	public var buttonD:TouchPadButton = new TouchPadButton(0, 0);
-	public var buttonE:TouchPadButton = new TouchPadButton(0, 0);
-	public var buttonF:TouchPadButton = new TouchPadButton(0, 0);
-	public var buttonG:TouchPadButton = new TouchPadButton(0, 0);
-	public var buttonH:TouchPadButton = new TouchPadButton(0, 0);
-	public var buttonI:TouchPadButton = new TouchPadButton(0, 0);
-	public var buttonJ:TouchPadButton = new TouchPadButton(0, 0);
-	public var buttonK:TouchPadButton = new TouchPadButton(0, 0);
-	public var buttonL:TouchPadButton = new TouchPadButton(0, 0);
-	public var buttonM:TouchPadButton = new TouchPadButton(0, 0);
-	public var buttonN:TouchPadButton = new TouchPadButton(0, 0);
-	public var buttonO:TouchPadButton = new TouchPadButton(0, 0);
-	public var buttonP:TouchPadButton = new TouchPadButton(0, 0);
-	public var buttonQ:TouchPadButton = new TouchPadButton(0, 0);
-	public var buttonR:TouchPadButton = new TouchPadButton(0, 0);
-	public var buttonS:TouchPadButton = new TouchPadButton(0, 0);
-	public var buttonT:TouchPadButton = new TouchPadButton(0, 0);
-	public var buttonU:TouchPadButton = new TouchPadButton(0, 0);
-	public var buttonV:TouchPadButton = new TouchPadButton(0, 0);
-	public var buttonW:TouchPadButton = new TouchPadButton(0, 0);
-	public var buttonX:TouchPadButton = new TouchPadButton(0, 0);
-	public var buttonY:TouchPadButton = new TouchPadButton(0, 0);
-	public var buttonZ:TouchPadButton = new TouchPadButton(0, 0);
+	public var buttonLeft:TouchButton = new TouchButton(0, 0);
+	public var buttonUp:TouchButton = new TouchButton(0, 0);
+	public var buttonRight:TouchButton = new TouchButton(0, 0);
+	public var buttonDown:TouchButton = new TouchButton(0, 0);
+	public var buttonA:TouchButton = new TouchButton(0, 0);
+	public var buttonB:TouchButton = new TouchButton(0, 0);
+	public var buttonC:TouchButton = new TouchButton(0, 0);
+	public var buttonD:TouchButton = new TouchButton(0, 0);
+	public var buttonE:TouchButton = new TouchButton(0, 0);
+	public var buttonF:TouchButton = new TouchButton(0, 0);
+	public var buttonG:TouchButton = new TouchButton(0, 0);
+	public var buttonH:TouchButton = new TouchButton(0, 0);
+	public var buttonI:TouchButton = new TouchButton(0, 0);
+	public var buttonJ:TouchButton = new TouchButton(0, 0);
+	public var buttonK:TouchButton = new TouchButton(0, 0);
+	public var buttonL:TouchButton = new TouchButton(0, 0);
+	public var buttonM:TouchButton = new TouchButton(0, 0);
+	public var buttonN:TouchButton = new TouchButton(0, 0);
+	public var buttonO:TouchButton = new TouchButton(0, 0);
+	public var buttonP:TouchButton = new TouchButton(0, 0);
+	public var buttonQ:TouchButton = new TouchButton(0, 0);
+	public var buttonR:TouchButton = new TouchButton(0, 0);
+	public var buttonS:TouchButton = new TouchButton(0, 0);
+	public var buttonT:TouchButton = new TouchButton(0, 0);
+	public var buttonU:TouchButton = new TouchButton(0, 0);
+	public var buttonV:TouchButton = new TouchButton(0, 0);
+	public var buttonW:TouchButton = new TouchButton(0, 0);
+	public var buttonX:TouchButton = new TouchButton(0, 0);
+	public var buttonY:TouchButton = new TouchButton(0, 0);
+	public var buttonZ:TouchButton = new TouchButton(0, 0);
+
+	public var instance:FlxTypedSpriteGroup<TouchButton>;
+	public var onButtonDown:FlxTypedSignal<TouchButton->Void> = new FlxTypedSignal<TouchButton->Void>();
+	public var onButtonUp:FlxTypedSignal<TouchButton->Void> = new FlxTypedSignal<TouchButton->Void>();
 
 	/**
 	 * Create a gamepad.
 	 *
-	 * @param   DPadMode     The D-Pad mode. `LEFT_FULL` for example.
-	 * @param   ActionMode   The action buttons mode. `A_B_C` for example.
+	 * @param   DPadMode     The D-Pad mode. `"LEFT_FULL"` for example.
+	 * @param   ActionMode   The action buttons mode. `"A_B"` for example.
 	 */
-	public function new(DPad:String, Action:String) {
+	public function new(DPad:String, Action:String)
+	{
 		super();
 
-		if (DPad != "NONE") {
+		if (DPad != "NONE")
+		{
 			if (!MobileData.dpadModes.exists(DPad))
 				throw 'The touchPad dpadMode "$DPad" doesn\'t exists.';
-			for (buttonData in MobileData.dpadModes.get(DPad).buttons) {
+			for (buttonData in MobileData.dpadModes.get(DPad).buttons)
+			{
 				Reflect.setField(this, buttonData.button,
 					createButton(buttonData.x, buttonData.y, buttonData.graphic, CoolUtil.colorFromString(buttonData.color)));
-				add(Reflect.field(this, buttonData.button));
+
+				var button:TouchButton = Reflect.field(this, buttonData.button);
+				var ids:Array<MobileButtonsList> = [];
+				if (buttonData.id != null)
+				{
+					for (id in buttonData.id)
+						if (id != null && MobileData.buttonsListIDs.exists(id))
+							ids.push(MobileData.buttonsListIDs.get(id));
+					button.id = ids;
+				}
+				add(button);
 			}
 		}
 
-		if (Action != "NONE") {
+		if (Action != "NONE")
+		{
 			if (!MobileData.actionModes.exists(Action))
 				throw 'The touchPad actionMode "$Action" doesn\'t exists.';
-			for (buttonData in MobileData.actionModes.get(Action).buttons) {
+			for (buttonData in MobileData.actionModes.get(Action).buttons)
+			{
 				Reflect.setField(this, buttonData.button,
 					createButton(buttonData.x, buttonData.y, buttonData.graphic, CoolUtil.colorFromString(buttonData.color)));
-				add(Reflect.field(this, buttonData.button));
+
+				var button:TouchButton = Reflect.field(this, buttonData.button);
+				var ids:Array<MobileButtonsList> = [];
+				if (buttonData.id != null)
+				{
+					for (id in buttonData.id)
+						if (id != null && MobileData.buttonsListIDs.exists(id))
+							ids.push(MobileData.buttonsListIDs.get(id));
+					button.id = ids;
+				}
+				add(button);
 			}
 		}
 
-		alpha = SaveData.controlsAlpha;
+		alpha = SaveData.touchPadAlpha;
 		scrollFactor.set();
+
+		instance = this;
 	}
 
-	override public function destroy() {
+	public function buttonJustPressed(id:MobileButtonsList):Bool
+	{
+		if (id == null)
+			return false;
+
+		var button:TouchButton = null;
+
+		for (member in members)
+		{
+			if (member.id.contains(id))
+			{
+				button = member;
+				break;
+			}
+			else
+				continue;
+		}
+
+		if (button == null)
+			return false;
+
+		return button.justPressed;
+	}
+
+	public function buttonPressed(id:MobileButtonsList):Bool
+	{
+		if (id == null)
+			return false;
+
+		var button:TouchButton = null;
+
+		for (member in members)
+		{
+			if (member.id.contains(id))
+			{
+				button = member;
+				break;
+			}
+			else
+				continue;
+		}
+
+		if (button == null)
+			return false;
+
+		return button.pressed;
+	}
+
+	public function buttonJustReleased(id:MobileButtonsList):Bool
+	{
+		if (id == null)
+			return false;
+
+		var button:TouchButton = null;
+
+		for (member in members)
+		{
+			if (member.id.contains(id))
+			{
+				button = member;
+				break;
+			}
+			else
+				continue;
+		}
+
+		if (button == null)
+			return false;
+
+		return button.justReleased;
+	}
+
+	override public function destroy()
+	{
 		super.destroy();
 
 		for (field in Reflect.fields(this))
-			if (Std.isOfType(Reflect.field(this, field), TouchPadButton))
+			if (Std.isOfType(Reflect.field(this, field), TouchButton))
 				Reflect.setField(this, field, FlxDestroyUtil.destroy(Reflect.field(this, field)));
+
+		onButtonDown.removeAll();
+		onButtonUp.removeAll();
+		onButtonDown = onButtonDown = null;
 	}
 
-	private function createButton(X:Float, Y:Float, Graphic:String, ?Color:FlxColor = 0xFFFFFF):TouchPadButton {
-		var button = new TouchPadButton(X, Y, Graphic.toUpperCase());
+	private function createButton(X:Float, Y:Float, Graphic:String, ?Color:FlxColor = 0xFFFFFF):TouchButton
+	{
+		var button = getButtonInstance(X, Y, Graphic.toUpperCase());
 		button.color = Color;
 		button.parentAlpha = this.alpha;
 		return button;
 	}
 
-	override function set_alpha(Value):Float {
-		forEachAlive((button:TouchPadButton) -> {
-			button.parentAlpha = Value;
-		});
-		return super.set_alpha(Value);
-	}
-}
+	private function getButtonInstance(x:Float = 0, y:Float = 0, ?labelGraphic:String):TouchButton
+	{
+		var button:TouchButton = new TouchButton(x, y);
+		if (labelGraphic != null)
+		{
+			button.label = new FlxSprite();
+			button.loadGraphic(Paths.image('touchpad/bg', "mobile"));
+			button.label.loadGraphic(Paths.image('touchpad/$labelGraphic', "mobile"));
+			button.scale.set(0.243, 0.243);
+			button.updateHitbox();
+			button.updateLabelPosition();
+			button.statusBrightness = [1, 0.75, 0.4];
+			button.statusIndicatorType = BRIGHTNESS;
+			button.indicateStatus();
+			button.immovable = true;
+			button.moves = button.solid = false;
+			button.antialiasing = button.label.antialiasing = SaveData.globalAntialiasing;
+			button.tag = labelGraphic.toUpperCase();
 
-class TouchPadButton extends TouchButton
-{
-	public function new(X:Float = 0, Y:Float = 0, ?labelGraphic:String){
-		super(X, Y);
-		if(labelGraphic != null){
-			label = new FlxSprite();
-			loadGraphic(Paths.image('touchpad/bg', "mobile"));
-			label.loadGraphic(Paths.image('touchpad/$labelGraphic', "mobile"));
-			scale.set(0.243, 0.243);
-			updateHitbox();
-			updateLabelPosition();
-			statusBrightness = [1, 0.9, 0.6];
-			statusIndicatorType = BRIGHTNESS;
-			indicateStatus();
-			solid = false;
-			immovable = true;
-			moves = false;
-			antialiasing = SaveData.globalAntialiasing;
-			label.antialiasing = SaveData.globalAntialiasing;
-			tag = labelGraphic.toUpperCase();
+			button.onDown.callback = () -> onButtonDown.dispatch(button);
+			button.onUp.callback = () -> onButtonUp.dispatch(button);
 		}
+		return button;
+	}
+
+	override function set_alpha(Value):Float
+	{
+		forEachAlive((button:TouchButton) -> button.parentAlpha = Value);
+		return super.set_alpha(Value);
 	}
 }

@@ -84,7 +84,7 @@ class FirstBootState extends MusicBeatState
 	{
 		super.update(elapsed);
 
-		if (controls.ACCEPT && selectedSomethin && !selectedsomething)
+		if ((controls.ACCEPT || (FlxG.touches.getFirst() != null && FlxG.touches.getFirst().justPressed)) && selectedSomethin && !selectedsomething)
 		{
 			FlxG.sound.play(Paths.sound('exitOS', 'preload'));
 

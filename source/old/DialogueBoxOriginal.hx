@@ -176,7 +176,7 @@ class DialogueBox extends FlxSpriteGroup
 			dialogueStarted = true;
 		}
 
-		if (PlayerSettings.player1.controls.BACK && !stopspamming && canSkip && canFullSkip && dialogueStarted)
+		if ((PlayerSettings.player1.controls.BACK #if android || FlxG.android.justReleased.BACK #end) && !stopspamming && canSkip && canFullSkip && dialogueStarted)
 		{
 			isEnding = true;
 			stopspamming = true;
@@ -184,14 +184,14 @@ class DialogueBox extends FlxSpriteGroup
 			endinstantly();
 		}
 
-		if (PlayerSettings.player1.controls.ACCEPT && dialogueEnded && canSkip)
+		if ((PlayerSettings.player1.controls.ACCEPT || (FlxG.touches.getFirst() != null && FlxG.touches.getFirst().justPressed)) && dialogueEnded && canSkip)
 		{
 			remove(dialogue);
 
 			FlxG.sound.play(Paths.sound('clickText'), 0.8);
 			enddialogue();
 		}
-		else if (PlayerSettings.player1.controls.ACCEPT && dialogueStarted && canSkip)
+		else if ((PlayerSettings.player1.controls.ACCEPT || (FlxG.touches.getFirst() != null && FlxG.touches.getFirst().justPressed)) && dialogueStarted && canSkip)
 			swagDialogue.skip();
 
 		super.update(elapsed);

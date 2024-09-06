@@ -10,7 +10,7 @@ import flixel.sound.FlxSound;
 import flixel.FlxSprite;
 import flixel.FlxCamera;
 import flixel.FlxG;
-#if mac
+#if desktop
 import flixel.input.mouse.FlxMouseButton;
 #end
 
@@ -39,6 +39,8 @@ class TouchButton extends TypedTouchButton<FlxSprite>
 	 * A simple tag that returns the button's graphic name in upper case.
 	**/
 	public var tag:String;
+
+	public var id:Array<MobileButtonsList> = [];
 
 	/**
 	 * Creates a new `TouchButton` object
@@ -266,7 +268,7 @@ class TypedTouchButton<T:FlxSprite> extends FlxSprite implements IFlxInput
 		
 		for (camera in cameras)
 		{
-			#if mac
+			#if desktop
 			var button = FlxMouseButton.getByID(FlxMouseButtonID.LEFT);
 			if(checkInput(FlxG.mouse, button, button.justPressedPosition, camera))
 			#else

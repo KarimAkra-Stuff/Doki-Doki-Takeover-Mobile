@@ -26,7 +26,8 @@
       "graphic": "b",
       "x": 1032,
       "y": 596,
-      "color": "0xFFCB00"
+      "color": "0xFFCB00",
+      "id": ["BUTTON_B"]
     },
     {
       "button": "buttonZ",
@@ -40,7 +41,8 @@
       "graphic": "a",
       "x": 1156,
       "y": 596,
-      "color": "0xFF0000"
+      "color": "0xFF0000",
+      "id": ["BUTTON_A"]
     }
   ]
 }

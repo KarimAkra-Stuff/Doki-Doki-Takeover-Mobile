@@ -1154,3 +1154,136 @@ class CustomCursor extends Option
 		return LangUtil.getString('nameCursor', 'option') + ' ' + (SaveData.customCursor ? LangUtil.getString('cmnOn') : LangUtil.getString('cmnOff'));
 	}
 }
+
+class HitboxTypeOption extends Option
+{
+	public var typesList:Array<String> = ['Gradient', 'No Gradient', 'Hidden'];
+	public var curType:Int = 0;
+	
+	public function new(desc:String)
+	{
+		super();
+		description = desc;
+		curType = typesList.indexOf(SaveData.hitboxType);
+	}
+
+	public override function press():Bool
+	{
+		if(curType == 2)
+			curType = 0;
+		else
+			curType++;
+		SaveData.hitboxType = typesList[curType];
+		display = updateDisplay();
+		return true;
+	}
+
+	private override function updateDisplay():String
+	{
+		return "Hitbox Designe: " + SaveData.hitboxType;
+	}
+}
+
+class HitboxAlphaOption extends Option
+{
+	public function new(desc:String)
+	{
+		super();
+		description = desc;
+		acceptValues = true;
+	}
+
+	public override function press():Bool
+	{
+		return false;
+	}
+
+	private override function updateDisplay():String
+	{
+		return 'Hitbox Opacity';
+	}
+
+	override function right():Bool
+	{
+		SaveData.hitboxAlpha += 0.01;
+
+		if (SaveData.hitboxAlpha > 1)
+			SaveData.hitboxAlpha = 1;
+		else if (SaveData.hitboxAlpha < 0.01)
+			SaveData.hitboxAlpha = 0.01;
+
+		return true;
+	}
+
+	override function left():Bool
+	{
+		SaveData.hitboxAlpha -= 0.01;
+
+		if (SaveData.hitboxAlpha > 1)
+			SaveData.hitboxAlpha = 1;
+		else if (SaveData.hitboxAlpha < 0.01)
+			SaveData.hitboxAlpha = 0.01;
+
+		return true;
+	}
+
+	override function getValue():String
+	{
+		return "Current Hitbox Opacity" + ': ${Math.fround(SaveData.hitboxAlpha * 100)}%';
+	}
+}
+
+class TouchPadAlphaOption extends Option
+{
+	public function new(desc:String)
+	{
+		super();
+		description = desc;
+		acceptValues = true;
+	}
+
+	public override function press():Bool
+	{
+		return false;
+	}
+
+	private override function updateDisplay():String
+	{
+		return 'Touch Pad Opacity';
+	}
+
+	override function right():Bool
+	{
+		SaveData.touchPadAlpha += 0.01;
+
+		if (SaveData.touchPadAlpha > 1)
+			SaveData.touchPadAlpha = 1;
+		else if (SaveData.touchPadAlpha < 0.01)
+			SaveData.touchPadAlpha = 0.01;
+
+		if (MusicBeatState.instance != null)
+			MusicBeatState.instance.touchPad.alpha = SaveData.touchPadAlpha;
+
+		return true;
+	}
+
+	override function left():Bool
+	{
+		SaveData.touchPadAlpha -= 0.01;
+
+		if (SaveData.touchPadAlpha > 1)
+			SaveData.touchPadAlpha = 1;
+		else if (SaveData.touchPadAlpha < 0.01)
+			SaveData.touchPadAlpha = 0.01;
+
+		if(MusicBeatState.instance != null)
+			MusicBeatState.instance.touchPad.alpha = SaveData.touchPadAlpha;
+
+		return true;
+	}
+
+	override function getValue():String
+	{
+		return "Current Touch Pad Opacity" + ': ${Math.fround(SaveData.touchPadAlpha * 100)}%';
+	}
+}
