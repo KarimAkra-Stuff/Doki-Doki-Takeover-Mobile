@@ -72,6 +72,9 @@ class DokiSideStory extends MusicBeatSubstate
 		});
 
 		changeItem();
+
+		addTouchPad('LEFT_FULL', 'A_B');
+		addTouchPadCamera();
 	}
 
 	override function update(elapsed:Float):Void
@@ -90,6 +93,7 @@ class DokiSideStory extends MusicBeatSubstate
 			{
 				FlxG.sound.play(Paths.sound('cancelMenu'));
 				DokiStoryState.instance.acceptInput = true;
+				DokiStoryState.instance.touchPad.visible = false;
 				close();
 			}
 

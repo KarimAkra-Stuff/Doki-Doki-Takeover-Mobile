@@ -69,9 +69,9 @@ class CrashHandler
 					switch (parent)
 					{
 						case Method(cla, func):
-							stackLabelArr.push('${file.replace('.hx', '')}.$func() [line $line - column $col]');
+							stackLabelArr.push('${file.replace('.hx', '')}.$func() [line $line]');
 						case _:
-							stackLabelArr.push('${file.replace('.hx', '')} [line $line - column $col]');
+							stackLabelArr.push('${file.replace('.hx', '')} [line $line]');
 					}
 				case LocalFunction(v):
 					stackLabelArr.push('Local Function ${v}');
@@ -94,7 +94,7 @@ class CrashHandler
 
 		Main.alertPopup('$m\n$stackLabel', "Error!");
 
-		LimeSystem.exit(1);
+		LimeSystem.exit(0);
 	}
 
 	/**

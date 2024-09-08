@@ -69,6 +69,10 @@ class Main extends Sprite
 
 	private function setupGame():Void
 	{
+		#if CRASH_HANDLER
+		CrashHandler.init();
+		#end
+		
 		// Run this first so we can see logs.
 		Debug.onInitProgram();
 
@@ -101,10 +105,6 @@ class Main extends Sprite
 
 		if (fpsVar != null)
 			fpsVar.visible = SaveData.showFPS;
-
-		#if CRASH_HANDLER
-		CrashHandler.init();
-		#end
 
 		#if FEATURE_MP4
 		hxvlc.util.Handle.init(#if (hxvlc >= "1.8.0") ['--no-lua' #if windows ,'--aout=waveout' #end] #end);

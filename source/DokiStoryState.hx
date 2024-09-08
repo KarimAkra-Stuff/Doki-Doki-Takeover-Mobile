@@ -411,11 +411,13 @@ class DokiStoryState extends MusicBeatState
 		}
 		else if (icons[curSelected][1])
 		{
-			touchPad.visible = false;
 			selectedSomethin = true;
 			FlxG.sound.play(Paths.sound('confirmMenu'));
 			goToState();
 		}
+		
+		acceptInput = false;
+		touchPad.visible = false;
 	}
 
 	function changeItem(huh:Int = 0)
