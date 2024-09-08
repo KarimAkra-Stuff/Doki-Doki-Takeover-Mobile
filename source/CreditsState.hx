@@ -194,6 +194,8 @@ class CreditsState extends MusicBeatState
 
 		changeItem();
 
+		addTouchPad('LEFT_FULL', 'A_B');
+
 		super.create();
 	}
 

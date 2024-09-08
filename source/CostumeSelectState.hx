@@ -234,6 +234,8 @@ class CostumeSelectState extends MusicBeatState
 
 		changeItem();
 
+		addTouchPad('UP_DOWN', 'A_B');
+
 		super.create();
 	}
 

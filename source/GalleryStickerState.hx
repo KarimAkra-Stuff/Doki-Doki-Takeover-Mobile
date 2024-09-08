@@ -83,6 +83,8 @@ class GalleryStickerState extends MusicBeatState
 
 		changeItem();
 
+		addTouchPad('LEFT_RIGHT', 'A_B');
+
 		super.create();
 	}
 
@@ -120,7 +122,7 @@ class GalleryStickerState extends MusicBeatState
 			dontSpam = true;
 		}
 
-		if (FlxG.keys.justPressed.S)
+		if (FlxG.keys.justPressed.S || FlxG.mouse.overlaps(switchState) && FlxG.mouse.justPressed)
 			MusicBeatState.switchState(new GalleryArtState());
 
 		if (FlxG.sound.music != null)

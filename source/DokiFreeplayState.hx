@@ -17,6 +17,7 @@ import flixel.util.FlxTimer;
 import flixel.effects.FlxFlicker;
 import flixel.addons.transition.FlxTransitionableState;
 import flixel.input.mouse.FlxMouseEventManager;
+import flixel.FlxSubState;
 #if FEATURE_DISCORD
 import Discord.DiscordClient;
 #end
@@ -306,6 +307,9 @@ class DokiFreeplayState extends MusicBeatState
 			add(costumeSelect);
 
 		add(mouseManager);
+
+
+		addTouchPad('LEFT_FULL', 'A_B');
 
 		super.create();
 	}
@@ -771,6 +775,23 @@ class DokiFreeplayState extends MusicBeatState
 			changePage(page);
 
 		LoadingState.loadAndSwitchState(new DokiFreeplayState(), false);
+	}
+
+	override public function closeSubState()
+	{
+		super.closeSubState();
+		addTouchPad('LEFT_FULL', 'A_B');
+		new FlxTimer().start(0.1, function(tmr:FlxTimer)
+		{
+			acceptInput = true; //avoid wierd interaction (?)
+		});
+	}
+
+	override public function openSubState(SubState:FlxSubState)
+	{
+		removeTouchPad();
+		super.openSubState(SubState);
+		MusicBeatSubstate.instance.addTouchPad('LEFT_FULL', 'A_B');
 	}
 }
 

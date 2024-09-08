@@ -364,6 +364,7 @@ class MainMenuState extends MusicBeatState
 			case 'options':
 				MusicBeatState.switchState(new OptionsState());
 			case 'exit':
+				removeTouchPad();
 				openSubState(new CloseGameSubState());
 		}
 	}

@@ -51,6 +51,8 @@ class CloseGameSubState extends MusicBeatSubstate
 		add(selectGrp);
 
 		changeItem();
+		
+		addTouchPad("LEFT_RIGHT", "A_B");
 	}
 
 	override function update(elapsed:Float):Void

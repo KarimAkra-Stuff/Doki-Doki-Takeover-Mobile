@@ -83,6 +83,8 @@ class GalleryArtState extends MusicBeatState
 
 		changeItem();
 
+		addTouchPad('LEFT_RIGHT', 'A_B');
+
 		super.create();
 	}
 
@@ -120,7 +122,7 @@ class GalleryArtState extends MusicBeatState
 			dontSpam = true;
 		}
 
-		if (FlxG.keys.justPressed.S)
+		if (FlxG.keys.justPressed.S || FlxG.mouse.overlaps(switchState) && FlxG.mouse.justPressed) //Does it work the same as using touch?
 			MusicBeatState.switchState(new GalleryStickerState());
 
 		if (FlxG.sound.music != null)
