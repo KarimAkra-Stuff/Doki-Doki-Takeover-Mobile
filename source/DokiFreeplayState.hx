@@ -81,7 +81,7 @@ class DokiFreeplayState extends MusicBeatState
 	];
 
 	public static function loadDiff(diff:Int, name:String, array:Array<SwagSong>)
-	{
+	{ //ehhhhhhh why
 		try
 		{
 			array.push(Song.loadFromJson(Highscore.formatSong(name, diff), name));
