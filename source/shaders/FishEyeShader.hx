@@ -16,6 +16,7 @@ class FishEyeShader extends FlxShader // https://www.shadertoy.com/view/WsVSzV
 			#define iChannel0 bitmap
 			#define texture flixel_texture2D
 			#define fragColor gl_FragColor
+			#define iResolution openfl_TextureSize
 			#define mainImage main
 
 			//For AMD, uniform cannot have anything after its been assigned. 
@@ -25,9 +26,8 @@ class FishEyeShader extends FlxShader // https://www.shadertoy.com/view/WsVSzV
 			void mainImage()
 				{
 				// squared distance from center
+				vec2 fragCoord = openfl_TextureCoordv*iResolution;
 				vec2 uv = fragCoord/iResolution.xy;
-			  vec2 fragCoord = openfl_TextureCoordv*openfl_TextureSize;
-		  	vec2 iResolution = openfl_TextureSize;
 				vec2 dc = abs(0.5-uv);
 				dc *= dc;
 				

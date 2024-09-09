@@ -13,7 +13,7 @@ class ChannelMaskShader extends FlxShader
 
 	void main()
 	{
-		vec4 texture = texture2D(bitmap, openfl_TextureCoordv.xy) / openfl_Alphav;
+		vec4 texture = flixel_texture2D(bitmap, openfl_TextureCoordv.xy) / openfl_Alphav;
 		float alpha = texture.a * openfl_Alphav;
 
 		vec3 rCol = rCol;

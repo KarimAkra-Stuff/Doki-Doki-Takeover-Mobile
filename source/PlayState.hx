@@ -2511,6 +2511,7 @@ class PlayState extends MusicBeatState
 			add(staticshock);
 
 		addMobileControls();
+		mobileControlsCamera.visible = false;
 		mobileControls.onButtonDown.add(onButtonPress);
 		mobileControls.onButtonUp.add(onButtonRelease);
 
@@ -3353,6 +3354,7 @@ class PlayState extends MusicBeatState
 
 	function startCountdown():Void
 	{
+		mobileControlsCamera.visible = true;
 		camHUD.visible = true;
 
 		if (camHUD.alpha != 0 && inCutscene && !isPixelUI)
@@ -4904,7 +4906,7 @@ class PlayState extends MusicBeatState
 		if ((controls.PAUSE #if android || FlxG.android.justReleased.BACK #end) && startedCountdown && canPause)
 			pauseState();
 
-		if (FlxG.keys.justPressed.F7 #if !debug && SaveData.unlockedEpiphany #end)
+		if (FlxG.keys.justPressed.F7 /*#if !debug && SaveData.unlockedEpiphany #end*/)
 		{
 			#if FEATURE_DISCORD
 			DiscordClient.changePresence("Chart Editor", null, null, true);
