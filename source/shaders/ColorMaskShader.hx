@@ -12,13 +12,10 @@ class ColorMaskShader extends FlxShader
 
 	void main()
 	{
-		vec4 texture = flixel_texture2D(bitmap, openfl_TextureCoordv.xy) / openfl_Alphav;
-		float alpha = texture.g * openfl_Alphav;
-
-		vec3 color1 = color1;
-		vec3 color2 = color2;
-
-		gl_FragColor = vec4(mix(color1, color2, vec3(texture.r)) * alpha, alpha);
+		vec4 textureColor = flixel_texture2D(bitmap, openfl_TextureCoordv.xy);
+		float alpha = textureColor.g * openfl_Alphav;
+		vec3 finalColor = mix(color1, color2, textureColor.r);
+		gl_FragColor = vec4(finalColor * alpha, alpha);
 	}
 	')
 
