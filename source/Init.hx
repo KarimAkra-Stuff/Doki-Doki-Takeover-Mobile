@@ -32,7 +32,7 @@ class Init extends MusicBeatState
 		if (Main.fpsVar == null)
 		{
 			Main.tongue = new FireTongueEx();
-			Main.tongue.initialize({locale: SaveData.language});
+			Main.tongue.initialize({locale: SaveData.language, checkMissing: true, replaceMissing: true});
 		}
 
 		FlxG.worldBounds.set(0, 0, FlxG.width, FlxG.height);

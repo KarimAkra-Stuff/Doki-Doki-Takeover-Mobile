@@ -61,7 +61,7 @@
 	trace logging is disabled. -->
 	<define name="FEATURE_LOGGING" if="FEATURE_FILESYSTEM" unless="PUBLIC_BUILD" />
 	<!-- Defines whether or not language support is available. -->
-	<!-- <define name="FEATURE_LANGUAGE" /> -->
+	<define name="FEATURE_LANGUAGE" />
 	<!-- Defines whether there's an unlock all function in the Options menu. -->
 	<define name="FEATURE_UNLOCK" unless="PUBLIC_BUILD" />
 	<!-- Defines whether or not the Izzy Engine crash handler is used. -->

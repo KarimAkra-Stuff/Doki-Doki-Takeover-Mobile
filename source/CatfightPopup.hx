@@ -93,7 +93,7 @@ class CatfightPopup extends MusicBeatSubstate
 				if (isFreePlay)
 					DokiFreeplayState.instance.acceptInput = true;
 				else
-					DokiSideStory.sidestoryinstance.acceptInput = true;
+					//DokiSideStory.sidestoryinstance.acceptInput = true;
 	
 				close();
 			}
