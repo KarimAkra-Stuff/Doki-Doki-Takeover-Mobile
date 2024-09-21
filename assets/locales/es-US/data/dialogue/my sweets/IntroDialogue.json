@@ -1,0 +1,87 @@
+{
+	"startingMusic": "natsc",
+	"initStyle": "normal",
+	"dialogue": 
+	[
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "neutral",
+			"string": "\"...está bien, me has convencido.\"",
+			"key": "sweeIntro1",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "yuri",
+			"expression": "neutral",
+			"string": "\"Oh?\"",
+			"key": "sweeIntro2",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "neutral",
+			"string": "\"Será mejor que no le digas esto a NADIE, pero a veces canto frente al espejo en mi cepillo para el cabello.\"",
+			"key": "sweeIntro3",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "hmmph",
+			"string": "\"Sin embargo, solo cuando mi papá no está en casa.\"",
+			"key": "sweeIntro4",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "yuri",
+			"expression": "smile",
+			"string": "\"...uhuhu.\"",
+			"key": "sweeIntro5",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "angy",
+			"string": "\"¡Ey! Escuché eso, ¿sabes?\"",
+			"key": "sweeIntro6",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "yuri",
+			"expression": "smile",
+			"string": "\"Es solo... imaginarte haciendo eso, es una imagen mental bastante adorable.\"",
+			"key": "sweeIntro7",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "angy",
+			"string": "\"¡C-cállate! ¡Y deja de llamarme linda! N-no soy lindo.\"",
+			"key": "sweeIntro8",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "hmmph",
+			"string": "\"Uf, no debería haber dicho nada.\"",
+			"key": "sweeIntro9",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "neutral",
+			"string": "\"Empecemos con esto.\"",
+			"key": "sweeIntro10",
+			"side": "left"
+		}
+	]
+}

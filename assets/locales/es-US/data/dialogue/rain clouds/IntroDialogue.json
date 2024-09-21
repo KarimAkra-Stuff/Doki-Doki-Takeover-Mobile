@@ -1,0 +1,328 @@
+{
+	"startingMusic": "sayoc",
+	"initStyle": "normal",
+	"dialogue": 
+	[
+		{
+			"isCommand": false,
+			"name": "yuri",
+			"expression": "neutral",
+			"string": "\"Parece que tenemos visitas.\"",
+			"key": "rcIntro1",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "hmmph",
+			"string": "\"¿En serio Sayori? ¿Trajiste un chico al club?\"",
+			"key": "rcIntro2",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "ehh",
+			"string": "\"Oye, no esperaba a nadie nuevo. ¡Ni siquiera hemos sacado volantes para el club todavía!\"",
+			"key": "rcIntro3",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "neutral",
+			"string": "\"¡Pero mira, Natsuki! ¡También tenemos otra chica!\"",
+			"key": "rcIntro4",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "gf",
+			"expression": "neutral",
+			"string": "*empty thoughts*",
+			"key": "rcIntro5",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "ehh",
+			"string": "\"Jejeje, si hubiera sabido que esperábamos más miembros, ¡le habría pedido a Natsuki que horneara algunos pastelitos de bienvenida!\"",
+			"key": "rcIntro6",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "happ",
+			"string": "\"¡Oh! ¡Y tal vez podría haberle pedido a Yuri que hiciera té también!\"",
+			"key": "rcIntro7",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "happ",
+			"string": "\"Necesito escribir esto para más tarde: 'Planear la fiesta del té para el club pronto'\"",
+			"key": "rcIntro8",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "yuri",
+			"expression": "smile",
+			"string": "\"Parece que ya estás muy entusiasmado con nuestros nuevos invitados. Ni siquiera has preguntado por sus nombres todavía-\"",
+			"key": "rcIntro9",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "ehh",
+			"string": "\"¡Ah bien! Eh, tonto de mí. ¿Cómo se llaman, nuevos asistentes al club de literatura?\"",
+			"key": "rcIntro10",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "bf",
+			"expression": "beep",
+			"string": "\"Beep skee!\"",
+			"key": "rcIntro11",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "gf",
+			"expression": "yeah",
+			"string": "*happy gesture*",
+			"key": "rcIntro12",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "happ",
+			"string": "\"¿Ustedes dos son novio y novia? Aww, se ven tan lindos juntos!!!\"",
+			"key": "rcIntro13",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "neutral",
+			"string": "\"... eso es lindo y todo, pero como, ¿cuáles son sus nombres?\"",
+			"key": "rcIntro14",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "bf",
+			"expression": "beep",
+			"string": "\"Beep skee!\"",
+			"key": "rcIntro15",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "gf",
+			"expression": "yeah",
+			"string": "*another happy gesture*",
+			"key": "rcIntro16",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "angy",
+			"string": "\"¡Sí, sabemos que ustedes están saliendo! ¡Queremos saber sus NOMBRES!\"",
+			"key": "rcIntro17",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "bf",
+			"expression": "neutral",
+			"string": "\"Bee dee skee dep!\"",
+			"key": "rcIntro18",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "hmmph",
+			"string": "\"... Ya no me gustan.\"",
+			"key": "rcIntro19",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "hmmph",
+			"string": "\"Ellos ya estan jugando conmigo\"",
+			"key": "rcIntro20",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "yuri",
+			"expression": "ehh",
+			"string": "\"¡Natsuki! No seas dura...\"",
+			"key": "rcIntro21",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "hmmph",
+			"string": "\"Hmph.\"",
+			"key": "rcIntro22",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "ehh",
+			"string": "\"Jejeje... Lo siento por eso. Si no quieres decirnos tus nombres, ¡está bien!\"",
+			"key": "rcIntro23",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "happ",
+			"string": "\"¡Soy Sayori!\"",
+			"key": "rcIntro24",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "neutral",
+			"string": "\"Esa encantadora dama lavanda de ahí es Yuri, y Natsuki es la que está realmente atrevida hoy.\"",
+			"key": "rcIntro25",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "yuri",
+			"expression": "neutral",
+			"string": "\"Dejando las introducciones a un lado... ¿podemos preguntar para qué son estos micrófonos?\"",
+			"key": "rcIntro26",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "neutral",
+			"string": "\"Estaba a punto de preguntar eso.\"",
+			"key": "rcIntro27",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "ehh",
+			"string": "\"Espero que no hayas confundido este lugar con el club de música-\"",
+			"key": "rcIntro28",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "bf",
+			"expression": "beep",
+			"string": "\"Boop dee!\"",
+			"key": "rcIntro29",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "yuri",
+			"expression": "neutral",
+			"string": "\"...¿De verdad quieres cantar con nosotras?\"",
+			"key": "rcIntro30",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "yuri",
+			"expression": "blush",
+			"string": "\"No estoy segura de lo cómoda que me sentiría haciendo eso\"",
+			"key": "rcIntro31",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "bf",
+			"expression": "beep",
+			"string": "\"Skee dep doop!\"",
+			"key": "rcIntro32",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "yuri",
+			"expression": "blush",
+			"string": "\"¡¿Q-qué quieres decir con que tengo que hacerlo?!\"",
+			"key": "rcIntro33",
+			"side": "left"
+		},
+		{
+			"isCommand": true,
+			"name": "hideright"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "neutral",
+			"string": "\"Sabes, hemos estado trabajando muy duro en la escritura y los poemas últimamente. ¡Creo que tener una sesión de canto divertida con todos es el descanso perfecto que todos necesitamos!\"",
+			"key": "rcIntro34",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "yuri",
+			"expression": "blush",
+			"string": "\"-!\"",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "neutral",
+			"string": "\"Cuando lo piensas, las canciones son solo poemas con música detrás de ellos, ¿no es así?\"",
+			"key": "rcIntro35",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "yeah",
+			"string": "\"¡Apuesto a que todas seríamos geniales en esto!\"",
+			"key": "rcIntro36",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "yuri",
+			"expression": "neutral",
+			"string": "\"...\"",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "neutral",
+			"string": "\"...\"",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "yeah",
+			"string": "\"¡Aquí, voy a ir primero!\"",
+			"key": "rcIntro37",
+			"side": "left"
+		}
+	]
+}

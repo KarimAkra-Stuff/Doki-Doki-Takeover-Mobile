@@ -1,0 +1,52 @@
+flag	content
+descKeyBindings	Cambia las combinaciones de teclas de cada nota.
+descDownscroll	Cambiar la dirección de las notas entrantes.
+descGhostTap	Determina si tocar o no fuera de las notas entrantes reducirá su salud.
+descJudgement	Personaliza los tiempos de juicio del juego.
+descFPSCap	Establece el límite de FPS del juego. (Izquierda o Derecha, Shift para ir más rápido)
+descCurFPSCap	Límite actual de FPS
+descScroll	Cambia la velocidad de desplazamiento de tus notas. No se aplicarán los cambios de velocidad a mitad de la canción. (Izquierda o Derecha, Shift para ir más rápido)
+descCurScroll	Velocidad de desplazamiento actual
+descReset	Alterne presionando R para terminar el juego.
+descCustomize	Personaliza partes del juego HUD al contenido de tu corazón.
+descCustomizeState	Arrastre alrededor de la partitura para personalizar su posición. R para restablecer. Q/E para hacer zoom. Espacio para pausar el zoom. C para generar combo.
+descAccuracy	Muestra información de precisión debajo de la barra de salud.
+descNPS	Muestra tus notas actuales por segundo.
+descPosition	Muestra cuánto tiempo queda en la canción actual.
+descFPSCount	Muestra la velocidad de fotogramas actual y el uso de la memoria.
+descFlashing	Alterne las luces intermitentes que pueden causar ataques epilépticos y/o fatiga visual.
+descBotplay	Haz que un bot juegue automáticamente por ti. (Las puntuaciones no se guardarán)
+descGFCountdown	Haz que Girlfriend cuente hacia atrás antes de que comience la canción.
+descMiddleScroll	Pon tus notas en el centro o a la derecha de la pantalla.
+descLaneUnderway	Alterna un subyacente para las notas. (0% es transparente, 100% es opaco)
+descLaneUnderwayControl	Transparencia de calco subyacente de carril actual
+descScoreReset	Restablezca los datos guardados de su puntaje a sus valores predeterminados. Esto también afectará ciertos desbloqueos. (NO SE PUEDE INVERTIR)
+descStoryReset	Restablezca los datos guardados de su historia a sus valores predeterminados. Esto también afectará ciertos desbloqueos. (NO SE PUEDE INVERTIR)
+descSaveReset	Elimina su archivo guardado por completo. (NO SE PUEDE INVERTIR)
+descGameJolt	¡Inicia sesión en tu cuenta de Game Jolt para ganar trofeos!
+descHitSound	Reproduce un sonido cada vez que presiona una tecla de nota.
+descHitSoundControl	Volumen actual del sonido de golpe
+descHitSoundJudge	Elige si los sonidos de golpe cambian o no según el juicio de nota que obtenga.
+descNoteSplash	¡Agrega un toque a cualquier nota enferma que toques!
+descEarlyLate	Muestra un indicador para cada vez que toca la nota antes o después.
+descAutoPause	Cambia la pausa del juego en los menús cuando no está enfocado.
+descJudgeCount	Muestra un recuento de cada juicio que obtienes durante una canción.
+descLanguage	Cambia el idioma del juego.
+descVideoDub	¡Mira el video doblaje oficial de Doki Doki Takeover!
+descBadEnd	Experimenta lo que sale mal en un final alternativo. (Se va a GameBanana)
+descRatingToggle	Elige si las calificaciones se muestran o no durante el juego.
+descAntialiasing	Haga que las imágenes sean más fluidas a costa del rendimiento.
+descMiddleOpponent	Mostrar notas del oponente
+descGPUTextures	Cargue texturas a través de su GPU en su lugar, reduciendo el uso de memoria.
+descCacheCharacter	Reduzca los tiempos de carga almacenando en caché cada carácter en el arranque. (USO PESADO DE MEMORIA)
+descCacheSong	Reduzca los tiempos de carga almacenando en caché cada canción en el arranque. (USO PESADO DE MEMORIA)
+descCache	Reduzca más los tiempos de carga en esta sesión almacenando en caché lo que se habilitó anteriormente.
+descPreload	Precargue los activos cuando comience una canción para reducir los tartamudeos y los bloqueos a costa de los tiempos de carga.
+descRandom	Randomize the notes of you and your opponent! (Scores will not be saved)
+descNoM	notas de markov
+descShaders	¡Permite que el juego haga uso de sombreadores! Desactívelo si experimenta bloqueos o problemas de rendimiento.
+descCursor	Muestra un cursor personalizado en lugar del cursor de su computadora.
+descLowEnd	Desactiva los efectos a favor de mejorar el rendimiento.
+descKeyBindControls	Escape para guardar, Retroceso para restablecer. Intro para cambiar una combinación de teclas.
+descKeyBindBlacklist	¡<X> está en la lista negra!
+descJudgementControls	Presione Izquierda para disminuir en 1, o Derecha para aumentar en 1.<N>Shift irá más rápido, Control irá en 0.1, Alt irá en 0.01.<N>Presione R para restablecer el juicio seleccionado. Mantener presionada la tecla Shift restablecerá todos los juicios.

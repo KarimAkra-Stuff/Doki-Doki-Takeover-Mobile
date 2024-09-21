@@ -1,0 +1,149 @@
+{
+	"startingMusic": "yuric",
+	"initStyle": "normal",
+	"dialogue": 
+	[
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "No mucho después de que Natsuki se fuera, otra cara familiar entró en la sala de música. Cierta 'encantadora dama lavanda', para ser exactos.",
+			"key": "svIntro1",
+			"side": ""
+		},
+		{
+			"isCommand": true,
+			"name": "playcutscene",
+			"string": "showdad",
+			"duration": 0
+		},
+		{
+			"isCommand": false,
+			"name": "yuri",
+			"expression": "ehh",
+			"string": "\"Ah, espero no estar interrumpiendo nada-\"",
+			"key": "svIntro2",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "neutral",
+			"string": "\"¡Yuri! No te preocupes, solo he estado dando vueltas, pasando el tiempo hasta nuestra próxima reunión del club.\"",
+			"key": "svIntro3",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "yuri",
+			"expression": "neutral",
+			"string": "\"Mhhm. Esto puede ser un poco extraño para mí decirlo de la nada, pero...\"",
+			"key": "svIntro4",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "yuri",
+			"expression": "smile",
+			"string": "\"-gracias.\"",
+			"key": "svIntro5",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "neutral",
+			"string": "\"¿Oh? ¿Para qué?\"",
+			"key": "svIntro6",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "yuri",
+			"expression": "smile",
+			"string": "\"Con todo lo que venimos haciendo en el club, esa incomodidad que siento… tratar de comprometerme a presentar lo que hago frente a los demás.\"",
+			"key": "svIntro7",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "yuri",
+			"expression": "smile",
+			"string": "\"Está disminuyendo gradualmente cuanto más hacemos cosas juntos como club.\"",
+			"key": "svIntro8",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "yuri",
+			"expression": "smile",
+			"string": "\"La escritura, el canto y simplemente... hablar. Todo me ha dado una alternativa mucho mejor para... liberar mis emociones.\"",
+			"key": "svIntro9",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "ahaha",
+			"string": "\"¡Estoy tan feliz de escuchar eso, Yuri! He notado que últimamente sales mucho más de tu zona de confort, y tu voz confiada para cantar siempre es agradable de escuchar.\"",
+			"key": "svIntro10",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "ahaha",
+			"string": "\"Sabiendo que este club ha sido un buen lugar de superación personal para ti, no podría estar más feliz de escuchar eso.\"",
+			"key": "svIntro11",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "Yuri rompe el contacto visual y mira hacia otro lado por solo un segundo; Una tímida sonrisa apareciendo en su rostro.",
+			"key": "svIntro12",
+			"side": ""
+		},
+		{
+			"isCommand": false,
+			"name": "yuri",
+			"expression": "smile",
+			"string": "\"Quería celebrar este hito personal con algo especial.\"",
+			"key": "svIntro13",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "yuri",
+			"expression": "neutral",
+			"string": "\"Yo… escribí mi propia canción. Este es un territorio nuevo para mi destreza como escritor, así que quería preguntarte si te gustaría interpretarlo conmigo aquí.\"",
+			"key": "svIntro14",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "yuri",
+			"expression": "neutral",
+			"string": "\"Solo un poco de revisión por pares antes de mostrárselo a los demás.\"",
+			"key": "svIntro15",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "ahh",
+			"string": "\"¡Sería un honor!\"",
+			"key": "svIntro16",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "ahh",
+			"string": "\"¿Deberíamos empezar? ¡Mis cuerdas vocales ya están calentadas!\"",
+			"key": "svIntro17",
+			"side": "right"
+		}
+	]
+}

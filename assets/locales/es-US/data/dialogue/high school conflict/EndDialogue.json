@@ -1,0 +1,70 @@
+{
+	"initStyle": "pixel",
+	"dialogue": 
+	[
+		{
+			"isCommand": false,
+			"name": "bf",
+			"expression": "neutral",
+			"string": "Skdee bep!",
+			"key": "hscEnd1",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "happy",
+			"string": "¡Te mantuviste muy bien con mi canción!",
+			"key": "hscEnd2",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "neutral",
+			"string": "¡Ah, hacía tiempo que no me sentía tan feliz!",
+			"key": "hscEnd3",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "neutral",
+			"string": "¿Podríamos cantar de nuevo?",
+			"key": "hscEnd4",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "bf",
+			"expression": "neutral",
+			"string": "Beep!",
+			"key": "hscEnd5",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "happy",
+			"string": "¡Está bien! Aquí vamos-",
+			"key": "hscEnd6",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "whodis",
+			"string": "¡¿Quien diablos eres tú?!",
+			"key": "hscEnd7",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "gasp",
+			"string": "-Eh?",
+			"key": "hscEnd8",
+			"side": "left"
+		}
+	]
+}

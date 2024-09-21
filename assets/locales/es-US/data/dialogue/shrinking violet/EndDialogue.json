@@ -1,0 +1,47 @@
+{
+	"startingMusic": "",
+	"initStyle": "normal",
+	"dialogue": 
+	[
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "ahh",
+			"string": "\"Woah, ya eres un compositor natural. ¡Sé que a los demás les encantará escuchar esto!\"",
+			"key": "svEnd1",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "Yuri mira hacia otro lado tímidamente una vez más y se ríe de sí misma.",
+			"key": "svEnd2",
+			"side": ""
+		},
+		{
+			"isCommand": false,
+			"name": "yuri",
+			"expression": "happy",
+			"string": "\"Uhuhu… agradezco que me des tu tiempo.\"",
+			"key": "svEnd3",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "yuri",
+			"expression": "happy",
+			"string": "\"Voy a ensayar un poco más por mi cuenta antes de nuestra próxima reunión del club.\"",
+			"key": "svEnd4",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "yuri",
+			"expression": "smile",
+			"string": "\"Te veré entonces, Monika.\"",
+			"key": "svEnd5",
+			"side": "left"
+		}
+	]
+}

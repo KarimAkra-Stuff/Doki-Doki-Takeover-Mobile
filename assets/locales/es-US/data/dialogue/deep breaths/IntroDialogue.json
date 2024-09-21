@@ -1,0 +1,87 @@
+{
+	"startingMusic": "yuric",
+	"initStyle": "normal",
+	"dialogue": 
+	[
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "what",
+			"string": "\"...bleh. Creo que he terminado por ahora. Me siento realmente mareado después de eso.\"",
+			"key": "dbIntro1",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "yeah",
+			"string": "\"¡Está bien! Ve a descansar tus cuerdas vocales.\"",
+			"key": "dbIntro2",
+			"side": "left"
+		},
+		{
+			"isCommand": true,
+			"name": "hideright"
+		},
+		{
+			"isCommand": true,
+			"name": "hideleft"
+		},
+		{
+			"isCommand": false,
+			"name": "gf",
+			"expression": "ehh",
+			"string": "*confused glances*",
+			"key": "dbIntro3",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "bf",
+			"expression": "think",
+			"string": "\"Skee dep? ...beep de dee skee.\"",
+			"key": "dbIntro4",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "neutral",
+			"string": "\"Eheheh ... Bueno, parece que eres la única que queda, Yuri!\"",
+			"key": "dbIntro5",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "yuri",
+			"expression": "blush",
+			"string": "\"...mmh-\"",
+			"key": "dbIntro6",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "ooh",
+			"string": "\"Oye, sé que puedes hacerlo, Yuri. ¡Apuesto a que tienes una de las mejores voces para cantar!\"",
+			"key": "dbIntro7",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "yuri",
+			"expression": "ehh",
+			"string": "\"...primero tener que leer mis poemas en voz alta al club... ¿y ahora cantar también?\"",
+			"key": "dbIntro8",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "yuri",
+			"expression": "ehh",
+			"string": "\"Este club me sigue pidiendo mucho.\"",
+			"key": "dbIntro9",
+			"side": "left"
+		}
+	]
+}

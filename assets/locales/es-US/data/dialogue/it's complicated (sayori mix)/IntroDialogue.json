@@ -1,0 +1,52 @@
+{
+	"dialogue": [
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "neutral",
+			"string": "\"Había una canción en esa lista que me llamó la atención.\"",
+			"key": "compIntro1",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "neutral",
+			"string": "\"La canción era alegre y optimista.\"",
+			"key": "compIntro2",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "ehh",
+			"string": "\"... y, sin embargo, también se sentía muy triste.\"",
+			"key": "compIntro3",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "neutral",
+			"string": "\"Las cosas que son a la vez tristes y felices de esa manera realmente me hablan.\"",
+			"key": "compIntro4",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "ehh",
+			"string": "\"Jejeje, no sé...\"",
+			"key": "compIntro5",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "ehh",
+			"string": "\"Es complicado.\"",
+			"key": "compIntro6",
+			"side": "left"
+		}
+	]
+}

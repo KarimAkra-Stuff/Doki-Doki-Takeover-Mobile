@@ -1,0 +1,216 @@
+{
+	"startingMusic": "monic",
+	"initStyle": "normal",
+	"disableBGFade": true,
+	"dialogue": 
+	[
+		{
+			"isCommand": true,
+			"name": "showbackgroundimage",
+			"string": "black"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "ahh",
+			"string": "\"Ah, Sayori! Yuri! Natsuki! Volvieron!\"",
+			"key": "consIntro1",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "neutral",
+			"string": "\"¿Cómo fue tu tiempo con Boyfriend and Girlfriend en su ciudad natal?\"",
+			"key": "consIntro2",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "ahaha",
+			"string": "(Ajá, todavía no puedo creer que esos sean sus nombres reales. Incluso lo dice en sus archivos de personajes-)",
+			"key": "consIntro3",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "memory",
+			"expression": "sunday",
+			"string": "",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "wah",
+			"string": "\"¡Tuve una competencia de gritos con una estrella de rock! Y los vencí totalmente también.\"",
+			"key": "consIntro4",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "wah",
+			"string": "\"Me están invitando la próxima semana para una revancha. ¡Si gano, obtengo entradas gratis para el próximo show de su banda!\"",
+			"key": "consIntro5",
+			"side": "right"
+		},
+		{
+			"isCommand": true,
+			"name": "hideleft"
+		},
+		{
+			"isCommand": false,
+			"name": "yuri",
+			"expression": "smile",
+			"string": "\"Tenía mucho dinero extra para gastar esta semana, así que cené en un restaurante muy agradable no muy lejos de la ciudad.\"",
+			"key": "consIntro6",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "memory",
+			"expression": "tabi",
+			"string": "",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "yuri",
+			"expression": "neutral",
+			"string": "\"Mientras estuve allí, tuve una agradable charla con alguien que compartía un... interés similar por coleccionar.\"",
+			"key": "consIntro7",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "yuri",
+			"expression": "neutral",
+			"string": "\"También pareció muy intrigado cuando mencioné a nuestros dos nuevos miembros del club en una conversación. Sin embargo, no quería entrometerme.\"",
+			"key": "consIntro8",
+			"side": "right"
+		},
+		{
+			"isCommand": true,
+			"name": "hideright"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "neutral",
+			"string": "(Parece que hay muchas personas extrañas y fantásticas en el mundo real.)",
+			"key": "consIntro9",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "ahaha",
+			"string": "(Y en algún lugar por ahí, mi verdadero amor... Todavía no me he olvidado de ellos.)",
+			"key": "consIntro10",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "neutral",
+			"string": "(Volveré y continuaré mi búsqueda lo suficientemente pronto. Hay... tantas cosas que necesito decirles.)",
+			"key": "consIntro11",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "ahaha",
+			"string": "\"Ah- lo siento, me perdí en mis pensamientos. ¿Qué hay de ti, Sayori? ¿Conociste nuevos amigos en tu viaje?\"",
+			"key": "consIntro12",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "happ",
+			"string": "\"¡Fue increíble! ¡Ni siquiera sabía que existían todos estos lugares!\"",
+			"key": "consIntro13",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "wah",
+			"string": "\"Es casi como si hubieran aparecido de la nada, jejeje~\"",
+			"key": "consIntro14",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "neutral",
+			"string": "\"¡Conocí a un nuevo amigo, de hecho! Me ha seguido todo el tiempo que estuvimos fuera.\"",
+			"key": "consIntro15",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "ahaha",
+			"string": "\"Eh-? Eso es... un poco raro.\"",
+			"key": "consIntro16",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "ahh",
+			"string": "\"-¡Pero me alegro de que todos hayan encontrado nuevos amigos geniales!\"",
+			"key": "consIntro17",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "happ",
+			"string": "\"Mhhmm! ¡Me siguió hasta aquí también! ¿Quieres conocerlo? ¡Él es tan lindo!\"",
+			"key": "consIntro18",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "neutral",
+			"string": "\"¿Oh? ¡S-claro! ¡Tráelos!\"",
+			"key": "consIntro19",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "ooh",
+			"string": "\"Saluda, Zipper!\"",
+			"key": "consIntro20",
+			"side": "right"
+		},
+		{
+			"isCommand": true,
+			"name": "endmusic"
+		},
+		{
+			"isCommand": true,
+			"name": "shake",
+			"duration": "1"
+		},
+		{
+			"isCommand": true,
+			"name": "hideleft"
+		},
+		{
+			"isCommand": false,
+			"name": "zipper",
+			"expression": "scream",
+			"string": "\"SKREEEEEEEEEEE!!!!\"",
+			"key": "consIntro21",
+			"side": "left"
+		}
+	]
+}

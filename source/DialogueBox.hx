@@ -360,21 +360,11 @@ class DialogueBox extends FlxSpriteGroup
 		// Epiphany username & OBS shit
 		var dialogueText:String = curDialogue.string;
 
-		#if FEATURE_LANGUAGE
-		if (SaveData.language != 'en-US' && curDialogue.key != null)
-			dialogueText = LangUtil.getString(curDialogue.key, 'dialogue');
-		#end
-
 		if (isEpiphany)
 		{
 			if (isOBS && curDialogue.stringOBS != null)
 			{
 				dialogueText = curDialogue.stringOBS;
-
-				#if FEATURE_LANGUAGE
-				if (SaveData.language != 'en-US' && curDialogue.keyOBS != null)
-					dialogueText = LangUtil.getString(curDialogue.keyOBS, 'dialogue');
-				#end
 			}
 			else
 			{

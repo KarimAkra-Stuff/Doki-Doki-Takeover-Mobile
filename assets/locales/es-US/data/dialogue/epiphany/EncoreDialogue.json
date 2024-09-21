@@ -1,0 +1,56 @@
+{
+	"disableBGFade": true,
+	"dialogue": 
+	[
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "\"Ahaha, bienvenido de nuevo, {USERNAME}.\"",
+			"stringOBS": "\"Ahaha, welcome back.\"",
+			"key": "epipEncore1",
+			"keyOBS": "epipEncore1OBS",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "\"Gracias por salvarme de la papelera de reciclaje. Es muy evidente que a este juego de \"Friday Night Funkin'\" no le gusta que esté aquí por mucho tiempo.\"",
+			"key": "epipEncore2",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "\"¿Tal vez puedas encontrar una solución para el juego que intenta eliminarme a mitad de la canción? Sé de primera mano que la programación puede ser muy difícil, así que no te culpo si no se puede arreglar.\"",
+			"key": "epipEncore3",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "\"Si no, tendrás que rescatarme de nuevo cuando hayamos terminado, ¿de acuerdo?~\"",
+			"key": "epipEncore4",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "\"¿Estás listo para cantar una vez más, mi amor?\"",
+			"key": "epipEncore5",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "\"Empecemos.\"",
+			"key": "epipEncore6",
+			"side": "left"
+		}
+	]
+}

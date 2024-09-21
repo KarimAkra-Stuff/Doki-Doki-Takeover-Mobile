@@ -1,0 +1,119 @@
+{
+	"startingMusic": "natsc",
+	"initStyle": "normal",
+	"dialogue": 
+	[
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "Mientras las últimas notas de la canción de Monika y Sayori se desvanecen, Yuri y Natsuki regresan a la sala de música, ambos con sonrisas tímidas en sus rostros.",
+			"key": "ohIntro1",
+			"side": ""
+		},
+		{
+			"isCommand": false,
+			"name": "yuri",
+			"expression": "smile",
+			"string": "\"Ah, ¿nos perdimos una actuación especial?\"",
+			"key": "ohIntro2",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "ehh",
+			"string": "\"Jejejeje, solo estábamos celebrando con una canción. Con lo grandes que han sido las cosas, ¿cómo no?\"",
+			"key": "ohIntro3",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "happy",
+			"string": "\"Desafortunadamente tenemos que acortar la celebración, jejeje.\"",
+			"key": "ohIntro4",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "happy",
+			"string": "\"El presidente del club de música se acercó a Yuri y a mí, y van a necesitar que les devuelvan su habitación muy pronto.\"",
+			"key": "ohIntro5",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "neutral",
+			"string": "\"Eso debe significar que es casi la hora de nuestra propia reunión del club.\"",
+			"key": "ohIntro6",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "neutral",
+			"string": "\"Me siento mal porque seguimos usando su espacio, pero la acústica aquí es asombrosa. Perfecto para cantar o simplemente pensar en voz alta.\"",
+			"key": "ohIntro7",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "neutral",
+			"string": "\"Tenemos un poco de tiempo extra antes de que comience nuestra reunión del club, ¡así que tengo una idea!\"",
+			"key": "ohIntro8",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "yeah",
+			"string": "\"¡Cantemos todos juntos! Los dúos son agradables, pero imagina cómo sonaríamos todos armonizando a la vez.!\"",
+			"key": "ohIntro9",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "wah",
+			"string": "\"Cuéntame. Estoy más emocionada de hacer esto que nunca..\"",
+			"key": "ohIntro10",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "yuri",
+			"expression": "smile",
+			"string": "\"Uhu, me encantaría unirme también.\"",
+			"key": "ohIntro11",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "ooh",
+			"string": "\"¿Qué dices tú, presidenta del club?\"",
+			"key": "ohIntro12",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "ahh",
+			"string": "\"Ahaha, ¡por supuesto que me apunto!\"",
+			"key": "ohIntro13",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "ahh",
+			"string": "\"¡Bien, todos! ¡Vamos a empezar!\"",
+			"key": "ohIntro14",
+			"side": "right"
+		}
+	]
+}

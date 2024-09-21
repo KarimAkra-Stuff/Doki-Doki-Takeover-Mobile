@@ -1,0 +1,152 @@
+{
+	"dialogue": [
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "neutral",
+			"string": "\"Ahahaha.\"",
+			"key": "glitEnd1",
+			"side": "left"
+		},
+		{
+			"isCommand": true,
+			"name": "fadeout",
+			"duration": 4
+		},
+		{
+			"isCommand": true,
+			"name": "showbackgroundimage",
+			"string": "festivalend"
+		},
+		{
+			"isCommand": true,
+			"name": "fadein",
+			"string": "hidedialogue",
+			"duration": 2
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "neutral",
+			"string": "\"Les agradezco que se hayan acercado para ayudarnos a hacer esta actuación.\"",
+			"key": "glitEnd2",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "ahh",
+			"string": "\"En nombre del Club de Literatura, les doy las gracias.\"",
+			"key": "glitEnd3",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "gf",
+			"expression": "yeah",
+			"string": "*cheery face*",
+			"key": "glitEnd4",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "bf",
+			"expression": "yeah",
+			"string": "\"Skee yeah!\"",
+			"key": "glitEnd5",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "neutral",
+			"string": "\"...\"",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "upset",
+			"string": "\"...ahora que todos se fueron, hay algo que quiero preguntar.\"",
+			"key": "glitEnd6",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "upset",
+			"string": "\"No eres \"de aquí\", por lo que he visto.\"",
+			"key": "glitEnd7",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "upset",
+			"string": "\"Y puedes entrar y salir de este lugar muy fácilmente ahora. Así que debo preguntar...\"",
+			"key": "glitEnd8",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "upset",
+			"string": "\"-¿Hay alguna manera de traernos de vuelta contigo?\"",
+			"key": "glitEnd9",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "bf",
+			"expression": "think",
+			"string": "",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "eeh",
+			"string": "\"Este juego es muy limitante con lo que podemos hacer, y los demás permanecerán felizmente inconscientes sin importar lo que suceda...\"",
+			"key": "glitEnd10",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "upset",
+			"string": "\"-pero si pudieran tener la oportunidad de ver lo que hay más allá de su escuela y sus hogares, creo que realmente les encantaría.\"",
+			"key": "glitEnd11",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "upset",
+			"string": "\"And maybe...\"",
+			"key": "glitEnd12",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "eeh",
+			"string": "\"-solo tal vez finalmente pueda encontrar al que he estado anhelando y verlos cara a cara.\"",
+			"key": "glitEnd13",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "eeh",
+			"string": "\"...y tal vez-\"",
+			"key": "glitEnd14",
+			"side": "left"
+		},
+		{
+			"isCommand": true,
+			"name": "playcutscene",
+			"string": "fadetoblack",
+			"duration": 0
+		}
+	]
+}

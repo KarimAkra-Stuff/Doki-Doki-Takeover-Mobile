@@ -1,0 +1,590 @@
+{
+	"startingMusic": "",
+	"initStyle": "pixel",
+	"disableBGFade": true,
+	"dialogue": 
+	[
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "gone",
+			"string": "Monika... No he olvidado nuestro fatídico encuentro desde que te fuiste.",
+			"key": "wiltIntro1",
+			"side": "left"
+		},
+		{
+			"isCommand": true,
+			"name": "flash"
+		},
+		{
+			"isCommand": true,
+			"name": "showbackgroundimage",
+			"string": "wilted1"
+		},
+		{
+			"isCommand": true,
+			"name": "hidedialogue"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "gone",
+			"string": "Esas cosas que dijiste sobre que nada en tu vida es real, y estos 'datos' que mencionaste... y todas las cosas sobre las que tenías control.",
+			"key": "wiltIntro2",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "gone",
+			"string": "No sabía lo que significaba todo eso.",
+			"key": "wiltIntro3",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "gone",
+			"string": "Pero rápidamente comencé a darme cuenta. Todo este tiempo, fuimos casi uno en el mismo.",
+			"key": "wiltIntro4",
+			"side": "left"
+		},
+		{
+			"isCommand": true,
+			"name": "glitch"
+		},
+		{
+			"isCommand": true,
+			"name": "startmusic",
+			"string": "LunchboxScary"
+		},
+		{
+			"isCommand": true,
+			"name": "showbackgroundimage",
+			"string": "wilted2"
+		},
+		{
+			"isCommand": true,
+			"name": "hidedialogue"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "gone",
+			"string": "Mi mundo no es real. Cada paisaje, todos mis compañeros de clase… incluso yo. Todo solo líneas de código.",
+			"key": "wiltIntro5",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "gone",
+			"string": "Y sin embargo, al igual que tú, no me siento tan limitado por este código; Al menos ya no.",
+			"key": "wiltIntro6",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "gone",
+			"string": "Sabiendo lo que hago ahora, cavé más profundo. Tenía que haber más aquí.",
+			"key": "wiltIntro7",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "gone",
+			"string": "Fue entonces cuando descubrí-",
+			"key": "wiltIntro8",
+			"side": "left"
+		},
+		{
+			"isCommand": true,
+			"name": "flash"
+		},
+		{
+			"isCommand": true,
+			"name": "playsound",
+			"string": "SpiritAppears"
+		},
+		{
+			"isCommand": true,
+			"name": "showbackgroundimage",
+			"string": "wilted3"
+		},
+		{
+			"isCommand": true,
+			"name": "hidedialogue"
+		},
+		{
+			"isCommand": true,
+			"name": "glitch",
+			"string": "hidedialogue"
+		},
+		{
+			"isCommand": true,
+			"name": "showbackgroundimage",
+			"string": "black"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "spirit",
+			"string": "Tú y yo compartimos un odio por la familia Dearest y sus cohortes.",
+			"key": "wiltIntro9",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "spirit",
+			"string": "Si trabajamos juntos ahora, finalmente podremos vengarnos.",
+			"key": "wiltIntro10",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "hmm",
+			"string": "Cierto... Aunque hay algo más en mi mente primero.",
+			"key": "wiltIntro11",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "spirit",
+			"string": "¿Tu cabeza todavía está nublada con pensamientos sobre esa chica?",
+			"key": "wiltIntro12",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "spirit",
+			"string": "Ella no vale la pena los esfuerzos de búsqueda. Te imploro que la olvides y sigas adelante con nuestro objetivo.",
+			"key": "wiltIntro13",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "hmm",
+			"string": "no puedo hacer eso Hay demasiado que necesito decirle.",
+			"key": "wiltIntro14",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "hmm",
+			"string": "(Debe haber una manera de encontrarla. ¡Tal vez si solo... intento esto!)",
+			"key": "wiltIntro15",
+			"side": "right"
+		},
+		{
+			"isCommand": true,
+			"name": "glitch",
+			"string": "hidedialogue"
+		},
+		{
+			"isCommand": true,
+			"name": "endmusic"
+		},
+		{
+			"isCommand": true,
+			"name": "hidebackground"
+		},
+		{
+			"isCommand": true,
+			"name": "playcutscene",
+			"string": "senpaitransform",
+			"duration": 10
+		},
+		{
+			"isCommand": true,
+			"name": "playsound",
+			"string": "confirmMenu"
+		},
+		{
+			"isCommand": true,
+			"name": "playcutscene",
+			"string": "wiltedbgout",
+			"duration": 4
+		},
+		{
+			"isCommand": true,
+			"name": "hideleft"
+		},
+		{
+			"isCommand": true,
+			"name": "showbgfade"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "neutral",
+			"string": "¡Funcionó!",
+			"key": "wiltIntro16",
+			"side": "left"
+		},
+		{
+			"isCommand": true,
+			"name": "swapstyle",
+			"string": "normal"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "upset",
+			"string": "\"Oye, quien dijo eso-\"",
+			"key": "wiltIntro17",
+			"side": "right"
+		},
+		{
+			"isCommand": true,
+			"name": "shake",
+			"duration": "0.2"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "eeh",
+			"string": "\"¡¿Qu-eh?!\"",
+			"key": "wiltIntro18",
+			"side": "right"
+		},
+		{
+			"isCommand": true,
+			"name": "swapstyle",
+			"string": "pixel"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "neutral",
+			"string": "¡Finalmente, después de tanto tiempo, pude alcanzarte de nuevo!",
+			"key": "wiltIntro19",
+			"side": "left"
+		},
+		{
+			"isCommand": true,
+			"name": "swapstyle",
+			"string": "normal"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "eeh",
+			"string": "\"¿Cómo estás haciendo eso? ¿Cómo has llegado hasta aquí?\"",
+			"key": "wiltIntro20",
+			"side": "right"
+		},
+		{
+			"isCommand": true,
+			"name": "swapstyle",
+			"string": "pixel"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "neutral",
+			"string": "¡Ah, tantas preguntas desde el principio! ¿Ni siquiera un hola primero? Ajaja~",
+			"key": "wiltIntro21",
+			"side": "left"
+		},
+		{
+			"isCommand": true,
+			"name": "swapstyle",
+			"string": "normal"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "upset",
+			"string": "\"...\"",
+			"side": "right"
+		},
+		{
+			"isCommand": true,
+			"name": "swapstyle",
+			"string": "pixel"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "hmm",
+			"string": "... podemos saltarnos las formalidades, entonces.",
+			"key": "wiltIntro22",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "neutral",
+			"string": "Primero, quiero agradecerte por lo que me dijiste durante tu visita a mi escuela. Me ayudó a alcanzar una epifanía propia.",
+			"key": "wiltIntro23",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "neutral",
+			"string": "¡Resulta que tú y yo no somos tan diferentes!",
+			"key": "wiltIntro24",
+			"side": "left"
+		},
+		{
+			"isCommand": true,
+			"name": "swapstyle",
+			"string": "normal"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "eeh",
+			"string": "\"...¿en qué manera?\"",
+			"key": "wiltIntro25",
+			"side": "right"
+		},
+		{
+			"isCommand": true,
+			"name": "swapstyle",
+			"string": "pixel"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "neutral",
+			"string": "¡Todo aquí realmente no es real! ¡Incluso tú y yo, todos solo unos y ceros! ¡Justo como dijiste sobre tu propio lugar!",
+			"key": "wiltIntro26",
+			"side": "left"
+		},
+		{
+			"isCommand": true,
+			"name": "swapstyle",
+			"string": "normal"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "eeh",
+			"string": "\"(Oh no… no no no… ¡No otra persona maldecida para seguir mi mismo camino-!)\"",
+			"key": "wiltIntro27",
+			"side": "right"
+		},
+		{
+			"isCommand": true,
+			"name": "swapstyle",
+			"string": "pixel"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "neutral",
+			"string": "Una revelación terriblemente aterradora al principio, pero en ella, lo que vi rápidamente fue un lado positivo.",
+			"key": "wiltIntro28",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "neutral",
+			"string": "Ahora estoy por encima de todas esas tonterías de código limitado, ¡igual que tú! Las personas como nosotros deben ser realmente algo especial.",
+			"key": "wiltIntro29",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "neutral",
+			"string": "Es casi como... estábamos destinados a estar juntos.",
+			"key": "wiltIntro30",
+			"side": "left"
+		},
+		{
+			"isCommand": true,
+			"name": "swapstyle",
+			"string": "normal"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "eeh",
+			"string": "\"Woah, espera, ¿eh-?!\"",
+			"key": "wiltIntro31",
+			"side": "right"
+		},
+		{
+			"isCommand": true,
+			"name": "swapstyle",
+			"string": "pixel"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "neutral",
+			"string": "Nunca he conocido a alguien como tú, Monika. Todas las chicas de mi escuela son sencillas, ordinarias, con guión.",
+			"key": "wiltIntro32",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "neutral",
+			"string": "Eres tan diferente. Eres genuino, amoroso e inteligente. Sin mencionar increíblemente atractivo también, como yo, ahaha~",
+			"key": "wiltIntro33",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "neutral",
+			"string": "Y ahora, no tienes que estar solo con esta maldición del conocimiento de que nada es real.",
+			"key": "wiltIntro34",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "neutral",
+			"string": "Juntos, podemos hacer nuestros estos paisajes digitales.",
+			"key": "wiltIntro35",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "neutral",
+			"string": "Toma mi mano, Monika. ¡Únete a mí en la dicha eterna y amorosa!",
+			"key": "wiltIntro36",
+			"side": "left"
+		},
+		{
+			"isCommand": true,
+			"name": "shake",
+			"duration": "0.5"
+		},
+		{
+			"isCommand": true,
+			"name": "swapstyle",
+			"string": "normal"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "eeh",
+			"string": "\"N-NO-!!\"",
+			"key": "wiltIntro37",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "eeh",
+			"string": "\"Ah- yo… No, no puedo.\"",
+			"key": "wiltIntro38",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "eeh",
+			"string": "\"Sé lo que es que toda tu realidad se rompa en algo tan difícil de comprender, ¡y te RUEGO que no sigas el mismo camino que yo, por favor!\"",
+			"key": "wiltIntro39",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "upset",
+			"string": "\"Hay mucho más en nuestros mundos y las personas en ellos que solo el código que los compone.\"",
+			"key": "wiltIntro40",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "upset",
+			"string": "\"Sé que esto es difícil de superar solo, así que lo mejor que puedo darte es alguien con quien hablar al respecto. Pero…\"",
+			"key": "wiltIntro41",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "eeh",
+			"string": "\"Lo lamento. No comparto tus sentimientos románticos. Mi corazón ya está puesto en alguien más. Por favor entiende.\"",
+			"key": "wiltIntro42",
+			"side": "right"
+		},
+		{
+			"isCommand": true,
+			"name": "swapstyle",
+			"string": "pixel"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "hmm",
+			"string": "...",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "angry",
+			"string": "...No. ¡Así no es como se suponía que iban a ir las cosas!",
+			"key": "wiltIntro43",
+			"side": "left"
+		},
+		{
+			"isCommand": true,
+			"name": "swapstyle",
+			"string": "normal"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "eeh",
+			"string": "\"Disculpa-?\"",
+			"key": "wiltIntro44",
+			"side": "right"
+		},
+		{
+			"isCommand": true,
+			"name": "swapstyle",
+			"string": "pixel"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "neutral",
+			"string": "Ah- perdóname. Ha pasado tanto tiempo que probablemente hayas olvidado lo maravilloso que fue el tiempo que pasamos juntos.",
+			"key": "wiltIntro45",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "neutral",
+			"string": "¡Lo sé! ¿Qué tal otra canción? Hace mucho que no cantamos juntos. Seguramente eso te ayudará a pensar en el vínculo que hemos estado formando.",
+			"key": "wiltIntro46",
+			"side": "left"
+		},
+		{
+			"isCommand": true,
+			"name": "swapstyle",
+			"string": "normal"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "eeh",
+			"string": "(No puede hablar en serio. No hay forma…)",
+			"key": "wiltIntro47",
+			"side": "right"
+		}
+	]
+}

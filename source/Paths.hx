@@ -179,6 +179,17 @@ class Paths
 		return getPath('data/$key.json', TEXT, library);
 	}
 
+	inline static public function dialogueJson(key:String, ?library:String)
+	{
+		#if FEATURE_LANGUAGE
+		var lang:String = SaveData.language;
+		if(OpenFlAssets.exists(getPath('locales/$lang/data/$key.json', TEXT)))
+		return getPath('locales/$lang/data/$key.json', TEXT)
+		else
+		#end
+		return getPath('data/$key.json', TEXT, library);
+	}
+
 	inline static public function shaderVertex(key:String, ?library:String)
 	{
 		return getPath('shaders/$key.vs', TEXT, library);

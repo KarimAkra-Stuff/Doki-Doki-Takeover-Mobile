@@ -1,0 +1,94 @@
+{
+	"startingMusic": "",
+	"initStyle": "pixel",
+	"disableBGFade": true,
+	"dialogue": 
+	[
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "hmm",
+			"string": "...",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "spirit",
+			"string": "Sabía que este pequeño desvío no sería fructífero para ti. La chica está decidida a seguir su camino.",
+			"key": "wiltEnd1",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "spirit",
+			"string": "Aunque esta breve visita me permitió aprender algo vital.",
+			"key": "wiltEnd2",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "spirit",
+			"string": "Parece que aquellos que residen en su mundo ahora tienen métodos para escapar del espacio digital al mundo de los mortales.",
+			"key": "wiltEnd3",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "spirit",
+			"string": "Y el hedor de los parientes de Daddy Dearest... También impregna su mundo.",
+			"key": "wiltEnd4",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "spirit",
+			"string": "Esa chica y su novio estaban ahí, y saben algo.",
+			"key": "wiltEnd5",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "spirit",
+			"string": "Con sus nuevas habilidades, podemos atraparlos la próxima vez que intenten ingresar al mundo digital.",
+			"key": "wiltEnd6",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "spirit",
+			"string": "Entonces... Tomaré el cuerpo de ese chico y escaparé de esta prisión electrónica. Y usted será capaz de hacer lo mismo.",
+			"key": "wiltEnd7",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "spirit",
+			"string": "Hay cientos de chicas más como ella en el mundo exterior, algunas con el espíritu libre que deseas.",
+			"key": "wiltEnd8",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "hmm",
+			"string": "...",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "spirit",
+			"string": "El tiempo de la venganza está cerca.",
+			"key": "wiltEnd9",
+			"side": "left"
+		}
+	]
+}

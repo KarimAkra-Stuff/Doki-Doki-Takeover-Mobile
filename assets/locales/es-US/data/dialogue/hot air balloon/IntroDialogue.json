@@ -1,0 +1,212 @@
+{
+	"startingMusic": "monic",
+	"initStyle": "normal",
+	"dialogue": 
+	[
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "Unos días después del festival... Monika está sola en la sala de música de la escuela.",
+			"key": "habIntro1",
+			"side": ""
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "El Club de Literatura ha estado ocupando el espacio mucho más desde que los miembros recientes del club los introdujeron a todos a cantar.",
+			"key": "habIntro2",
+			"side": ""
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "-Tanto es así que a menudo terminan usando la sala más que el propio Music Club en ocasiones.",
+			"key": "habIntro3",
+			"side": ""
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "Con su momento a solas, Monika reflexiona sobre todo lo que ha sucedido recientemente.",
+			"key": "habIntro4",
+			"side": ""
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "neutral",
+			"string": "\"Es irreal lo... bonitas que se han vuelto las cosas.\"",
+			"key": "habIntro5",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "neutral",
+			"string": "\"No sé qué hice para merecer una segunda oportunidad, después de todo lo que hice antes… pero sé que mantendré las cosas bien esta vez. Para mis amigas.\"",
+			"key": "habIntro6",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "ahaha",
+			"string": "\"Ajá, cuando solo me quedaba yo, recuerdo haberle dicho a la persona que amo que me hubiera encantado que un artista de rap se uniera al club algún día.\"",
+			"key": "habIntro7",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "neutral",
+			"string": "\"No esperaba que eso realmente sucediera, y que ellos fueran los que ayudaran a salvarme y me dieran esta oportunidad adicional. No puedo agradecerles lo suficiente.\"",
+			"key": "habIntro8",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "La reflexión de Monika se ve interrumpida por el sonido de pasos que ingresan a la sala de música. Un individuo familiar de cabello rosado entró.",
+			"key": "habIntro9",
+			"side": ""
+		},
+		{
+			"isCommand": true,
+			"name": "playcutscene",
+			"string": "showdad",
+			"duration": 0
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "ahh",
+			"string": "\"¡Ay, Natsuki! ¡Me sorprende verte aquí! Esperaba que tú y los demás aún estuvieran en clases.\"",
+			"key": "habIntro10",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "neutral",
+			"string": "\"Yo... le dije a mi maestra que estaba tomando un descanso para ir al baño. Aunque en realidad me fui para ir a buscarte.\"",
+			"key": "habIntro11",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "sick",
+			"string": "\"He estado pensando en... cosas... recientemente. Quería venir a hablar contigo sobre eso.\"",
+			"key": "habIntro12",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "ahh",
+			"string": "\"¡Siempre soy todo oídos! ¿Qué tienes en mente?\"",
+			"key": "habIntro13",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "sick",
+			"string": "\"Yo… siento que no puedo seguirles el ritmo.\"",
+			"key": "habIntro14",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "upset",
+			"string": "\"¿Oh? ¿En qué manera?\"",
+			"key": "habIntro15",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "sick",
+			"string": "\"Tuve ese sentimiento en el fondo durante un tiempo, incluso cuando éramos solo nosotros cuatro en el club.\"",
+			"key": "habIntro16",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "sick",
+			"string": "\"Ahora que el club ha crecido a siete miembros, y con el canto encima de eso… ¡Siento que no puedo competir!\"",
+			"key": "habIntro17",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "sick",
+			"string": "\"Todo el mundo se siente mucho mejor y refinado al cantar, y yo no puedo sobresalir entre todas las voces.\"",
+			"key": "habIntro18",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "sick",
+			"string": "\"Este club es una de las mejores cosas que tengo en este momento como un lugar cómodo lejos de casa, pero este sentimiento de ser eclipsado y pensar que tengo que esforzarme tanto para no ser olvidado...\"",
+			"key": "habIntro19",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "upset",
+			"string": "\"Natsuki: ¡Puedo asegurarte, desde el fondo de mi corazón, que eres honestamente uno de nuestros escritores y cantantes más destacados en todo el club!\"",
+			"key": "habIntro20",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "ahaha",
+			"string": "\"No creo que nadie pueda capturar el estilo único que aportas a todo lo que haces. ¡Y todos lo saben también!\"",
+			"key": "habIntro21",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "ahaha",
+			"string": "\"La impresión que dejas en el club es demasiado especial para olvidarla, y nunca querríamos dejarte fuera.\"",
+			"key": "habIntro22",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "hmmph",
+			"string": "\"...\"",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "Natsuki se cruza de brazos y mira hacia otro lado con una expresión insegura.",
+			"key": "habIntro23",
+			"side": ""
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "ahh",
+			"string": "\"¡Yo también puedo probarlo! Aquí, ¿por qué no cantamos una canción rápida? Te puedo asegurar que una vez que comiences a entrar en tu flujo, verás lo que te hace tan especial.\"",
+			"key": "habIntro24",
+			"side": "right"
+		}
+	]
+}

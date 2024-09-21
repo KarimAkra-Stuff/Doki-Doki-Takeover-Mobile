@@ -1,0 +1,36 @@
+{
+	"dialogue": [
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "hmmph",
+			"string": "\"Voy a ser Honesta.\"",
+			"key": "beatIntro1",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "hmmph",
+			"string": "\"Había demasiadas canciones en esa lista que nos diste, y no quería filtrar cada una de ellas..\"",
+			"key": "beatIntro2",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "neutral",
+			"string": "\"Sin embargo, esta canción tenía una imagen de un lindo gato como carátula del álbum, así que, naturalmente, elegí esa.\"",
+			"key": "beatIntro3",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "angy",
+			"string": "\"¡Que Empieze la música!\"",
+			"key": "beatIntro4",
+			"side": "left"
+		}
+	]
+}

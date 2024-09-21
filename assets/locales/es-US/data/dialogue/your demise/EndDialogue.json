@@ -1,0 +1,248 @@
+{
+	"startingMusic": "",
+	"initStyle": "pixel",
+	"dialogue": 
+	[
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "hmm",
+			"string": "...",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "uhoh",
+			"string": "Ahaha, I should know better-",
+			"key": "ydEnd1",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "uhoh",
+			"string": "Tratando de interferir con la vida amorosa de las personas de nuevo.",
+			"key": "ydEnd2",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "hmm",
+			"string": "Te dejaré ser Libre.",
+			"key": "ydEnd3",
+			"side": "left"
+		},
+		{
+			"isCommand": true,
+			"name": "startmusic",
+			"string": "pixelc"
+		},
+		{
+			"isCommand": true,
+			"name": "flash",
+			"duration": 0.5
+		},
+		{
+			"isCommand": true,
+			"name": "playcutscene",
+			"string": "pixelend",
+			"duration": 5
+		},
+		{
+			"isCommand": true,
+			"name": "showbackgroundimage",
+			"string": "ending0"
+		},
+		{
+			"isCommand": true,
+			"name": "fadeout",
+			"string": "hidedialogue",
+			"duration": 4
+		},
+		{
+			"isCommand": true,
+			"name": "showbackgroundimage",
+			"string": "ending3"
+		},
+		{
+			"isCommand": true,
+			"name": "fadein",
+			"string": "hidedialogue",
+			"duration": 4
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "hmm",
+			"string": "Entonces, ¿no fuiste tú quien me robó el micrófono?",
+			"key": "ydEnd4",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "sad",
+			"string": "Ese niño de pelo azul me lo dio cuando me presenté.",
+			"key": "ydEnd5",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "sad",
+			"string": "no se donde lo consiguio.",
+			"key": "ydEnd6",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "sad",
+			"string": "Ni siquiera sé cómo llegué aquí, para el caso.",
+			"key": "ydEnd7",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "hmm",
+			"string": "Hmm-",
+			"key": "ydEnd8",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "hmm",
+			"string": "¿Y qué sucedió exactamente después de nuestro... dúo involuntario?",
+			"key": "ydEnd9",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "sad",
+			"string": "Yo ... me deshice de todos.",
+			"key": "ydEnd10",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "sad",
+			"string": "Temporalmente. Es algo que puedo hacer, pero esa es una larga historia.",
+			"key": "ydEnd11",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "sad",
+			"string": "-y eso incluía a la novia de ese niño.",
+			"key": "ydEnd12",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "uhoh",
+			"string": "Ahaha, los viejos hábitos son difíciles de olvidar, como dicen.",
+			"key": "ydEnd13",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "hmm",
+			"string": "¿También a su chica?",
+			"key": "ydEnd14",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "sad",
+			"string": "",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "",
+			"string": "¡Ja! ¡Apuesto a que realmente cabreaste a ese gusano!",
+			"key": "ydEnd15",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "",
+			"string": "Ojalá estuviera allí para ver la mirada en su horrible cara de bebé.",
+			"key": "ydEnd16",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "sad",
+			"string": "Estaba Muy Enojando...",
+			"key": "ydEnd17",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "sad",
+			"string": "...",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "hmm",
+			"string": "...",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "",
+			"string": "Oye.",
+			"key": "ydEnd18",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "gasp",
+			"string": "...hm?",
+			"key": "ydEnd19",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "",
+			"string": "Tu desempeño no fue tan malo antes.",
+			"key": "ydEnd20",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "",
+			"string": "¿Te importa otra canción?",
+			"key": "ydEnd21",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "gasp",
+			"string": "..!",
+			"side": "right"
+		}
+	]
+}
