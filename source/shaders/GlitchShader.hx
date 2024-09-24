@@ -16,8 +16,8 @@ class GlitchShader extends FlxShader // https://www.shadertoy.com/view/XtyXzW
 	// So for now, Linux users will have to disable shaders specifically for Libitina.
 
 	@:glFragmentSource('
-	#extension GL_EXT_gpu_shader4 : enable
-	#extension GL_NV_non_square_matrices : enable
+	// #extension GL_EXT_gpu_shader4 : enable
+	// #extension GL_NV_non_square_matrices : enable
 
 	#pragma header
 

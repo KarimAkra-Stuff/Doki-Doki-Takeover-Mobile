@@ -44,7 +44,7 @@
 	<define name="PUBLIC_BUILD" unless="debug || FORCE_DEBUG" />
 
 	<!-- Defines whether the Discord client should be enabled. -->
-	<define name="FEATURE_DISCORD" if="desktop PUBLIC_BUILD" unless="hl" />
+	<!-- <define name="FEATURE_DISCORD" if="desktop PUBLIC_BUILD" unless="hl" /> -->
 	<!-- Defines whether the file system can be read/written directly. Does not work in browser. -->
 	<!-- <define name="FEATURE_FILESYSTEM" if="desktop || mobile" /> -->
 	<!-- Defines whether MP4 videos should be enabled. -->
@@ -208,8 +208,16 @@
 
 	<!--Used
 	for Izzy Engine's crash handler-->
-	<haxedef name="HXCPP_CHECK_POINTER" if="CRASH_HANDLER" />
-	<haxedef name="HXCPP_STACK_LINE" if="CRASH_HANDLER" />
+	<section if="cpp">
+		<haxedef name="HXCPP_CHECK_POINTER" />
+		<haxedef name="HXCPP_STACK_LINE" />
+		<haxedef name="HXCPP_STACK_TRACE" />
+		<haxedef name="HXCPP_CATCH_SEGV" />
+	</section>
+
+	<haxedef name='no-deprecation-warnings' />
+	<haxeflag name="--macro" value="allowPackage('flash')" />
+	<haxeflag name="--macro" value="include('my.pack')" />
 
 	<!-- _________________________________ Custom _______________________________ -->
 

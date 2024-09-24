@@ -10,6 +10,12 @@ using StringTools;
  */
 class FlxShader extends OriginalFlxShader
 {
+	public static var extensions:Array<String> = [
+		'EXT_shader_image_load_store',
+		'ARM_shader_framebuffer_fetch',
+		'EXT_compute_shader'
+	];
+	
 	public var custom:Bool = false;
 	public var save:Bool = true;
 
@@ -58,6 +64,15 @@ class FlxShader extends OriginalFlxShader
 		#else
 		var prefix = "#version 330\n";
 		#end
+
+		for(extension in extensions)
+		{
+			@:privateAccess
+			if (extension.toUpperCase().startsWith('ARM')
+				&& !Std.string(openfl.Lib.current.stage.context3D.gl.getParameter(gl.RENDERER)).toUpperCase().contains('MALI'))
+				extension = extension.replace('ARM', 'EXT');
+			prefix += '#extension $extension : enable\n';
+		}
 
 		#if (js && html5)
 		prefix += (precisionHint == FULL ? "precision mediump float;\n" : "precision lowp float;\n");

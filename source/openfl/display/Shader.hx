@@ -333,6 +333,9 @@ class Shader
 			var message = startMessage;
 			message += "\n" + shaderInfoLog;
 			message += "\n" + source;
+			#if macro
+			if (compileStatus == 0) Log.error(message);
+			#else
 			#if sys
 			if (compileStatus == 0)
 			{
@@ -353,6 +356,7 @@ class Shader
 				Main.alertPopup('$message', 'Shader Compile Error!');
                 lime.system.System.exit(0);
             }
+			#end
 			else if (hasInfoLog)
 				Log.debug(message);
 		}

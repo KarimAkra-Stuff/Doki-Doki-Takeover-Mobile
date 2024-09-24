@@ -24,7 +24,7 @@ class FishEyeShader extends FlxShader // https://www.shadertoy.com/view/WsVSzV
 			uniform float scan; // simulate darkness between scanlines
 
 			void mainImage()
-				{
+			{
 				// squared distance from center
 				vec2 fragCoord = openfl_TextureCoordv*iResolution;
 				vec2 uv = fragCoord/iResolution.xy;
@@ -45,7 +45,7 @@ class FishEyeShader extends FlxShader // https://www.shadertoy.com/view/WsVSzV
 					// sample the texture
 					fragColor = vec4(mix(flixel_texture2D(bitmap,uv).rgb,vec3(0.0),apply),1.0);
 					}
-				}
+			}
 		')
 
 	var json:FishEyeJSON = null;
