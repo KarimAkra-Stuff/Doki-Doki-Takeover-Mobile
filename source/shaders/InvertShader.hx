@@ -7,10 +7,9 @@ class InvertShader extends FlxShader
 
 	void main()
 	{
-		vec4 texture = texture2D(bitmap, openfl_TextureCoordv.xy) / openfl_Alphav;
+		vec4 texture = texture2D(bitmap, openfl_TextureCoordv.xy);
 		float alpha = texture.a * openfl_Alphav;
-
-		gl_FragColor = vec4((vec3(1, 1, 1) - texture.rgb) * alpha, alpha);
+		gl_FragColor = vec4((vec3(1.0) - texture.rgb) * alpha, alpha);
 	}
 	')
 

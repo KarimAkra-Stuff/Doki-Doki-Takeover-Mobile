@@ -1,0 +1,225 @@
+{
+	"startingMusic": "protagc",
+	"dialogue": 
+	[
+		{
+			"isCommand": false,
+			"name": "mc",
+			"expression": "chill",
+			"string": "\"Ah, qué bueno que los atrapé en un buen momento. Escuché de los demás que dejarás el club por un tiempo después de hoy..\"",
+			"key": "neetIntro1",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "mc",
+			"expression": "chill",
+			"string": "\"We didn't exactly see each other much aside from the festival, so I wanted to say goodbye just in case.\"",
+			"key": "neetIntro2",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "mc",
+			"expression": "camera",
+			"string": "\"También he querido preguntarte algo. Algunos consejos, para ser específicos.\"",
+			"key": "neetIntro3",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "bf",
+			"expression": "neutral",
+			"string": "\"Bee boop?\"",
+			"key": "neetIntro4",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "mc",
+			"expression": "happy",
+			"string": "\"No esperaba disfrutar tanto mi tiempo aquí en el club. Escribir poemas y ayudar a organizar estos eventos especiales y conocer a todos los demás miembros del club es definitivamente algo que necesitaba.\"",
+			"key": "neetIntro5",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "mc",
+			"expression": "sigh",
+			"string": "\"De lo contrario, me habría quedado atrapado en mi habitación por el resto de mi vida siendo un 'NEET', como diría Sayori.\"",
+			"key": "neetIntro6",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "mc",
+			"expression": "chill",
+			"string": "\"Unirse al Club de Literatura también vino con un beneficio adicional bastante agradable.\"",
+			"key": "neetIntro7",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "mc",
+			"expression": "chill",
+			"string": "\"Seguro que ya te has dado cuenta, pero este club-\"",
+			"key": "neetIntro8",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "mc",
+			"expression": "happy",
+			"string": "\"-está lleno de chicas increíblemente lindas.\"",
+			"key": "neetIntro9",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "mc",
+			"expression": "happy",
+			"string": "\"Ya tienes novia, así que quería preguntarte si, por casualidad, ¿tienes algún consejo para alguien como yo que puede buscar el romance?.\"",
+			"key": "neetIntro10",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "bf",
+			"expression": "beep",
+			"string": "\"De skeet.\"",
+			"key": "neetIntro11",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "mc",
+			"expression": "sigh",
+			"string": "\"...¿cantar? Esa parece ser tu respuesta a todos los problemas de la vida.\"",
+			"key": "neetIntro12",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "mc",
+			"expression": "camera",
+			"string": "\"Las chicas no son tan simples, ya sabes. Además, ya te lo dije antes, no voy a avergonzarme tratando de cantar frente a ellos.\"",
+			"key": "neetIntro13",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "bf",
+			"expression": "neutral",
+			"string": "*stare*",
+			"key": "neetIntro14",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "mc",
+			"expression": "chill",
+			"string": "\"...\"",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "mc",
+			"expression": "sigh",
+			"string": "\"No.\"",
+			"key": "neetIntro15",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "gf",
+			"expression": "neutral",
+			"string": "*stare*",
+			"key": "neetIntro14",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "mc",
+			"expression": "sigh",
+			"string": "\"Para.\"",
+			"key": "neetIntro16",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "bf",
+			"expression": "neutral",
+			"string": "*contacto visual intenso e ininterrumpido*",
+			"key": "neetIntro17",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "mc",
+			"expression": "sigh",
+			"string": "\"...\"",
+			"side": "left"
+		},
+		{
+			"isCommand": true,
+			"name": "shake",
+			"duration": "0.2"
+		},
+		{
+			"isCommand": false,
+			"name": "mc",
+			"expression": "hrk",
+			"string": "\"...ghh-!\"",
+			"key": "neetIntro18",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "mc",
+			"expression": "sigh",
+			"string": "\"¡F-bien! Le daré una oportunidad a cantar.\"",
+			"key": "neetIntro19",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "mc",
+			"expression": "sigh",
+			"string": "(No puedo creer que las miradas fijas sean todo lo que se necesita para que haga las cosas.)",
+			"key": "neetIntro20",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "mc",
+			"expression": "sigh",
+			"string": "(Aunque si esto termina como cuando me uní al club, esto podría terminar funcionando al final.)",
+			"key": "neetIntro21",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "mc",
+			"expression": "sigh",
+			"string": "\"¿Puedes darme algunos consejos al menos?\"",
+			"key": "neetIntro22",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "gf",
+			"expression": "yeah",
+			"string": "*cheer*",
+			"key": "neetIntro23",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "bf",
+			"expression": "yeah",
+			"string": "\"Skee yeah!\"",
+			"key": "neetIntro24",
+			"side": "right"
+		}
+	]
+}

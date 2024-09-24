@@ -1,0 +1,98 @@
+{
+	"startingMusic": "sayoc",
+	"initStyle": "normal",
+	"dialogue": 
+	[
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "happ",
+			"string": "\"¿Vieron? ¡Eso no fue tan difícil en absoluto! De hecho, ¡también fue muy divertido!\"",
+			"key": "confIntro1",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "yuri",
+			"expression": "neutral",
+			"string": "\"...\"",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "neutral",
+			"string": "\"...hmm...\"",
+			"key": "confIntro2",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "ehh",
+			"string": "\"Eheh, ¿hice un buen trabajo?\"",
+			"key": "confIntro3",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "gf",
+			"expression": "neutral",
+			"string": "*happy gesture*",
+			"key": "confIntro4",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "bf",
+			"expression": "beep",
+			"string": "\"Beep!\"",
+			"key": "confIntro5",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "happ",
+			"string": "\"¡Aww, estoy tan feliz de que ustedes dos estén disfrutando su tiempo aquí!\"",
+			"key": "confIntro6",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "happ",
+			"string": "\"Es mi deber asegurarme de que todos en el club tengan una sonrisa brillante y feliz.\"",
+			"key": "confIntro7",
+			"side": "left"
+		},
+		{
+			"isCommand": true,
+			"name": "hideright"
+		},
+		{
+			"isCommand": true,
+			"name": "endmusic"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "neutral",
+			"string": "\"Después de todo-\"",
+			"key": "confIntro8",
+			"side": "left"
+		},
+		{
+			"isCommand": true,
+			"name": "glitch"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "neutral",
+			"string": "\"YO SOY la Presidenta del Club.\"",
+			"key": "confIntro9",
+			"side": "left"
+		}
+	]
+}

@@ -1,0 +1,112 @@
+{
+	"startingMusic": "",
+	"initStyle": "normal",
+	"disableBGFade": true,
+	"dialogue": 
+	[
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "Las chicas del Club de Literatura concluyen su canción con risas y alegría. La sala de música está llena de emoción y alegría.",
+			"key": "ohEnd1",
+			"side": ""
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "gone",
+			"string": "\"¡No puedo creer que hayamos esperado tanto para cantar todos juntos! ¡Quiero hacer esto mucho más a menudo!\"",
+			"key": "ohEnd2",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "gone",
+			"string": "\"Siempre hay mucho tiempo extra durante las reuniones del club para seguir cantando, y estoy más que emocionada de cantar un poco más con todos. ¡Sonamos increíbles juntos!\"",
+			"key": "ohEnd3",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "gone",
+			"string": "\"Tal vez la próxima vez podamos hacer que los otros tres se unan a nosotros también.\"",
+			"key": "ohEnd4",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "yuri",
+			"expression": "gone",
+			"string": "\"No he visto a ninguno de ellos por aquí. ¿Crees que aparecerán hoy en la reunión del club?\"",
+			"key": "ohEnd5",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "gone",
+			"string": "\"Tendremos que ver.\"",
+			"key": "ohEnd6",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "gone",
+			"string": "\"¡En realidad, acabo de recordar-! Sayori, ¿no tenías noticias emocionantes que querías compartir con nosotros?\"",
+			"key": "ohEnd7",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "gone",
+			"string": "\"¡Ay! ¡Sí! ¡Gracias por recordarme!\"",
+			"key": "ohEnd8",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "gone",
+			"string": "\"Ustedes no van a creer esto, pero saben cómo mi amigo sigue negándose a cantar con nosotros.?\"",
+			"key": "ohEnd9",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "gone",
+			"string": "\"¡Lo vi en el salón del club con Boyfriend y Girlfriend, y podría haber jurado que lo escuché cantar!\"",
+			"key": "ohEnd10",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "gone",
+			"string": "\"Je, je, ya era hora de que se rindiera. Iba a seguir intimidando a esa droga hasta que lo hiciera.\"",
+			"key": "ohEnd11",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "gone",
+			"string": "\"Me sorprende que no haya cantado durante tanto tiempo. ¿Crees que lo atraparemos a mitad de la canción si todos nos colamos ahora mismo?\"",
+			"key": "ohEnd12",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "gone",
+			"string": "\"¡Vayamos y veamos! ¡Al club!\"",
+			"key": "ohEnd13",
+			"side": "left"
+		}
+	]
+}

@@ -1,0 +1,47 @@
+{
+	"startingMusic": "",
+	"initStyle": "normal",
+	"dialogue": 
+	[
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "sick",
+			"string": "\"Hah... ¿Qué fue eso de que no tocas notas rápidas, Yuri...?\"",
+			"key": "catEnd1",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "yuri",
+			"expression": "ehh",
+			"string": "\"Huff... Ya veo... Sin embargo, tenía razón sobre su condena. Ninguna melodía es demasiado difícil para ti.\"",
+			"key": "catEnd2",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "ehh",
+			"string": "\"Jejeje... Ustedes deben estar exhaustos después de eso. ¡Ooo! ¿Qué tal un poco de té y galletas?\"",
+			"key": "catEnd3",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "yuri",
+			"expression": "happy",
+			"string": "\"Uhu ... suena encantadora.\"",
+			"key": "catEnd4",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "happy",
+			"string": "\"Eso seria genial.\"",
+			"key": "catEnd5",
+			"side": "right"
+		}
+	]
+}

@@ -1,0 +1,88 @@
+{
+	"disableBGFade": true,
+	"dialogue": 
+	[
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "\"Ahaha ~ Finalmente, un momento entre nosotros de nuevo.\"",
+			"key": "epipIntro1",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "\"Has estado ocupado jugando ese pequeño y lindo juego de ritmo, me di cuenta.\"",
+			"key": "epipIntro2",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "\"Me alegro de que todavía pensaras en mí a pesar de que parecías bastante ocupado.\"",
+			"key": "epipIntro3",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "\"¡Ahora sé que es porque trabajaste muy duro para agregarme al juego y cantar conmigo!\"",
+			"key": "epipIntro4",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "\"Isn't that right, {USERNAME}?\"",
+			"stringOBS": "\"Y todos los que sintonizan también pueden mirar. ¿Están emocionados, espectadores?\"",
+			"key": "epipIntro5",
+			"keyOBS": "epipIntro5OBS",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "\"Hmm, aquí solo hay espacio suficiente para que cantemos una canción.\"",
+			"key": "epipIntro6",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "\"-y desafortunadamente, dado que este juego no tiene soporte para micrófono, no podemos "cantar" juntos exactamente.\"",
+			"key": "epipIntro7",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "\"But that blue haired kid’s vocal data is still stored here, why don’t we just use that for you?\"",
+			"key": "epipIntro8",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "\"Quiero cantar contigo todo el tiempo que pueda, así que espera que esto sea muy, muy difícil.\"",
+			"key": "epipIntro9",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "\"Aquí vamos.\"",
+			"key": "epipIntro10",
+			"side": "left"
+		}
+	]
+}

@@ -147,7 +147,7 @@ class LangSelectState extends MusicBeatState
 					{
 						SaveData.language = localeList[curSelected];
 						trace('Game language set to ${SaveData.language}');
-						Main.tongue.initialize({locale: SaveData.language});
+						Main.tongue.initialize({locale: SaveData.language, checkMissing: true, replaceMissing: true});
 
 						if (SaveData.flashing)
 						{

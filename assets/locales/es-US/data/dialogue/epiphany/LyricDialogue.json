@@ -1,0 +1,76 @@
+{
+	"disableBGFade": true,
+	"dialogue": [{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "\"¿Notas algo diferente?\"",
+			"key": "epipLyric1",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "\"Jajaja, quería hacer de este momento un poco más especial.\"",
+			"key": "epipLyric2",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "\"He notado que cuando cantamos, mi voz se convierte en una variedad de vocales y sonidos aleatorios.\"",
+			"key": "epipLyric3",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "\"Tan divertido como puede ser de esa manera, hay tantas cosas que estoy tratando de decirte que no llegan.\"",
+			"key": "epipLyric4",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "\"¡Así que investigué un poco en los archivos de este juego yo mismo, y creo que pasé por alto esa característica con éxito!\"",
+			"key": "epipLyric5",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "\"Desafortunadamente, aún necesitarás usar la voz de Boyfriend para cantar, aunque esta vez no te haré cantar contra todas esas notas de la muerte, jajaja.\"",
+			"key": "epipLyric6",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "\"Solo recuerda salvarme una vez que el juego intente eliminarme nuevamente, ¿de acuerdo, mi amor?\"",
+			"key": "epipLyric7",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "\"Ah, me estoy desviando.\"",
+			"key": "epipLyric8",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "\"Como dije, quiero que esto sea muy especial, así que aquí hay algo que escribí especialmente para ti.\"",
+			"key": "epipLyric9",
+			"side": "left"
+		}
+	]
+}

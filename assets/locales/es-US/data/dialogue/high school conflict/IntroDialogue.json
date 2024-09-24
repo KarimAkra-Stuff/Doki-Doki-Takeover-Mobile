@@ -1,0 +1,111 @@
+{
+	"startingMusic": "Lunchbox",
+	"initStyle": "pixel",
+	"dialogue": 
+	[
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "gasp",
+			"string": "...huh?",
+			"key": "hscIntro1",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "gasp",
+			"string": "Pensé... que me borraron. Después de lo que le hice a mis amigas.",
+			"key": "hscIntro2",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "gasp",
+			"string": "-pero donde estoy ahora?",
+			"key": "hscIntro3",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "bf",
+			"expression": "hueh",
+			"string": "Beep!",
+			"key": "hscIntro4",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "gasp",
+			"string": "-Oh! Hola?",
+			"key": "hscIntro5",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "bf",
+			"expression": "neutral",
+			"string": "Skee dep boop!",
+			"key": "hscIntro6",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "gasp",
+			"string": "Quieres cantar?",
+			"key": "hscIntro7",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "bf",
+			"expression": "neutral",
+			"string": "Beep dai!",
+			"key": "hscIntro8",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "gasp",
+			"string": "...Esto esta pasando relamente rapido.",
+			"key": "hscIntro9",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "neutral",
+			"string": "-Pero sabes que?",
+			"key": "hscIntro10",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "happy",
+			"string": "Me gusta!",
+			"key": "hscIntro11",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "neutral",
+			"string": "Por lo general, toco el piano mientras canto, pero este no es un mal cambio de ritmo..",
+			"key": "hscIntro12",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "happy",
+			"string": "¡Así que sí!",
+			"key": "hscIntro13",
+			"side": "left"
+		}
+	]
+}

@@ -1,0 +1,225 @@
+{
+	"startingMusic": "",
+	"initStyle": "pixel",
+	"dialogue": 
+	[
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "gasp",
+			"string": "Esas chicas me han estado mirando mal desde que llegué aquí. ¿Hice algo mal?.",
+			"key": "bakaEnd1",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "neutral",
+			"string": "Ah, veo que has notado a mis queridas compañeras de escuela.",
+			"key": "bakaEnd2",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "neutral",
+			"string": "He conseguido toda la multitud de fans dedicadas aquí.",
+			"key": "bakaEnd3",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "neutral",
+			"string": "Es natural cuando eres la persona más popular en tu escuela.",
+			"key": "bakaEnd4",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "neutral",
+			"string": "Parece que todos están celosos de ti, siendo capaz de despertar mi interés tan rápido.",
+			"key": "bakaEnd5",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "neutral",
+			"string": "Matarían por pasar un momento fugaz conmigo. Desafortunadamente, simplemente no valen mi tiempo. Ahahah~",
+			"key": "bakaEnd6",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "sad",
+			"string": "Eso es... mmm...",
+			"key": "bakaEnd7",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "neutral",
+			"string": "Debes tener tu propia pequeña base de fans de donde vienes, ¿no?.",
+			"key": "bakaEnd8",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "gasp",
+			"string": "Algunas personas dicen que sí, pero personalmente siento que todo lo que hice en mi escuela pasó completamente desapercibido.",
+			"key": "bakaEnd9",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "gasp",
+			"string": "Sin embargo, nunca me propuse ser popular. Solo quería compartir mis pasiones con cualquiera que quisiera escuchar..",
+			"key": "bakaEnd10",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "uhoh",
+			"string": "Y gracias a eso, conocí a mi maravilloso grupo de amigos...",
+			"key": "bakaEnd11",
+			"side": "right"
+		},
+		{
+			"isCommand": true,
+			"name": "glitch"
+		},
+		{
+			"isCommand": true,
+			"name": "hidebgfade"
+		},
+		{
+			"isCommand": true,
+			"name": "showbackgroundimage",
+			"string": "flashback1"
+		},
+		{
+			"isCommand": true,
+			"name": "hidedialogue"
+		},
+		{
+			"isCommand": true,
+			"name": "glitch"
+		},
+		{
+			"isCommand": true,
+			"name": "showbackgroundimage",
+			"string": "ending2"
+		},
+		{
+			"isCommand": true,
+			"name": "showbgfade"
+		},
+		{
+			"isCommand": true,
+			"name": "hideleft"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "gasp",
+			"string": "-agh!",
+			"key": "bakaEnd12",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "gasp",
+			"string": "(Eso que vi-)",
+			"key": "bakaEnd13",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "gasp",
+			"string": "(Pero Porque..?)",
+			"key": "bakaEnd14",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "hmm",
+			"string": "Estás haciendo eso otra vez, Monika. Sabes que siempre puedes decirme lo que sea que pase.",
+			"key": "bakaEnd15",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "gasp",
+			"string": "E-estoy bien... ¡estoy bien!",
+			"key": "bakaEnd16",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "uhoh",
+			"string": "No hay necesidad de preocuparse por mí, ahaha-",
+			"key": "bakaEnd17",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "hmm",
+			"string": "Ah, si insistes.",
+			"key": "bakaEnd18",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "neutral",
+			"string": "En ese caso, me gustaría saber más acerca de dónde eres. Me sigues intrigando con cada conversación.",
+			"key": "bakaEnd19",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "gasp",
+			"string": "Puedo hacer mi mejor esfuerzo para hacer eso, sí.",
+			"key": "bakaEnd20",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "gasp",
+			"string": "(¿Está sucediendo algo que está causando estos efectos?)",
+			"key": "bakaEnd21",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "gasp",
+			"string": "(El juego apenas se mantenía unido cuando no estaban todos..)",
+			"key": "bakaEnd22",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "sad",
+			"string": "(Si algo va mal-)",
+			"key": "bakaEnd23",
+			"side": "right"
+		}
+	]
+}

@@ -1,0 +1,262 @@
+{
+	"startingMusic": "protagc",
+	"dialogue": 
+	[
+		{
+			"isCommand": true,
+			"name": "showbackgroundimage",
+			"string": "festivalbeginning"
+		},
+		{
+			"isCommand": false,
+			"name": "mc",
+			"expression": "neutral",
+			"string": "\"Entonces, ustedes dos deben ser los otros miembros que Monika y las otras chicas siguen mencionando.\"",
+			"key": "crucIntro1",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "mc",
+			"expression": "neutral",
+			"string": "\"Parecen conocerlos bastante bien, aunque nunca antes los había visto en una reunión del club.\"",
+			"key": "crucIntro2",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "mc",
+			"expression": "sigh",
+			"string": "\"Bueno, supongo que me metí en todo esto del Club de Literatura no hace mucho, debo haberme perdido cuando estabas cerca.\"",
+			"key": "crucIntro3",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "mc",
+			"expression": "neutral",
+			"string": "\"Sin embargo, me alegro de que aparecieras hoy. Todo tu asunto de cantar ha inspirado al club.\"",
+			"key": "crucIntro4",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "mc",
+			"expression": "neutral",
+			"string": "\"Para el festival escolar de hoy, decidieron cantar en vivo como actividad especial de su club.\"",
+			"key": "crucIntro5",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "mc",
+			"expression": "sigh",
+			"string": "\"No estoy seguro de qué tiene que ver el canto con la literatura, pero todos parecían estar de acuerdo. Sin embargo, no puede estar molesto por eso.\"",
+			"key": "crucIntro6",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "mc",
+			"expression": "happy",
+			"string": "\"No he visto a Sayori tan feliz en mucho tiempo.\"",
+			"key": "crucIntro7",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "mc",
+			"expression": "happy",
+			"string": "\"No he tenido que esforzarme para despertarla para la escuela tanto como yo, ella está justo afuera con una sonrisa feliz esperándome, tarareando melodías alegres.\"",
+			"key": "crucIntro8",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "mc",
+			"expression": "sigh",
+			"string": "\"Pero si ustedes no aparecieran, tendría que haber sido yo quien cantara con ellos. Todavía no estoy listo para avergonzarme así frente a mis compañeros.\"",
+			"key": "crucIntro9",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "mc",
+			"expression": "camera",
+			"string": "\"Además, ninguno de ellos pudo encontrar una canción que quisieran hacer a dúo.\"",
+			"key": "crucIntro10",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "mc",
+			"expression": "neutral",
+			"string": "\"¿Creen que ustedes pueden ayudarlos?\"",
+			"key": "crucIntro11",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "gf",
+			"expression": "neutral",
+			"string": "*happy gesture*",
+			"key": "crucIntro12",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "bf",
+			"expression": "neutral",
+			"string": "\"Beep!\"",
+			"key": "crucIntro13",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "mc",
+			"expression": "happy",
+			"string": "\"¿Todo un backlog de canciones? Eso debería darles a todos una buena selección para elegir.\"",
+			"key": "crucIntro14",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "mc",
+			"expression": "camera",
+			"string": "\"Les avisaré una vez que regresen de la preparación.\"",
+			"key": "crucIntro15",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "mc",
+			"expression": "happy",
+			"string": "\"Y los veré a ustedes dos esta noche en el festival.\"",
+			"key": "crucIntro16",
+			"side": "right"
+		},
+		{
+			"isCommand": true,
+			"name": "endmusic"
+		},
+		{
+			"isCommand": true,
+			"name": "fadeout",
+			"duration": 4
+		},
+		{
+			"isCommand": true,
+			"name": "hidebackground"
+		},
+		{
+			"isCommand": true,
+			"name": "hideleft"
+		},
+		{
+			"isCommand": true,
+			"name": "fadein",
+			"string": "hidedialogue",
+			"duration": 2
+		},
+		{
+			"isCommand": false,
+			"name": "mc",
+			"expression": "happy",
+			"string": "\"El audio está configurado, estamos listos para empezar cuando tú lo estés.\"",
+			"key": "crucIntro17",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "happ",
+			"string": "\"¡Muchas gracias por ayudarnos!\"",
+			"key": "crucIntro18",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "wah",
+			"string": "\"Es divertido verte manejando toda esa tecnología musical.\"",
+			"key": "crucIntro19",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "happ",
+			"string": "\"¡Sí! ¡Eres como nuestro propio MC personal!\"",
+			"key": "crucIntro20",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "ahaha",
+			"string": "(En más de un sentido, ahaha-)",
+			"key": "crucIntro21",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "upset",
+			"string": "(Hmm... Me pregunto si ese chiste funciona en la traducción-)",
+			"key": "crucIntro22",
+			"side": "left"
+		},
+		{
+			"isCommand": true,
+			"name": "hideright"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "neutral",
+			"string": "\"Oh, ¿vas a ir primero, Yuri?\"",
+			"key": "crucIntro23",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "yuri",
+			"expression": "neutral",
+			"string": "\"Mhm...\"",
+			"key": "crucIntro24",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "yuri",
+			"expression": "smile",
+			"string": "\"Me encontré particularmente inmerso en la historia de la pista que elegí.\"",
+			"key": "crucIntro25",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "yuri",
+			"expression": "neutral",
+			"string": "\"Una canción de dos jóvenes amantes que deambulan por las partes sombreadas de su animada ciudad natal y se encuentran cara a cara con un monstruo.\"",
+			"key": "crucIntro26",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "yuri",
+			"expression": "neutral",
+			"string": "\"Uno listo para exigir la voluntad de Dios sobre ellos.\"",
+			"key": "crucIntro27",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "yuri",
+			"expression": "ehh",
+			"string": "\"Con una motocierra.\"",
+			"key": "crucIntro28",
+			"side": "left"
+		}
+	]
+}

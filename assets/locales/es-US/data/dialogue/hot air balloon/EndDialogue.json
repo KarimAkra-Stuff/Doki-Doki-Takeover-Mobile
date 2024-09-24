@@ -1,0 +1,47 @@
+{
+	"startingMusic": "",
+	"initStyle": "normal",
+	"dialogue": 
+	[
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "ahh",
+			"string": "\"¡De eso estoy hablando! Esas notas rápidas por sí solas te hacen destacar mucho, y cuando consideras todo lo demás, ¡eso es todo un paquete de individualidad deslumbrante!\"",
+			"key": "habEnd1",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "happy",
+			"string": "\"…je je. Eso ayudó a tranquilizar mi mente.\"",
+			"key": "habEnd2",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "happy",
+			"string": "\"¿Sabes qué? La próxima vez que vea a ese tipo de 'Boyfriend', ¡lo golpearé con el solo más rápido que jamás haya escuchado! ¡Jajaja!\"",
+			"key": "habEnd3",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "ahh",
+			"string": "\"¡Sí, así es como lo haces!\"",
+			"key": "habEnd4",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "happy",
+			"string": "\"Yo... realmente aprecio la ayuda, Monika.\"",
+			"key": "habEnd5",
+			"side": "left"
+		}
+	]
+}

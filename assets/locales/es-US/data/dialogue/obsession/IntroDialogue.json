@@ -1,0 +1,197 @@
+{
+	"canSkip": false,
+	"startingMusic": "",
+	"initStyle": "normal",
+	"dialogue": 
+	[
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "yeah",
+			"string": "\"¡Yuri, tu voz para cantar es increíble! ¡Canta otra vez, canta otra vez! ¡Quiero oir!\"",
+			"key": "obseIntro1",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "what",
+			"string": "\"Hrk-!\"",
+			"key": "obseIntro2",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "neutral",
+			"string": "\"¿Estás bien, Natsuki?\"",
+			"key": "obseIntro3",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "sick",
+			"string": "",
+			"side": "right"
+		},
+		{
+			"isCommand": true,
+			"name": "autoskip",
+			"string": "\"Bleh... no me siento tan bien-\"",
+			"key": "obseIntro4"
+		},
+		{
+			"isCommand": true,
+			"name": "autoskip",
+			"string": "\"eeeeeeeeeeeeeeeeeeeeeeeeee\"",
+			"key": "obseIntro5"
+		},
+		{
+			"isCommand": true,
+			"name": "autoskip",
+			"string": "\"eeeeeeeeeeeee\"",
+			"key": "obseIntro6"
+		},
+		{
+			"isCommand": true,
+			"name": "autoskip",
+			"string": "\"oooo\"",
+			"key": "obseIntro7"
+		},
+		{
+			"isCommand": true,
+			"name": "autoskip",
+			"string": "\"eeeeeee\"",
+			"key": "obseIntro8"
+		},
+		{
+			"isCommand": true,
+			"name": "autoskip",
+			"string": "\"eeee\"",
+			"key": "obseIntro9"
+		},
+		{
+			"isCommand": true,
+			"name": "autoskip",
+			"string": "\"eee\"",
+			"key": "obseIntro10"
+		},
+		{
+			"isCommand": true,
+			"name": "playsound",
+			"string": "glitch1"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "spook",
+			"string": "",
+			"side": "right"
+		},
+		{
+			"isCommand": true,
+			"name": "glitch"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "sick",
+			"string": "esto se salta por alguna razón",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "sick",
+			"string": "\"No me siento tan bien.\"",
+			"key": "obseIntro11",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "ehh",
+			"string": "\"Ah, voy a acompañar a Natsuki a la enfermería.\"",
+			"key": "obseIntro12",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "neutral",
+			"string": "\"¡S-ustedes se divierten cantando!\"",
+			"key": "obseIntro13",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "ehh",
+			"string": "\"Eheh-\"",
+			"key": "obseIntro14",
+			"side": "left"
+		},
+		{
+			"isCommand": true,
+			"name": "hideleft"
+		},
+		{
+			"isCommand": true,
+			"name": "hideright"
+		},
+		{
+			"isCommand": true,
+			"name": "playcutscene",
+			"string": "dokiexit",
+			"duration": 7
+		},
+		{
+			"isCommand": false,
+			"name": "yuri",
+			"expression": "smile",
+			"string": "\"...ufufu.\"",
+			"key": "obseIntro15",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "yuri",
+			"expression": "smile",
+			"string": "\"Cantar es mucho mejor de lo que pensaba.\"",
+			"key": "obseIntro16",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "yuri",
+			"expression": "smile",
+			"string": "\"Es un buen medio alternativo para... liberar mis emociones.\"",
+			"key": "obseIntro17",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "yuri",
+			"expression": "smile",
+			"string": "\"Cantemos de nuevo. Ahora mismo.\"",
+			"key": "obseIntro18",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "yuri",
+			"expression": "ahaha",
+			"string": "\"Hahhhh...-\"",
+			"key": "obseIntro19",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "bf",
+			"expression": "scared",
+			"string": "\"...\"",
+			"side": "right"
+		}
+	]
+}

@@ -6,6 +6,7 @@ import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.text.FlxText;
 import flixel.util.FlxTimer;
 import flixel.effects.FlxFlicker;
+import flixel.FlxSubState;
 
 class DokiSideStory extends MusicBeatSubstate
 {
@@ -72,13 +73,12 @@ class DokiSideStory extends MusicBeatSubstate
 		});
 
 		changeItem();
-
 		addTouchPad('LEFT_FULL', 'A_B');
-		addTouchPadCamera();
 	}
 
 	override function update(elapsed:Float):Void
 	{
+
 		super.update(elapsed);
 
 		if (acceptInput)
@@ -92,8 +92,7 @@ class DokiSideStory extends MusicBeatSubstate
 			if (controls.BACK)
 			{
 				FlxG.sound.play(Paths.sound('cancelMenu'));
-				DokiStoryState.instance.acceptInput = true;
-				DokiStoryState.instance.touchPad.visible = false;
+				MusicBeatSubstate.instance.touchPad = null;
 				close();
 			}
 
@@ -122,6 +121,24 @@ class DokiSideStory extends MusicBeatSubstate
 				}
 			}
 		}
+	}
+
+	override public function closeSubState()
+	{
+		super.closeSubState();
+		addTouchPad('LEFT_FULL', 'A_B');
+		new FlxTimer().start(0.1, function(tmr:FlxTimer)
+		{
+			acceptInput = true; //avoid wierd interaction (?)
+			if(MusicBeatSubstate.instance.touchPad == null) MusicBeatSubstate.instance.touchPad = touchPad;
+		});
+	}
+
+	override public function openSubState(SubState:FlxSubState)
+	{
+		removeTouchPad();
+		super.openSubState(SubState);
+		MusicBeatSubstate.instance.addTouchPad('LEFT_RIGHT', 'A_B');
 	}
 
 	function changeItem(amt:Int = 0):Void

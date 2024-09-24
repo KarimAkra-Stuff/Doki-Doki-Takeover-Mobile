@@ -1,0 +1,95 @@
+{
+	"startingMusic": "natsc",
+	"initStyle": "normal",
+	"dialogue": 
+	[
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "wah",
+			"string": "\"¡Ja! ¿Podrías seguir con ese?\"",
+			"key": "bakaIntro1",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "gf",
+			"expression": "giggle",
+			"string": "*riendo*",
+			"key": "bakaIntro2",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "bf",
+			"expression": "neutral",
+			"string": "\"Dee boo skeet~\"",
+			"key": "bakaIntro3",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "angy",
+			"string": "\"Rgh-! DEJA DE LLAMARME LINDA!!!\"",
+			"key": "bakaIntro4",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "angy",
+			"string": "\"No necesito que los chicos también me llamen lindo, eso es muy vergonzoso.-\"",
+			"key": "bakaIntro5",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "ehh",
+			"string": "\"Él es el único chico aquí, Natsuki..\"",
+			"key": "bakaIntro6",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "neutral",
+			"string": "\"Bueno... He tenido la intención de pedirle a un buen amigo mío que se una al club también, pero apuesto a que ese tonto se unirá al club de anime en su lugar..\"",
+			"key": "bakaIntro7",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "hmmph",
+			"string": "\"Sabía que debería haber probado algo nuevo.\"",
+			"key": "bakaIntro8",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "neutral",
+			"string": "\"Por suerte, esa música no es la única que escucho..\"",
+			"key": "bakaIntro9",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "hmmph",
+			"string": "\"Si hay alguien que sabe cómo subvertir las expectativas, soy yo..\"",
+			"key": "bakaIntro10",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "angy",
+			"string": "\"Dale!\"",
+			"key": "bakaIntro11",
+			"side": "left"
+		}
+	]
+}

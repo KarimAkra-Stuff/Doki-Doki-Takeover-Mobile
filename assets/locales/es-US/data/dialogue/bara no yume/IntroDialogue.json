@@ -1,0 +1,102 @@
+{
+	"startingMusic": "",
+	"initStyle": "pixel",
+	"dialogue": 
+	[
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "angry",
+			"string": "Wait-",
+			"key": "bnyIntro1",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "angry",
+			"string": "¿Ese es mi micrófono? ¿Cómo diablos conseguiste eso?",
+			"key": "bnyIntro2",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "gasp",
+			"string": "...",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "angry",
+			"string": "¡¿Y qué hace ese GUSANO aquí?!",
+			"key": "bnyIntro3",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "bf",
+			"expression": "what",
+			"string": "bep-",
+			"key": "bnyIntro4",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "angry",
+			"string": "¿No te divertiste lo suficiente haciendo el ridículo la última vez que apareciste?",
+			"key": "bnyIntro5",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "angry",
+			"string": "¿Ahora traes a más de tus horriblemente atractivos amigos aquí para burlarse de mí una vez más?",
+			"key": "bnyIntro6",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "gasp",
+			"string": "Oye, no es-",
+			"key": "bnyIntro7",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "angry",
+			"string": "Tú. Devuélveme eso. Tengo otra cuenta que saldar.",
+			"key": "bnyIntro8",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "gasp",
+			"string": "¿Eh? No, espera, estaba a punto de...",
+			"key": "bnyIntro9",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "angry",
+			"string": "Dije ¡QUE ME LO DES!",
+			"key": "bnyIntro10",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "gasp",
+			"string": "N-no!",
+			"key": "bnyIntro11",
+			"side": "right"
+		}
+	]
+}

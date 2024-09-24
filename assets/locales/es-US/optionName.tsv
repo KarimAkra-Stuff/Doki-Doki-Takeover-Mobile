@@ -1,0 +1,50 @@
+flag	content
+nameKeyBindings	Key Bindings
+nameDownscroll	Downscroll
+nameUpscroll	Upscroll
+nameGhostTap	Ghost Tapping
+nameNoGhostTap	No Ghost Tapping
+namePosition	Song Position
+nameReset	Boton De Reseteo
+nameFlashing	Luces parpadeantes
+nameJudgement	Tiempos de juicio
+nameFPSCount	FPS y contador de memoria
+nameFPSCap	Límite de FPS
+nameScroll	Velocidad de desplazamiento
+nameScrollDefault	Canción predeterminada
+nameNPS	Pantalla NPS
+nameCustomize	Personalizar HUD de juego
+nameGFCountdown	Cuenta regresiva de GF
+nameMiddleScrollOn	desplazamiento medio
+nameMiddleScrollOff	Desplazamiento lateral
+nameLaneUnderwayOn	Subsuelo de carril
+nameLaneUnderwayOff	Subsuelo sin carril
+nameScoreReset	Restablecer datos de puntuación
+nameScoreResetConfirm	Confirmar Restablecer datos de puntuación
+nameStoryReset	Restablecer datos de la historia
+nameStoryResetConfirm	Confirmar Restablecer datos de la historia
+nameSaveReset	Eliminar datos guardados
+nameSaveResetConfirm	Confirmar eliminación de datos guardados
+nameSelfAware	Conciencia de sí mismo
+nameGameJolt	Integración de la sacudida del juego
+nameHitSound	Golpear sonidos
+nameHitSoundJudge	Judgement Hit Sounds
+nameNoteSplash	Salpicaduras de notas
+nameEarlyLate	Indicador temprano/tardío
+nameAutoPause	Pausa Automática
+nameJudgeCount	Contador de juicios
+nameVideoDub	doblaje de video
+nameShowRating	Mostrar Rango
+nameHideRating	Ocultar Rango
+nameAntialiasing	Anti-aliasing
+nameGPUTextures	GPU Textures
+nameCacheCharacter	Character Caching
+nameCacheSong	Song Caching
+nameCache	Cache Assets
+namePreload	Precargar Assets
+nameShaders	Sombreado
+nameLowEnd	gama baja
+nameCursor	Cursor personalizados
+nameMirror	Modo Espejo
+nameSudden	Muerte Subita
+nameRandom	Notas aleatorias

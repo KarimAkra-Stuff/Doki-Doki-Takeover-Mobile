@@ -400,6 +400,11 @@ class DokiStoryState extends MusicBeatState
 	{
 		super.closeSubState();
 		add(mouseManager);
+		touchPad.visible = true;
+		new FlxTimer().start(0.2, function(tmr:FlxTimer)
+		{
+			acceptInput = true; //avoid wierd interaction (?)
+		});
 	}
 	
 	function selectThing()

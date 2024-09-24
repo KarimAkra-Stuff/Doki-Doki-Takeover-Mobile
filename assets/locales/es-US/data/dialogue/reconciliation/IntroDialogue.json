@@ -1,0 +1,212 @@
+{
+	"startingMusic": "monic",
+	"initStyle": "normal",
+	"dialogue": [
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "happ",
+			"string": "\"Monika! ¡Te hemos estado esperando!\"",
+			"key": "recoIntro1",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "happ",
+			"string": "\"¡No es propio de ti llegar tan tarde a una reunión del club!\"",
+			"key": "recoIntro2",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "yuri",
+			"expression": "neutral",
+			"string": "\"Parece que también has traído algunos miembros nuevos contigo.\"",
+			"key": "recoIntro3",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "neutral",
+			"string": "\"¿En serio, Mónica? ¿Trajiste a un chico?\"",
+			"key": "recoIntro4",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "hmmph",
+			"string": "\"Bueno, al menos también encontraste a otra chica.\"",
+			"key": "recoIntro5",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "hmmph",
+			"string": "(Uno que no me haga sentir tan pequeño en comparación con el resto de ustedes.)",
+			"key": "recoIntro6",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "eeh",
+			"string": "\"Oh! Yo-\"",
+			"key": "recoIntro7",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "bf",
+			"expression": "neutral",
+			"string": "*stare*",
+			"key": "recoIntro8",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "gf",
+			"expression": "neutral",
+			"string": "*stare*",
+			"key": "recoIntro8",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "eeh",
+			"string": "\"...Hola a los dos. Ha sido un tiempo.\"",
+			"key": "recoIntro9",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "bf",
+			"expression": "neutral",
+			"string": "\"Bep.\"",
+			"key": "recoIntro10",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "upset",
+			"string": "\"Lo siento por lo que hice antes.\"",
+			"key": "recoIntro11",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "eeh",
+			"string": "\"Y lamento haberte puesto sin darme cuenta en otra situación como esa poco después...\"",
+			"key": "recoIntro12",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "upset",
+			"string": "\"-pero ahora que estoy aquí, todo debería estar estable.\"",
+			"key": "recoIntro13",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "eeh",
+			"string": "\"No espero que me perdones... pero me alegro de que ahora estéis a salvo.\"",
+			"key": "recoIntro14",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "bf",
+			"expression": "think",
+			"string": "\"...\"",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "bf",
+			"expression": "yeah",
+			"string": "\"Ska dee beep!\"",
+			"key": "recoIntro15",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "upset",
+			"string": "\"-!\"",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "ahaha",
+			"string": "\"Ahaha... No tienes idea de lo feliz que estoy de escuchar eso.\"",
+			"key": "recoIntro16",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "ahh",
+			"string": "\"Ok todas!\"",
+			"key": "recoIntro17",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "ahh",
+			"string": "\"¡Me gustaría que conocieran a los miembros más nuevos del Club de Literatura!\"",
+			"key": "recoIntro18",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "ahh",
+			"string": "\"Y tengo una manera divertida que me gustaría presentarles.\"",
+			"key": "recoIntro19",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "upset",
+			"string": "\"Oye, a pesar de todo lo estresante que acaba de pasar-\"",
+			"key": "recoIntro20",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "ahaha",
+			"string": "\"-te queda suficiente energía para una canción más?\"",
+			"key": "recoIntro21",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "bf",
+			"expression": "yeah",
+			"string": "\"Ska dee beep!\"",
+			"key": "recoIntro22",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "ahh",
+			"string": "\"¡Entonces hagámoslo!\"",
+			"key": "recoIntro23",
+			"side": "left"
+		}
+	]
+}

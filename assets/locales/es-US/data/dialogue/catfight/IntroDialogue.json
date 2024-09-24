@@ -1,0 +1,87 @@
+{
+	"startingMusic": "yuric",
+	"initStyle": "normal",
+	"dialogue": 
+	[
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "En un día aparentemente normal en el Club de Literatura... Natsuki demuestra sus habilidades de canto rápido a Yuri, miembro del club.",
+			"key": "catIntro1",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "wah",
+			"string": "\"¡Hah, estas cosas de 'rapear' que a Boyfriend le encantan no son nada difíciles! Todo ese tiempo cantando en el espejo realmente valió la pena.\"",
+			"key": "catIntro2",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "yuri",
+			"expression": "neutral",
+			"string": "\"Tan rápido, pero tan claro y rítmico. No he visto a nadie aquí capaz de sacar eso adelante de la forma en que lo haces tú. Yo... definitivamente me sentiría demasiado abrumado y estropearía mis palabras.\"",
+			"key": "catIntro3",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "neutral",
+			"string": "\"Oye, tú eres el que realmente tiene una buena voz para cantar. Más rápido no siempre significa mejor sonido, ya sabes.\"",
+			"key": "catIntro4",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "yuri",
+			"expression": "blush",
+			"string": "\"-¡pero la convicción necesaria para llevar a cabo tan intensas proezas líricas! ¡Todavía no estoy en ese nivel! Estoy confinado a las melodías más lentas y estándar.\"",
+			"key": "catIntro5",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "hmmph",
+			"string": "\"¿Y qué hay de malo en eso? ¡Haces que suenen perfectos! ¡Sonaré mal si trato de cantar en tus tonos más profundos!\"",
+			"key": "catIntro6",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "yuri",
+			"expression": "ahh",
+			"string": "\"¡E-eso no es cierto! ¡Serías capaz de bajarlo tan fácilmente! ¡Al menos tienes la confianza para intentarlo!\"",
+			"key": "catIntro7",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "sick",
+			"string": "\"¡Caramba, Yuri, ya acepta el cumplido!\"",
+			"key": "catIntro8",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "yuri",
+			"expression": "ehh",
+			"string": "\"Menospreciarte no es un cumplido-!\"",
+			"key": "catIntro9",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "angy",
+			"string": "\"¡Literalmente estás haciendo lo mismo! Rrragh-! ¡Bien! ¡Te demostraré que te equivocas ahora mismo!\"",
+			"key": "catIntro10",
+			"side": "right"
+		}
+	]
+}

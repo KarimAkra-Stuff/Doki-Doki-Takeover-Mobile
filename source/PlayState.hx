@@ -670,7 +670,7 @@ class PlayState extends MusicBeatState
 	
 				try
 				{
-					introDoof = new DialogueBox(Assets.getText(Paths.json('dialogue/${SONG.song.toLowerCase()}/$introDialogue')));
+					introDoof = new DialogueBox(Assets.getText(Paths.dialogueJson('dialogue/${SONG.song.toLowerCase()}/$introDialogue')));
 					introDoof.scrollFactor.set();
 				}
 				catch (e)
@@ -685,7 +685,7 @@ class PlayState extends MusicBeatState
 	
 				try
 				{
-					endDoof = new DialogueBox(Assets.getText(Paths.json('dialogue/${SONG.song.toLowerCase()}/$endDialogue')));
+					endDoof = new DialogueBox(Assets.getText(Paths.dialogueJson('dialogue/${SONG.song.toLowerCase()}/$endDialogue')));
 					endDoof.scrollFactor.set();
 				}
 				catch (e)

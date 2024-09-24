@@ -1,0 +1,181 @@
+{
+	"startingMusic": "",
+	"initStyle": "pixel",
+	"dialogue": 
+	[
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "neutral",
+			"string": "¡Qué hermosa actuación fue esa! Sabía que lo tenías en ti.",
+			"key": "confEnd1",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "sad",
+			"string": "Hoy ha sido uno de los únicos momentos reales en los que he intentado cantar frente a extraños.",
+			"key": "confEnd2",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "uhoh",
+			"string": "Me alegro de que toda la práctica haya valido la pena.",
+			"key": "confEnd3",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "neutral",
+			"string": "También me gustó bastante la elección de la canción. ¿De dónde es?",
+			"key": "confEnd4",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "gasp",
+			"string": "¡Oh! Yo... yo escribí esa canción.",
+			"key": "confEnd5",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "gasp",
+			"string": "Es algo en lo que paso muchas noches trabajando. Estaba destinado a alguien que significa mucho para mí..",
+			"key": "confEnd6",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "sad",
+			"string": "Desafortunadamente... sucedieron muchas cosas y perdí mi oportunidad de cantárselas...",
+			"key": "confEnd7",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "gasp",
+			"string": "Todavía no sé dónde estoy ahora, así que no sé si alguna vez podré compartirlo con ellos... ",
+			"key": "confEnd8",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "gasp",
+			"string": "-aunque no sé si querrán escucharlo.",
+			"key": "confEnd9",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "neutral",
+			"string": "Ah, una historia tan trágica en la que te has enredado..",
+			"key": "confEnd10",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "neutral",
+			"string": "Puedo prometer que este lugar es uno de tales tragedias.",
+			"key": "confEnd11",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "happy",
+			"string": "¡Estaré cerca cada vez que tengas una canción en tu corazón que necesite ser cantada!",
+			"key": "confEnd12",
+			"side": "left"
+		},
+		{
+			"isCommand": true,
+			"name": "hideleft"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "gasp",
+			"string": "(Este tipo es terriblemente coqueto de repente, especialmente después de que nos gritó a mí y a ese chico antes....)",
+			"key": "confEnd13",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "sad",
+			"string": "(Bien. Si no hubiera terminado aquí, habría sido en la papelera de reciclaje...)",
+			"key": "confEnd14",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "sad",
+			"string": "...",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "sad",
+			"string": "(Espero que las demás estén bien.)",
+			"key": "confEnd15",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "sad",
+			"string": "(Natsuki, Yuri, Sayori...)",
+			"key": "confEnd16",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "sad",
+			"string": "(Después de lo que pasó, pensé que restaurar sus archivos de personajes e irme sería lo mejor para el club... y para el que amaba...)",
+			"key": "confEnd17",
+			"side": "right"
+		},
+		{
+			"isCommand": true,
+			"name": "glitch"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "gasp",
+			"string": "-!",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "senpai",
+			"expression": "hmm",
+			"string": "¿Pasa algo?",
+			"key": "confEnd18",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "gasp",
+			"string": "Ah, estoy bien. no se que fue eso-",
+			"key": "confEnd19",
+			"side": "right"
+		}
+	]
+}

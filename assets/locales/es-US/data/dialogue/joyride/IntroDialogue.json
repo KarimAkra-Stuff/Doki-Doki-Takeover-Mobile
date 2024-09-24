@@ -1,0 +1,219 @@
+{
+	"startingMusic": "sayoc",
+	"initStyle": "normal",
+	"dialogue": 
+	[
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "ahh",
+			"string": "\"Hmm, Natsuki y Yuri ya pasaron por aquí, así que me pregunto-\"",
+			"key": "joyIntro1",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "Las palabras de Monika fueron rápidamente interrumpidas por el sonido de la puerta de la sala de música al abrirse de par en par.",
+			"key": "joyIntro2",
+			"side": ""
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "Rápidamente entró corriendo el último miembro importante del Club de Literatura, con un paso vivo.",
+			"key": "joyIntro3",
+			"side": ""
+		},
+		{
+			"isCommand": true,
+			"name": "playcutscene",
+			"string": "showdad",
+			"duration": 0
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "ahaha",
+			"string": "\"Ahaha, justo como pensaba! Estoy feliz de que hayas venido a visitarme también, Sayori.\"",
+			"key": "joyIntro4",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "yeah",
+			"string": "\"Ah, Natsuki y Yuri ya estaban aquí??? los extrañé??? Aww noooo, ¡tenía noticias emocionantes para compartir!\"",
+			"key": "joyIntro5",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "neutral",
+			"string": "\"Ambos aparecieron antes para hablar uno a uno conmigo.\"",
+			"key": "joyIntro6",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "neutral",
+			"string": "\"Aunque, ¿qué es lo que te tiene de muy buen humor en este momento? ¡Tu sonrisa es la más grande que he visto!\"",
+			"key": "joyIntro7",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "happ",
+			"string": "\"¡Ejeje, no puedo evitarlo! ¡Todo lo que hemos estado haciendo recientemente ha sido increíble!\"",
+			"key": "joyIntro8",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "happ",
+			"string": "\"¡El festival salió a la perfección y ahora tenemos siete increíbles miembros del club que se hacen felices y positivos unos a otros!\"",
+			"key": "joyIntro9",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "happ",
+			"string": "\"Es todo lo que podría desear: Todos felices y apoyándose unos a otros.\"",
+			"key": "joyIntro10",
+			"side": "left"
+		},
+		{
+			"isCommand": true,
+			"name": "endmusic",
+			"expression": "",
+			"string": "",
+			"side": ""
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "El comportamiento emocionado de Sayori se enfría, volviéndose más solemne pero aún con una sonrisa genuina en su rostro.",
+			"key": "joyIntro11",
+			"side": ""
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "wah",
+			"string": "\"Ver cuánto bien hemos estado haciendo... Me ayuda a tener una razón para levantarme de la cama cada mañana, sabiendo que pudimos lograr esto.\"",
+			"key": "joyIntro12",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "wah",
+			"string": "\"Todavía es difícil para mí tener siempre en mente esos pensamientos felices, pero está mejorando, poco a poco cada día.\"",
+			"key": "joyIntro13",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "wah",
+			"string": "\"Me hace sentir más agradecido cada día que pudimos comenzar este club.\"",
+			"key": "joyIntro14",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "wah",
+			"string": "",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "Todas las noticias positivas y la felicidad de sus amigos habían llenado a Monika de un estado de emoción abrumador.",
+			"key": "joyIntro15",
+			"side": ""
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "Las lágrimas brotaron de los ojos de Monika mientras escuchaba las palabras de Sayori.",
+			"key": "joyIntro16",
+			"side": ""
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "En un estallido de felicidad melancólica, Monika se acerca y abraza a Sayori.",
+			"key": "joyIntro17",
+			"side": ""
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "cry",
+			"string": "\"Estoy... estoy tan orgullosa de ti, Sayori. Significa mucho que estés aquí con nosotros para hacer de este club el lugar que es.\"",
+			"key": "joyIntro18",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "cry",
+			"string": "\"Ha ayudado a mucha gente... especialmente a mí. Gracias…\"",
+			"key": "joyIntro19",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "wah",
+			"string": "\"Jejeje… gracias también, Monika.\"",
+			"key": "joyIntro20",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "Después de que pasan unos momentos, las chicas rompen su abrazo. Monika se seca las lágrimas y respira hondo.",
+			"key": "joyIntro21",
+			"side": ""
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "ahaha",
+			"string": "\"Ajá, esto va a ser un gran cambio de tono, pero cuando los demás vinieron antes, cada uno cantó una canción conmigo.\"",
+			"key": "joyIntro22",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "ahaha",
+			"string": "\"Me haría muy feliz poder hacer lo mismo contigo también.\"",
+			"key": "joyIntro23",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "yeah",
+			"string": "\"¡No hace falta que me lo digas dos veces! ¡Vamos a cantar!\"",
+			"key": "joyIntro24",
+			"side": "left"
+		}
+	]
+}

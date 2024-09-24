@@ -1,0 +1,79 @@
+{
+	"startingMusic": "",
+	"initStyle": "normal",
+	"dialogue": 
+	[
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "Y a través del poder de la canción, Girlfriend pudo escribir la letra de su propia canción de amor para su querido Boyfriend.",
+			"key": "lnfEnd1",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "Las chicas pidieron con entusiasmo ver qué se le había ocurrido a Girlfriend, por lo que les entregó el papel con todas las letras escritas en él.",
+			"key": "lnfEnd2",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "Con mucha anticipación, las niñas comenzaron a leer, y-",
+			"key": "lnfEnd3",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "-sus expresiones se transformaron lentamente en unas de sorpresa y confusión.",
+			"key": "lnfEnd4",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "eeh",
+			"string": "\"...No esperaba que escribieras algo tan... explícito-\"",
+			"key": "lnfEnd5",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "angy",
+			"string": "\"¡¡¡Ef, eww!!! ¡¿Por qué escribiste eso?! ¡No necesito saber qué hacen tú y tu novio por la noche!\"",
+			"key": "lnfEnd6",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "yuri",
+			"expression": "ehh",
+			"string": "\"Tengo... curiosidad por saber qué te inspiró a escribir varios versos sobre 'La sangre de tus enemigos'-\"",
+			"key": "lnfEnd7",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "ehh",
+			"string": "\"Eh Eh... ehhhh... tal vez la próxima vez, trate de mantener las cosas apropiadas para la escuela-\"",
+			"key": "lnfEnd8",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "gf",
+			"expression": "peace",
+			"string": "*blep*",
+			"key": "lnfEnd9",
+			"side": "right"
+		}
+	]
+}

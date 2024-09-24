@@ -1,0 +1,118 @@
+{
+	"startingMusic": "",
+	"initStyle": "normal",
+	"dialogue": 
+	[
+		{
+			"isCommand": false,
+			"name": "mc",
+			"expression": "happy",
+			"string": "\"Wow, eso fue mucho más divertido de lo que pensaba. Yo no lo hice nada mal, creo.\"",
+			"key": "neetEnd1",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "yeah",
+			"string": "\"¡Lo hiciste increíble!\"",
+			"key": "neetEnd2",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "mc",
+			"expression": "happy",
+			"string": "\"Je, gracias Sayo-\"",
+			"key": "neetEnd3",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "mc",
+			"expression": "chill",
+			"string": "\"-Espera...\"",
+			"key": "neetEnd4",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "ahaha",
+			"string": "\"Realmente nos estabas aguantando todo este tiempo, ¿hmm? ¡Llevamos años intentando que te unas a nosotros!\"",
+			"key": "neetEnd5",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "mc",
+			"expression": "hrk",
+			"string": "\"¿Cuánto tiempo han estado aquí?\"",
+			"key": "neetEnd6",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "wah",
+			"string": "\"¡Jajaja! Hemos estado aquí por un tiempo. No puedo creer que estuvieras tan metido en eso que no te diste cuenta.\"",
+			"key": "neetEnd7",
+			"side": "left"
+		},
+		{
+			"isCommand": true,
+			"name": "shake",
+			"duration": "0.2"
+		},
+		{
+			"isCommand": false,
+			"name": "mc",
+			"expression": "hrk",
+			"string": "\"hrk-!\"",
+			"key": "neetEnd8",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "yuri",
+			"expression": "smile",
+			"string": "\"Tu voz para cantar es tan naturalmente segura como tu voz para leer poemas.\"",
+			"key": "neetEnd9",
+			"side": "left"
+		},
+		{
+			"isCommand": true,
+			"name": "hideleft"
+		},
+		{
+			"isCommand": false,
+			"name": "bf",
+			"expression": "neutral",
+			"string": "\"Skep de bop, bedeep?~\"",
+			"key": "neetEnd10",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "bf",
+			"expression": "neutral",
+			"string": "(Translation) What did I tell you, broski?",
+			"key": "neetEnd11",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "mc",
+			"expression": "sigh",
+			"string": "(No hay forma de que realmente haya funcionado, ¿verdad?)",
+			"key": "neetEnd12",
+			"side": "left"
+		},
+		{
+			"isCommand": true,
+			"name": "playcutscene",
+			"string": "fadetoblack",
+			"duration": 2
+		}
+	]
+}

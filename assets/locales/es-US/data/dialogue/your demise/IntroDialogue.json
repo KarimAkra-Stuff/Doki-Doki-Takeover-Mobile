@@ -1,0 +1,116 @@
+{
+	"startingMusic": "",
+	"initStyle": "pixel",
+	"dialogue": 
+	[
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "uhoh",
+			"string": "Ahí... No más distracciones.",
+			"key": "ydIntro1",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "bf",
+			"expression": "what",
+			"string": "SKEE DEP!",
+			"key": "ydIntro2",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "bf",
+			"expression": "what",
+			"string": "(Traducción) GIRLFRIEND!",
+			"key": "ydIntro3",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "",
+			"string": "Volvamos a cantar, ¿de acuerdo?",
+			"key": "ydIntro4",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "bf",
+			"expression": "angry",
+			"string": "...",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "gasp",
+			"string": "Hmm?",
+			"key": "ydIntro5",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "bf",
+			"expression": "angry",
+			"string": "*ruidos agresivos de bee bop*",
+			"key": "ydIntro6",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "gasp",
+			"string": "Oh... ella.",
+			"key": "ydIntro7",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "",
+			"string": "Oye, no nos preocupemos por ella, ¿de acuerdo?",
+			"key": "ydIntro8",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "",
+			"string": "¡Vamos, tengo una canción muy especial que quería cantar!",
+			"key": "ydIntro9",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "bf",
+			"expression": "angry",
+			"string": "*continuación de bee bops enojados*",
+			"key": "ydIntro10",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "gasp",
+			"string": "...",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "hmm",
+			"string": "...",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "hmm",
+			"string": "Una canción más.",
+			"key": "ydIntro11",
+			"side": "left"
+		}
+	]
+}
