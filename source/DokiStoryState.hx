@@ -88,9 +88,13 @@ class DokiStoryState extends MusicBeatState
 
 	public static var instance:DokiStoryState;
 
+	#if desktop
 	var mouseManager:FlxMouseEventManager = new FlxMouseEventManager();
+	#end
 
 	public var acceptInput:Bool = true;
+
+	public var canSelect:Bool = false;
 
 	override function create()
 	{
@@ -190,13 +194,17 @@ class DokiStoryState extends MusicBeatState
 			story_icon.ID = i;
 			grpSprites.add(story_icon);
 
+			#if desktop
 			// Making sure a locked week isn't selected
 			if (dirstuff != 'dokistory/LockedWeek')
 				mouseManager.add(story_icon, onMouseDown, null, onMouseOver);
+			#end
 			
 		}
 
+		#if desktop
 		add(mouseManager);
+		#end
 
 		story_sidestories = new FlxSprite(395, 542);
 		story_sidestories.frames = Paths.getSparrowAtlas('dokistory/SideStories', 'preload', true);
@@ -304,7 +312,7 @@ class DokiStoryState extends MusicBeatState
 				MusicBeatState.switchState(new MainMenuState());
 			}
 
-			if (controls.ACCEPT)
+			if (controls.ACCEPT && canSelect)
 				selectThing();
 		}
 
@@ -329,6 +337,8 @@ class DokiStoryState extends MusicBeatState
 
 		PlayState.ForceDisableDialogue = false;
 		PlayState.isStoryMode = true;
+		if(FlxG.keys.pressed.TAB)
+			PlayState.forceBotplay = true;
 		selectedSomethin = true;
 		diffselect = false;
 
@@ -392,15 +402,20 @@ class DokiStoryState extends MusicBeatState
 	// :) ~Codexes
 	override public function openSubState(subState:FlxSubState)
 	{
+		#if desktop
 		remove(mouseManager);
+		#end
+		removeTouchPad();
 		super.openSubState(subState);
 	}
 
 	override public function closeSubState()
 	{
 		super.closeSubState();
+		#if desktop
 		add(mouseManager);
-		touchPad.visible = true;
+		#end
+		addTouchPad('LEFT_FULL', 'A_B');
 		new FlxTimer().start(0.2, function(tmr:FlxTimer)
 		{
 			acceptInput = true; //avoid wierd interaction (?)
@@ -416,13 +431,13 @@ class DokiStoryState extends MusicBeatState
 		}
 		else if (icons[curSelected][1])
 		{
+			touchPad.visible = false;
 			selectedSomethin = true;
 			FlxG.sound.play(Paths.sound('confirmMenu'));
 			goToState();
 		}
 		
 		acceptInput = false;
-		touchPad.visible = false;
 	}
 
 	function changeItem(huh:Int = 0)
@@ -475,18 +490,23 @@ class DokiStoryState extends MusicBeatState
 		switch (curSelected)
 		{
 			case 5:
+				canSelect = SaveData.beatMonika;
 				txtWeekTitle.visible = SaveData.beatMonika;
 				txtTracklist.visible = SaveData.beatFestival;
 			case 6:
+				canSelect = SaveData.beatFestival;
 				txtWeekTitle.visible = SaveData.beatFestival;
 				txtTracklist.visible = SaveData.beatEncore;
 			case 7:
+				canSelect = SaveData.beatEncore;
 				txtWeekTitle.visible = SaveData.beatEncore;
 				txtTracklist.visible = SaveData.beatProtag;
 			case 9:
+				canSelect = true;
 				txtWeekTitle.visible = false;
 				txtTracklist.visible = false;
 			default:
+				canSelect = icons[curSelected][1];
 				trace(icons[curSelected][1]);
 				txtWeekTitle.visible = icons[curSelected][1];
 				txtTracklist.visible = icons[curSelected][1];
@@ -558,8 +578,10 @@ class DokiStoryState extends MusicBeatState
 		{
 			story_sidestories.visible = true;
 			SaveData.weekUnlocked = 9;
+			#if desktop
 			if (mouseManager != null) 
 				mouseManager.add(story_sidestories, onMouseDown, null, onMouseOver);
+			#end
 		}
 		if (SaveData.beatSide)
 		{
@@ -591,6 +613,7 @@ class DokiStoryState extends MusicBeatState
 		txtTracklist.text += "\n";
 	}
 
+	#if desktop
 	function onMouseDown(spr:FlxSprite):Void
 	{
 		if (!selectedSomethin)
@@ -612,6 +635,7 @@ class DokiStoryState extends MusicBeatState
 			updateSelected();
 		}
 	}
+	#end
 
 	override function beatHit()
 	{

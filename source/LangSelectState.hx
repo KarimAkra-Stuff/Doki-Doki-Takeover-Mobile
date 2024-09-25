@@ -82,6 +82,7 @@ class LangSelectState extends MusicBeatState
 		titleText.antialiasing = SaveData.globalAntialiasing;
 		add(titleText);
 
+		addTouchPad('UP_DOWN', 'A_B');
 		super.create();
 	}
 

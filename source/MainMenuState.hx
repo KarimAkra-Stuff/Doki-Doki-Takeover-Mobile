@@ -261,7 +261,7 @@ class MainMenuState extends MusicBeatState
 			#end
 		}
 
-		shaker = new FlxSprite(1132, 538);
+		shaker = new FlxSprite(1132, /*538*/182);
 		shaker.frames = Paths.getSparrowAtlas("shaker", 'preload');
 		shaker.animation.addByPrefix('play', "Shaker", 21, false);
 		shaker.antialiasing = SaveData.globalAntialiasing;
@@ -294,7 +294,7 @@ class MainMenuState extends MusicBeatState
 
 		changeItem();
 
-		addTouchPad('UP_DOWN', 'A_B');
+		addTouchPad('UP_DOWN', 'A');
 		super.create();
 	}
 

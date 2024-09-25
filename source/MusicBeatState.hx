@@ -36,7 +36,7 @@ class MusicBeatState extends FlxUIState
 		var sprite:FlxSprite = new FlxSprite().loadGraphic(Paths.image('cursor'));
 		FlxG.mouse.load(sprite.pixels);
 
-		CoolUtil.setFPSCap(SaveData.framerate);
+		// CoolUtil.setFPSCap(SaveData.framerate);
 
 		if (!FlxTransitionableState.skipNextTransOut)
 			openSubState(new CustomFadeTransition(0.7, true));
@@ -177,36 +177,42 @@ class MusicBeatState extends FlxUIState
 
 	}
 
-	public static function switchState(nextState:FlxState)
+	public static function switchState(nextState:FlxState = null)
 	{
-		var curState:Dynamic = FlxG.state;
-		var leState:MusicBeatState = curState;
-		if (!FlxTransitionableState.skipNextTransIn)
+		if (nextState == null)
+			nextState = FlxG.state;
+		if (nextState == FlxG.state)
 		{
-			leState.openSubState(new CustomFadeTransition(0.6, false));
-			if (nextState == FlxG.state)
-			{
-				CustomFadeTransition.finishCallback = function()
-				{
-					FlxG.resetState();
-				};
-			}
-			else
-			{
-				CustomFadeTransition.finishCallback = function()
-				{
-					FlxG.switchState(nextState);
-				};
-			}
+			resetState();
 			return;
 		}
+
+		if (FlxTransitionableState.skipNextTransIn)
+			FlxG.switchState(nextState);
+		else
+			startTransition(nextState);
 		FlxTransitionableState.skipNextTransIn = false;
-		FlxG.switchState(nextState);
 	}
 
 	public static function resetState()
 	{
-		MusicBeatState.switchState(FlxG.state);
+		if (FlxTransitionableState.skipNextTransIn)
+			FlxG.resetState();
+		else
+			startTransition();
+		FlxTransitionableState.skipNextTransIn = false;
+	}
+
+	public static function startTransition(nextState:FlxState = null)
+	{
+		if (nextState == null)
+			nextState = FlxG.state;
+
+		FlxG.state.openSubState(new CustomFadeTransition(0.6, false));
+		if (nextState == FlxG.state)
+			CustomFadeTransition.finishCallback = function() FlxG.resetState();
+		else
+			CustomFadeTransition.finishCallback = function() FlxG.switchState(nextState);
 	}
 
 	private function updateBeat():Void

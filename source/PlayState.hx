@@ -64,10 +64,6 @@ import StageData;
 #if FEATURE_DISCORD
 import Discord.DiscordClient;
 #end
-#if FEATURE_FILESYSTEM
-import Sys;
-import sys.FileSystem;
-#end
 #if FEATURE_GAMEJOLT
 import GameJolt.GameJoltAPI;
 #end
@@ -92,6 +88,7 @@ class PlayState extends MusicBeatState
 	public static var showCutscene:Bool = true;
 	public static var deathCounter:Int = 0;
 	public static var toggleBotplay:Bool = false;
+	public static var forceBotplay:Null<Bool> = null;
 	public static var ForceDisableDialogue:Bool = false;
 
 	var midsongcutscene:Bool = false;
@@ -557,6 +554,8 @@ class PlayState extends MusicBeatState
 
 		if (!isStoryMode)
 			toggleBotplay = SaveData.botplay;
+		
+		if(forceBotplay != null) toggleBotplay = forceBotplay;
 
 		// Making difficulty text for Discord Rich Presence/Song Position Bar.
 		switch (storyDifficulty)
@@ -1523,6 +1522,7 @@ class PlayState extends MusicBeatState
 						rainBG.setGraphicSize(Std.int(rainBG.width / defaultCamZoom));
 						rainBG.updateHitbox();
 						rainBG.antialiasing = SaveData.globalAntialiasing;
+						rainBG.bitmap.smoothing = false;
 						rainBG.cameras = [camGame2];
 						add(rainBG);
 					}
@@ -1567,6 +1567,7 @@ class PlayState extends MusicBeatState
 						testVM.setGraphicSize(Std.int(testVM.width / defaultCamZoom));
 						testVM.updateHitbox();
 						testVM.antialiasing = SaveData.globalAntialiasing;
+						testVM.bitmap.smoothing = false;
 						testVM.alpha = 0.001;
 						add(testVM);
 					}
@@ -1665,6 +1666,7 @@ class PlayState extends MusicBeatState
 						crackBG.setGraphicSize(Std.int(crackBG.width / defaultCamZoom));
 						crackBG.updateHitbox();
 						crackBG.antialiasing = SaveData.globalAntialiasing;
+						crackBG.bitmap.smoothing = false;
 						crackBG.alpha = 0.001;
 						add(crackBG);
 					}
@@ -3179,9 +3181,11 @@ class PlayState extends MusicBeatState
 	{
 		endingSong = true;
 		camHUD.visible = false;
+		mobileControlsCamera.visible = false;
 
 		if (toggleBotplay)
 			toggleBotplay = false;
+		forceBotplay = null;
 
 		campaignScore += Math.round(songScore);
 
@@ -5274,6 +5278,7 @@ class PlayState extends MusicBeatState
 
 	function endSong():Void
 	{
+		mobileControlsCamera.visible = false;
 		positionDisplay.visible = false;
 		endingSong = true;
 		sectionStart = false;
@@ -5384,6 +5389,7 @@ class PlayState extends MusicBeatState
 				Highscore.saveWeekScore(storyWeek, campaignScore, storyDifficulty);
 				SaveData.save();
 
+				forceBotplay = null;
 				switch (curSong.toLowerCase())
 				{
 					default:
@@ -5417,6 +5423,7 @@ class PlayState extends MusicBeatState
 				if (FlxTransitionableState.skipNextTransIn)
 					CustomFadeTransition.nextCamera = null;
 
+				forceBotplay = null;
 				MusicBeatState.switchState(new DokiFreeplayState());
 			}
 		}

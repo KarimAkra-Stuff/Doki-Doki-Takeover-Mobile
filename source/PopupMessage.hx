@@ -92,6 +92,9 @@ class PopupMessage extends MusicBeatSubstate
 
 		FlxG.sound.play(Paths.sound('scrollMenu'));
 		updateBox();
+
+		addTouchPad('NONE', 'A');
+		addTouchPadCamera();
 	}
 
 	function updateBox():Void

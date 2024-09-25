@@ -4,6 +4,7 @@ import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.math.FlxMath;
 import flixel.text.FlxText;
+import mobile.MobileData;
 
 class OptionCategory
 {
@@ -1040,6 +1041,7 @@ class GPUTextures extends Option
 	public override function press():Bool
 	{
 		SaveData.gpuTextures = !SaveData.gpuTextures;
+		hxvlc.openfl.Video.useTexture = SaveData.gpuTextures;
 		display = updateDisplay();
 		return true;
 	}
@@ -1157,7 +1159,7 @@ class CustomCursor extends Option
 
 class HitboxTypeOption extends Option
 {
-	public var typesList:Array<String> = ['Gradient', 'No Gradient', 'Hidden'];
+	public var typesList:Array<String> = ['Gradient', 'Solid Color', 'Hidden'];
 	public var curType:Int = 0;
 	
 	public function new(desc:String)
@@ -1285,5 +1287,96 @@ class TouchPadAlphaOption extends Option
 	override function getValue():String
 	{
 		return "Current Touch Pad Opacity" + ': ${Math.fround(SaveData.touchPadAlpha * 100)}%';
+	}
+}
+
+class MobileControlsOption extends Option
+{
+	public var modesList:Array<String> = ['Pad-Right', 'Pad-Left', 'Pad-Custom', 'Hitbox'];
+	@:isVar
+	public var curType(get, set):Int;
+
+	public function new(desc:String)
+	{
+		super();
+		description = desc;
+		// acceptValues = true;
+	}
+
+	public override function press():Bool
+	{
+		changeType(1);
+		display = updateDisplay();
+		return true;
+	}
+
+	// tried to make it work by pressing left and right but didn't turn out well
+
+	// override function right():Bool
+	// {
+	// 	changeType(1);
+	// 	// display = updateDisplay();
+	// 	press();
+	// 	return true;
+	// }
+
+	// override function left():Bool
+	// {
+	// 	changeType(-1);
+	// 	// display = updateDisplay();
+	// 	press();
+
+	// 	return true;
+	// }
+
+	private override function updateDisplay():String
+	{
+		return "Mobile Controls: " + modesList[curType];
+	}
+
+	function changeType(change:Int = 0)
+	{
+		curType += change;
+
+		if (curType < 0)
+			curType = modesList.length - 1;
+		if (curType >= modesList.length)
+			curType = 0;
+
+	}
+
+	private function get_curType():Int
+	{
+		return MobileData.mode;
+	}
+
+	private function set_curType(Value:Int):Int
+	{
+		return MobileData.mode = Value;
+	}
+
+	// override function getValue():String
+	// {
+	// 	return "Mobile Options";
+	// }
+}
+
+class CustomPadSetup extends Option
+{
+	public function new(desc:String)
+	{
+		super();
+		description = desc;
+	}
+
+	public override function press():Bool
+	{
+		MusicBeatState.switchState(new mobile.TouchPadMappingState());
+		return true;
+	}
+
+	private override function updateDisplay():String
+	{
+		return "Customize Touch Pad Layout";
 	}
 }

@@ -29,5 +29,5 @@ cmnCaching	Caching
 cmnLanguage	Language Select
 cmnDisableCaching	(press D to disable next boot)
 cmnCachingFinish	Finished caching!
-cmnDialogueSkip	Press ESCAPE to skip the dialogue.
+cmnDialogueSkip	Press BACK to skip the dialogue.
 cmnExit	Are you sure you want to<N>exit the game?

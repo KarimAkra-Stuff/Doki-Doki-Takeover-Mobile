@@ -98,8 +98,9 @@ class MobileData
 			var fileWithNoLib:String = file.contains(':') ? file.split(':')[1] : file;
 			if (Path.extension(fileWithNoLib) == 'json')
 			{
-			 	#if FEATURE_FILESYSTEM file = Path.join([folder, Path.withoutDirectory(file)]); #end
-				var str = #if FEATURE_FILESYSTEM File.getContent(file) #else Assets.getText(file) #end;
+			 	// #if FEATURE_FILESYSTEM file = Path.join([folder, Path.withoutDirectory(file)]); #end
+				// var str = #if FEATURE_FILESYSTEM File.getContent(file); #else Assets.getText(file); #end
+				var str = Assets.getText(file);
 				var json:TouchPadButtonsData = cast Json.parse(str);
 				var mapKey:String = Path.withoutDirectory(Path.withoutExtension(fileWithNoLib));
 				map.set(mapKey, json);
@@ -110,9 +111,9 @@ class MobileData
     public static function readDir(directory:String):Array<String>
 	{
 		var directoryWithNoLib:String = directory.contains(':') ? directory.split(':')[1] : directory;
-		#if FEATURE_FILESYSTEM
-		return FileSystem.readDirectory(directoryWithNoLib);
-		#else
+		// #if FEATURE_FILESYSTEM
+		// return FileSystem.readDirectory(directoryWithNoLib);
+		// #else
 		var dirs:Array<String> = [];
 		for (dir in Assets.list().filter(folder -> folder.startsWith(directoryWithNoLib)))
 		{
@@ -126,7 +127,7 @@ class MobileData
 			}
 		}
 		return dirs;
-		#end
+		// #end
 	}
 }
 

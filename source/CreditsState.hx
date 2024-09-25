@@ -24,11 +24,6 @@ import lime.utils.Assets;
 import haxe.Json;
 import shaders.ColorMaskShader;
 
-#if FEATURE_FILESYSTEM
-import Sys;
-import sys.FileSystem;
-#end
-
 #if FEATURE_DISCORD
 import Discord.DiscordClient;
 #end

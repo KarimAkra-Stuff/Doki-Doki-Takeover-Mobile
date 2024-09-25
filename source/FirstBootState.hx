@@ -67,6 +67,8 @@ class FirstBootState extends MusicBeatState
 			optionText.ID = i;
 			grpOptionsTexts.add(optionText);
 		}
+
+		addTouchPad('UP_DOWN', 'A');
 		#else
 		FlxTween.tween(backdrop, {alpha: 1}, 0.5, {ease: FlxEase.quadOut});
 		FlxTween.tween(gradient, {alpha: 1}, 0.5, {ease: FlxEase.quadOut});
@@ -135,6 +137,7 @@ class FirstBootState extends MusicBeatState
 
 			if (controls.ACCEPT)
 			{
+				FlxTween.tween(touchPad, {alpha: 0}, 1, {ease: FlxEase.quadOut, onComplete: (t) -> removeTouchPad()});
 				selectedsomething = true;
 				selectedSomethin = true;
 				FlxG.sound.play(Paths.sound('confirmMenu'));

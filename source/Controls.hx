@@ -881,7 +881,7 @@ class Controls extends FlxActionSet
 		state = MusicBeatSubstate.instance;
 
 		if (state != null && state.touchPad != null)
-			bools[0] = state.touchPad.buttonJustPressed(id);
+			bools[2] = state.touchPad.buttonJustPressed(id);
 
 		return bools[0] || bools[1] || bools[2];
 	}
@@ -901,7 +901,7 @@ class Controls extends FlxActionSet
 		state = MusicBeatSubstate.instance;
 
 		if (state != null && state.touchPad != null)
-			bools[0] = state.touchPad.buttonJustReleased(id);
+			bools[2] = state.touchPad.buttonJustReleased(id);
 
 		return bools[0] || bools[1] || bools[2];
 	}
@@ -921,7 +921,7 @@ class Controls extends FlxActionSet
 		state = MusicBeatSubstate.instance;
 
 		if (state != null && state.touchPad != null)
-			bools[0] = state.touchPad.buttonPressed(id);
+			bools[2] = state.touchPad.buttonPressed(id);
 
 		return bools[0] || bools[1] || bools[2];
 	}

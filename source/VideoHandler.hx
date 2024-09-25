@@ -11,7 +11,7 @@ class VideoHandler extends FlxVideo
 
 	public function new():Void
 	{
-		super();
+		super(true);
 
 		// autoVolumeHandle = false;
 		onEndReached.add(function()
@@ -22,16 +22,26 @@ class VideoHandler extends FlxVideo
 
 	override public function play():Bool
 	{
+		FlxG.stage.quality = BEST;
 		FlxG.stage.addEventListener(KeyboardEvent.KEY_DOWN, onKeyPress);
 		FlxG.mouse.visible = false;
 		FlxG.sound.music.stop();
 		FlxG.addChildBelowMouse(this);
-
+		// make the video look a bit cleaner ig..?
+		shader = new openfl.filters.BitmapFilterShader();
+		@:privateAccess
+		if(shader != null)
+		{
+			trace('video shader is not null');
+			@:privateAccess
+			shader.__texture.filter = SaveData.globalAntialiasing ? LINEAR : NEAREST;
+		}
 		return super.play();
 	}
 
 	override public function dispose():Void
 	{
+		FlxG.stage.quality = LOW;
 		FlxG.stage.removeEventListener(KeyboardEvent.KEY_DOWN, onKeyPress);
 		FlxG.mouse.visible = true;
 		FlxG.removeChild(this);

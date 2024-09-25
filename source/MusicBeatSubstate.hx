@@ -12,10 +12,13 @@ import mobile.*;
 class MusicBeatSubstate extends FlxSubState
 {
 	public static var instance:MusicBeatSubstate;
+	public var prevInstance:MusicBeatSubstate;
 
 	public function new()
 	{
 		// CoolUtil.setFPSCap(SaveData.framerate);
+		if(instance != null)
+			prevInstance = instance;
 		instance = this;
 		super();
 	}
@@ -73,6 +76,9 @@ class MusicBeatSubstate extends FlxSubState
 
 	override public function destroy()
 	{
+		if (prevInstance != null)
+			instance = prevInstance;
+		
 		removeTouchPad();
 
 		super.destroy();

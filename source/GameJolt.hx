@@ -77,10 +77,6 @@ import flixel.graphics.FlxGraphic;
 import flixel.addons.transition.FlxTransitionSprite.GraphicTransTileDiamond;
 import shaders.ColorMaskShader;
 
-#if FEATURE_FILESYSTEM
-import Sys;
-#end
-
 class GameJoltAPI // Connects to tentools.api.FlxGameJolt
 {
 	static var userLogin:Bool = false;

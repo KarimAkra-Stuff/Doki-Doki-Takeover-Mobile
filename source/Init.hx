@@ -14,18 +14,19 @@ class Init extends MusicBeatState
 {
 	var preloadMusic:Array<String> = [
 		'freakyMenu',
-		'disco',
-		'monic',
-		'natsc',
-		'pixelc',
-		'protagc',
-		'sayoc',
-		'yuric'
+		'disco'/*,*/
+		// 'monic',
+		// 'natsc',
+		// 'pixelc',
+		// 'protagc',
+		// 'sayoc',
+		// 'yuric'
 	];
 
 	override function create()
 	{
 		SaveData.init();
+		hxvlc.openfl.Video.useTexture = SaveData.gpuTextures;
 		CoolUtil.setFPSCap(SaveData.framerate);
 		KeyBinds.gamepad = FlxG.gamepads.lastActive != null;
 
