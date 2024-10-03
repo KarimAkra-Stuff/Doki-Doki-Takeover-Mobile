@@ -67,6 +67,8 @@ class MainMenuState extends MusicBeatState
 	var menu_character:FlxSprite;
 	var shaker:FlxSprite;
 	var addVally:Bool = false;
+	
+	var keyboard:FlxSprite;
 
 	var backdrop:FlxBackdrop;
 	var logoBl:FlxSprite;
@@ -82,10 +84,6 @@ class MainMenuState extends MusicBeatState
 		instance = this;
 
 		persistentUpdate = persistentDraw = true;
-
-		#if desktop
-		FlxG.mouse.visible = true;
-		#end
 
 		if (!SaveData.beatPrologue)
 		{
@@ -269,6 +267,15 @@ class MainMenuState extends MusicBeatState
 		if (addVally)
 			add(shaker);
 
+		keyboard = new FlxSprite();
+		keyboard.loadGraphic(Paths.image('keyboard', 'mobile'));
+		keyboard.setGraphicSize(140, 140);
+		keyboard.updateHitbox();
+		keyboard.x = FlxG.width - (keyboard.width + 35);
+		keyboard.color = 0xFD9FEF;
+		if(!addVally)
+			add(keyboard);
+
 		#if desktop
 		add(mouseManager);
 		#end
@@ -295,6 +302,8 @@ class MainMenuState extends MusicBeatState
 		changeItem();
 
 		addTouchPad('UP_DOWN', 'A');
+
+		FlxG.stage.window.onTextInput.add(handleCode);
 		super.create();
 	}
 
@@ -309,6 +318,9 @@ class MainMenuState extends MusicBeatState
 		{
 			if (shaker != null && addVally && FlxG.mouse.overlaps(shaker) && FlxG.mouse.justPressed)
 				openSong();
+
+			if (keyboard != null && !addVally && FlxG.mouse.overlaps(keyboard) && FlxG.mouse.justPressed)
+				FlxG.stage.window.textInputEnabled = true;
 
 			if (controls.UP_P)
 			{
@@ -325,13 +337,16 @@ class MainMenuState extends MusicBeatState
 			if (controls.RESET)
 				MusicBeatState.resetState();
 
-			#if debug
-			if (FlxG.keys.justPressed.O)
-				SaveData.unlockAll();
+			// #if debug
+			if(FlxG.keys.pressed.SHIFT)
+			{
+				if (FlxG.keys.justPressed.O)
+					SaveData.unlockAll();
 
-			if (FlxG.keys.justPressed.P)
-				SaveData.unlockAll(false);
-			#end
+				if (FlxG.keys.justPressed.P)
+					SaveData.unlockAll(false);
+			}
+			// #end
 
 			if (controls.ACCEPT)
 				selectThing();
@@ -503,5 +518,31 @@ class MainMenuState extends MusicBeatState
 		}
 
 		return char;
+	}
+
+	final code:String = 'justmonika';
+	var curCode:String = '';
+	function handleCode(str:String)
+	{
+		curCode += str.toLowerCase();
+		trace(curCode);
+
+		if (!code.startsWith(curCode))
+		{
+			curCode = '';
+			trace('code got reseted!');
+		}
+
+		if(curCode == code)
+		{
+			SaveData.unlockAll();
+			FlxG.resetState();
+		}
+	}
+
+	override public function destroy()
+	{
+		FlxG.stage.window.onTextInput.remove(handleCode);
+		super.destroy();
 	}
 }

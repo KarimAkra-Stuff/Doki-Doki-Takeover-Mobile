@@ -31,10 +31,7 @@ class MusicBeatSubstate extends FlxSubState
 	private var controls(get, never):Controls;
 
 	public var touchPad:TouchPad;
-	public var mobileControls:MobileControls;
-
 	public var touchPadCamera:FlxCamera;
-	public var mobileControlsCamera:FlxCamera;
 
 	inline function get_controls():Controls
 		return PlayerSettings.player1.controls;

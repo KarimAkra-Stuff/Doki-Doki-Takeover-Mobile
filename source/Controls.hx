@@ -223,7 +223,6 @@ class Controls extends FlxActionSet
 	inline function get_DOWN_R()
 		return _downR.check() || mobileControlsJustReleased(BUTTON_DOWN);
 
-	// THE NOTES CONTROLS ARE TEMPORARY AND NOT FINAL!!!!!!
 	public var NOTE_UP(get, never):Bool;
 
 	inline function get_NOTE_UP()

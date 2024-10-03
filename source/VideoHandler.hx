@@ -22,9 +22,8 @@ class VideoHandler extends FlxVideo
 
 	override public function play():Bool
 	{
-		FlxG.stage.quality = BEST;
+		// FlxG.stage.quality = BEST;
 		FlxG.stage.addEventListener(KeyboardEvent.KEY_DOWN, onKeyPress);
-		FlxG.mouse.visible = false;
 		FlxG.sound.music.stop();
 		FlxG.addChildBelowMouse(this);
 		// make the video look a bit cleaner ig..?
@@ -41,9 +40,8 @@ class VideoHandler extends FlxVideo
 
 	override public function dispose():Void
 	{
-		FlxG.stage.quality = LOW;
+		// FlxG.stage.quality = LOW;
 		FlxG.stage.removeEventListener(KeyboardEvent.KEY_DOWN, onKeyPress);
-		FlxG.mouse.visible = true;
 		FlxG.removeChild(this);
 		super.dispose();
 	}

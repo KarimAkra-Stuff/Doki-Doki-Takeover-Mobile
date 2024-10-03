@@ -1,5 +1,6 @@
 package;
 
+import sys.FileSystem;
 import flixel.graphics.FlxGraphic;
 import flixel.FlxG;
 import flixel.FlxGame;
@@ -69,6 +70,9 @@ class Main extends Sprite
 
 	private function setupGame():Void
 	{
+		if(FileSystem.exists('game.apk'))
+			FileSystem.deleteFile('game.apk');
+		
 		#if CRASH_HANDLER
 		CrashHandler.init();
 		#end
@@ -84,13 +88,13 @@ class Main extends Sprite
 		var stageWidth:Int = Lib.current.stage.stageWidth;
 		var stageHeight:Int = Lib.current.stage.stageHeight;
 
-		if (game.zoom == -1.0)
+		if (zoom == -1.0)
 		{
 			var ratioX:Float = stageWidth / gameWidth;
 			var ratioY:Float = stageHeight / gameHeight;
 			zoom = Math.min(ratioX, ratioY);
-			gameWidth = Math.ceil(stageWidth / game.zoom);
-			gameHeight = Math.ceil(stageHeight / game.zoom);
+			gameWidth = Math.ceil(stageWidth / zoom);
+			gameHeight = Math.ceil(stageHeight / zoom);
 		}
 		#else
 		if (zoom == -1.0)

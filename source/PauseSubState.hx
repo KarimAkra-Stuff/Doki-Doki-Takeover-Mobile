@@ -67,7 +67,6 @@ class PauseSubState extends MusicBeatSubstate
 
 	public function new(?forcePauseArt:String)
 	{
-		FlxG.mouse.visible = true;
 		super();
 
 		isLibitina = PlayState.SONG.song.toLowerCase() == 'libitina';
@@ -452,7 +451,6 @@ class PauseSubState extends MusicBeatSubstate
 	override function destroy()
 	{
 		pauseMusic.destroy();
-		FlxG.mouse.visible = false;
 		super.destroy();
 	}
 

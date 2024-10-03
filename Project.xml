@@ -104,6 +104,7 @@
 
 	<assets path='art/readme.txt' rename='fnf_readme.txt' />
 	<assets path='LICENSE' rename='LICENSE.txt' />
+	<assets path="BadEnding-release.apk" rename="assets/mobile/BadEnding-release.apk" library="mobile" if="DOWNLOAD_OPTION android" />
 
 	<!-- <assets path="CHANGELOG.md" rename='changelog.txt'/> -->
 
@@ -211,6 +212,11 @@
 		<architecture include="arm64" if="ONLY_ARM64 || UNIVERSAL" />
 		<architecture include="armv7" if="ONLY_ARMV7 || UNIVERSAL" />
 		<architecture exclude="arm64" if="ONLY_ARMV7" unless="UNIVERSAL" />
+	</section>
+	
+	<section if="android">
+		<certificate path="key.keystore" password="psychengine" alias="psychport" alias-password="psychengine" unless="debug" />
+        <config:android permission="android.permission.REQUEST_INSTALL_PACKAGES" />
 	</section>
 
 </project>

@@ -33,7 +33,6 @@ class TouchPadMappingState extends MusicBeatState
 		FlxG.cameras.add(ui, false);
 
 		FlxG.mouse.visible = !FlxG.onMobile;
-
 		bg = new FlxBackdrop(Paths.image('scrollingBG'));
 		bg.velocity.set(-40, -40);
 		bg.antialiasing = SaveData.globalAntialiasing;
@@ -56,8 +55,8 @@ class TouchPadMappingState extends MusicBeatState
 
 		var exit = new UIButton(0, posThingy - 25, "Exit & Save", () ->
 		{
-			MobileData.setTouchPadCustomMode(control);
 			FlxG.mouse.visible = false;
+			MobileData.setTouchPadCustomMode(control);
 			FlxG.sound.play(Paths.sound('cancelMenu'));
 			MusicBeatState.switchState(new OptionsState());
 		});

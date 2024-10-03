@@ -2597,7 +2597,7 @@ class PlayState extends MusicBeatState
 		FlxG.stage.addEventListener(KeyboardEvent.KEY_UP, onKeyRelease);
 
 		if (SaveData.hitSound) HitSoundManager.init();
-		FlxG.mouse.visible = false;
+		lime.system.System.allowScreenTimeout = false;
 		super.create();
 
 		CustomFadeTransition.nextCamera = camOverlay;
@@ -2636,7 +2636,7 @@ class PlayState extends MusicBeatState
 	{
 		FlxG.stage.removeEventListener(KeyboardEvent.KEY_DOWN, onKeyPress);
 		FlxG.stage.removeEventListener(KeyboardEvent.KEY_UP, onKeyRelease);
-		FlxG.mouse.visible = true;
+		lime.system.System.allowScreenTimeout = SaveData.screensaver;
 		super.destroy();
 	}
 
@@ -3997,6 +3997,7 @@ class PlayState extends MusicBeatState
 
 	override function openSubState(SubState:FlxSubState)
 	{
+		lime.system.System.allowScreenTimeout = SaveData.screensaver;
 		if (paused)
 		{
 			if (FlxG.sound.music != null)
@@ -4027,6 +4028,7 @@ class PlayState extends MusicBeatState
 
 	override function closeSubState()
 	{
+		lime.system.System.allowScreenTimeout = false;
 		if (paused)
 		{
 			if (FlxG.sound.music != null && !startingSong && !endingSong && !inCutscene)

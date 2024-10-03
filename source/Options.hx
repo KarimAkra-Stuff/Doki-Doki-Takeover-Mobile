@@ -5,6 +5,17 @@ import flixel.FlxSprite;
 import flixel.math.FlxMath;
 import flixel.text.FlxText;
 import mobile.MobileData;
+import mobile.MobileScaleMode;
+import openfl.Assets;
+import sys.io.File;
+import sys.FileSystem;
+import haxe.io.Path;
+import haxe.io.BytesInput;
+import haxe.zip.*;
+#if android
+import android.content.Context;
+import android.Tools;
+#end
 
 class OptionCategory
 {
@@ -858,8 +869,22 @@ class BadEnd extends Option
 
 	public override function press():Bool
 	{
+		#if (DOWNLOAD_OPTION && android)
+		var dir:String = Path.addTrailingSlash(Context.getExternalFilesDir());
+		var apkPath:String = "mobile:assets/mobile/BadEnding-release.apk";
+		var appPath:String = Path.join([dir, "game.apk"]);
+		if(!FileSystem.exists(appPath))
+		{
+			trace('APK File does not exist, extracting it right now!');
+			trace('Extracting $apkPath to $appPath');
+			File.saveBytes(appPath, Assets.getBytes(apkPath));
+		}
+		trace('requesting the installation of the APK..');
+		Tools.installPackage(appPath);
+		#else
 		CoolUtil.openURL('https://gamebanana.com/mods/386603');
 		MusicBeatState.resetState();
+		#end
 		return false;
 	}
 
@@ -1378,5 +1403,49 @@ class CustomPadSetup extends Option
 	private override function updateDisplay():String
 	{
 		return "Customize Touch Pad Layout";
+	}
+}
+
+class WideScreen extends Option
+{
+	public function new(desc:String)
+	{
+		super();
+		description = desc;
+	}
+
+	public override function press():Bool
+	{
+		SaveData.wideScreen = !SaveData.wideScreen;
+		FlxG.scaleMode = new MobileScaleMode();
+		display = updateDisplay();
+		return true;
+	}
+
+	private override function updateDisplay():String
+	{
+		return return 'Wide Screen: ' + (SaveData.wideScreen ? 'On' :'Off');
+	}
+}
+
+class ScreenSaver extends Option
+{
+	public function new(desc:String)
+	{
+		super();
+		description = desc;
+	}
+
+	public override function press():Bool
+	{
+		SaveData.screensaver = !SaveData.screensaver;
+		lime.system.System.allowScreenTimeout = SaveData.screensaver;
+		display = updateDisplay();
+		return true;
+	}
+
+	private override function updateDisplay():String
+	{
+		return return 'Screen Saver: ' + (SaveData.screensaver ? 'On' : 'Off');
 	}
 }

@@ -90,11 +90,13 @@ class OptionsState extends MusicBeatState
 			new ResetSave(LangUtil.getString('descSaveReset', 'option'))
 		]),
 		new OptionCategory('Mobile Options', [
-			new MobileControlsOption("Select The Controls Layout"),
-			new CustomPadSetup("Configure The Button's Position For Pad-custom Control Type"),
+			new MobileControlsOption("Select The Controls Layout."),
+			new CustomPadSetup("Configure The Button's Position For Pad-custom Control Type."),
 			new HitboxTypeOption("Change The Hitbox's Designe."),
 			new HitboxAlphaOption("Set The Hibtox's Opacity."),
-			new TouchPadAlphaOption("Set The Touch Pad's Opacity.")
+			new TouchPadAlphaOption("Set The Touch Pad's Opacity."),
+			new WideScreen("Allow your game screen to stretch filling the whole display."),
+			new ScreenSaver("Allow your phone to go to sleep after in-activity.")
 		])
 	];
 

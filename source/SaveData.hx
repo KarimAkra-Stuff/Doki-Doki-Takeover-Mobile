@@ -28,7 +28,7 @@ class SaveData
 	public static var accuracyDisplay:Null<Bool> = true;
 	public static var offset:Null<Float> = 0;
 	public static var songPosition:Null<Bool> = false;
-	public static var showFPS:Null<Bool> = false;
+	public static var showFPS:Null<Bool> = true;
 	public static var changedHit:Null<Bool> = false;
 	public static var changedHitX:Null<Float> = -1;
 	public static var changedHitY:Null<Float> = -1;
@@ -131,6 +131,8 @@ class SaveData
 	public static var hitboxType:String = 'Gradient';
 	public static var hitboxAlpha:Float = 0.6;
 	public static var touchPadAlpha:Float = 1.0;
+	public static var wideScreen:Bool = false;
+	public static var screensaver:Bool = false;
 
 	private static var importantMap:Map<String, Array<String>> =
 	[

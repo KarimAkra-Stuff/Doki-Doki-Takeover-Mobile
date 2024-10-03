@@ -21,7 +21,6 @@ class MusicBeatState extends FlxUIState
 	private var curBeat:Int = 0;
 	private var controls(get, never):Controls;
 
-
 	public var touchPad:TouchPad;
 	public var mobileControls:MobileControls;
 
