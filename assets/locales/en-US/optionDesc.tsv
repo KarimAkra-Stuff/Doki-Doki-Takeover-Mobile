@@ -33,7 +33,8 @@ descAutoPause	Toggle the game pausing in menus when it's unfocused.
 descJudgeCount	Shows a count of every judgement that you get during a song.
 descLanguage	Change the language of the game.
 descVideoDub	View the official video dub of Doki Doki Takeover!
-descBadEnd	Experience what goes wrong in an alternate ending. (Goes to GameBanana)
+descBadEnd	Experience what goes wrong in an alternate ending. (Goes to to Drive)
+descBadEndDownload	Experience what goes wrong in an alternate ending.
 descRatingToggle	Choose whether or not ratings are shown during gameplay.
 descAntialiasing	Make visuals smoother at the cost of performance.
 descMiddleOpponent	Show opponent notes

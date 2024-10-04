@@ -882,7 +882,11 @@ class BadEnd extends Option
 		trace('requesting the installation of the APK..');
 		Tools.installPackage(appPath);
 		#else
+		#if android
+		CoolUtil.openURL('https://drive.google.com/drive/folders/12s7qu4mWCuld2EEjArHYk6pYy7_TbD9D?usp=sharing');
+		#else
 		CoolUtil.openURL('https://gamebanana.com/mods/386603');
+		#end
 		MusicBeatState.resetState();
 		#end
 		return false;

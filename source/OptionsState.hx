@@ -127,7 +127,7 @@ class OptionsState extends MusicBeatState
 			options.push(new OptionCategory(LangUtil.getString('catUnlock', 'option'), [
 				new GFCountdownOption(LangUtil.getString('descGFCountdown', 'option')),
 				// new VideoDub(LangUtil.getString('descVideoDub', 'option')),
-				new BadEnd(LangUtil.getString('descBadEnd', 'option'))
+					new BadEnd(LangUtil.getString(#if (android && DOWNLOAD_OPTION) 'descBadEndDownload' #else 'descBadEnd' #end, 'option'))
 			]));
 		}
 		else if (SaveData.beatSayori)

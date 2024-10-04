@@ -33,7 +33,8 @@ descAutoPause	Cambia la pausa del juego en los menús cuando no está enfocado.
 descJudgeCount	Muestra un recuento de cada juicio que obtienes durante una canción.
 descLanguage	Cambia el idioma del juego.
 descVideoDub	¡Mira el video doblaje oficial de Doki Doki Takeover!
-descBadEnd	Experimenta lo que sale mal en un final alternativo. (Se va a GameBanana)
+descBadEnd	Experimenta lo que sale mal en un final alternativo. (Se va a Drive)
+descBadEndDownload	Experimenta lo que sale mal en un final alternativo.
 descRatingToggle	Elige si las calificaciones se muestran o no durante el juego.
 descAntialiasing	Haga que las imágenes sean más fluidas a costa del rendimiento.
 descMiddleOpponent	Mostrar notas del oponente
