@@ -216,7 +216,6 @@
 	
 	<section if="android">
 		<certificate path="key.keystore" password="psychengine" alias="psychport" alias-password="psychengine" unless="debug" />
-        <config:android permission="android.permission.REQUEST_INSTALL_PACKAGES" />
 	</section>
 
 </project>
